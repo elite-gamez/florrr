@@ -8,4 +8,4 @@ If you have any question, please send me direct messages in discord: `@samerkizi
 
 ## Credit
 Everything here are created by Furaken and Opfer.
-Smaller contributors are already given credits in specify scripts.
+Smaller contributors are already given credits in specific scripts.
