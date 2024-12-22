@@ -1,5 +1,6 @@
-// @require      https://cdn.jsdelivr.net/npm/chart.js@4.3.3/dist/chart.umd.min.js
-// @require      https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0
+// @license agpl
+// @require https://cdn.jsdelivr.net/npm/chart.js@4.3.3/dist/chart.umd.min.js
+// @require https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0
 
 var getTodayDateLocalString = new Date().toString().substring(0,15),
     allAvailableServersNumber = 7,
