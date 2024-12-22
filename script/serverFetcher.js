@@ -1,3 +1,5 @@
+// @license agpl
+
 function updateServers() {
     for (let i = 0; i < totalServers; i++) {
         fetch(`https://api.n.m28.io/endpoint/florrio-map-${i}-green/findEach/`).then((response) => response.json()).then((data) => {
