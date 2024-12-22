@@ -1,4 +1,5 @@
-// @require      https://unpkg.com/string-similarity@4.0.4/umd/string-similarity.min.js
+// @license agpl
+// @require https://unpkg.com/string-similarity@4.0.4/umd/string-similarity.min.js
 
 var obj =
     {
