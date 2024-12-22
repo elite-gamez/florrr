@@ -1,3 +1,5 @@
+// @license agpl
+
 var totalServers = 7,
     position = "-200px"
 
