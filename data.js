@@ -64,7 +64,8 @@ const data = {
         62: "Trader",
         63: "Gambler",
         65: "Magic Firefly",
-        66: "Titan"
+        66: "Titan",
+        67: "Nazar Beetle"
     },
     petal: {
         1: "Basic",
