@@ -157,6 +157,7 @@ const data = {
         88: "Magic Missile",
         89: "Magic Stick",
         90: "Coral",
-        91: "Magic Bubble"
+        91: "Magic Bubble",
+        92: "Nazar Amulet"
     }
 }
