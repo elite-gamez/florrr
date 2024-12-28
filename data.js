@@ -63,6 +63,7 @@ const data = {
         61: "Hel Wasp",
         62: "Trader",
         63: "Gambler",
+        64: "Oracle",
         65: "Magic Firefly",
         66: "Titan",
         67: "Nazar Beetle"
