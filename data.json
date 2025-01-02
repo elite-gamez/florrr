@@ -1,6 +1,6 @@
 
 {
-    "credit": "k2r_n2iq",
+    "__credit": "k2r_n2iq",
     "mob": [
         {
             "index": 1,
@@ -537,7 +537,23 @@
             "displayName": "Beetle",
             "description": "This one has a different pattern... what does that mean?",
             "overriddenSpawnMessage": null
-        }
+        },
+    	{
+    		"index": 68,
+            "technicalName": "worm",
+    		"name": "Worm",
+    		"displayName": "Worm",
+    		"description": "It's supposed to eat dirt but this one's eating flowers.",
+    		"overriddenSpawnMessage": null
+    	},
+    	{
+    		"index": 69,
+            "technicalName": "worm_guts",
+    		"name": "Worm guts",
+    		"displayName": "Worm guts",
+    		"description": "You're not supposed to see this text. I'm calling the police.",
+    		"overriddenSpawnMessage": null
+    	}
     ],
     "petal": [
         {
