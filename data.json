@@ -1,10 +1,9 @@
-
 {
     "__credit": "k2r_n2iq",
     "mob": [
         {
             "index": 1,
-            "technicalName": "rock",
+            "id": "rock",
             "name": "Rock",
             "displayName": "Rock",
             "description": "A rock. It doesn't do much.",
@@ -12,7 +11,7 @@
         },
         {
             "index": 2,
-            "technicalName": "cactus",
+            "id": "cactus",
             "name": "Cactus",
             "displayName": "Cactus",
             "description": "Avoid touching it, it hurts.",
@@ -20,7 +19,7 @@
         },
         {
             "index": 3,
-            "technicalName": "ladybug",
+            "id": "ladybug",
             "name": "Ladybug",
             "displayName": "Ladybug",
             "description": "Cute and harmless.",
@@ -28,7 +27,7 @@
         },
         {
             "index": 4,
-            "technicalName": "bee",
+            "id": "bee",
             "name": "Bee",
             "displayName": "Bee",
             "description": "It stings. Don't touch it.",
@@ -36,7 +35,7 @@
         },
         {
             "index": 5,
-            "technicalName": "ant_baby",
+            "id": "ant_baby",
             "name": "Baby Ant",
             "displayName": "Baby Ant",
             "description": "Weak and defenseless, but big dreams.",
@@ -44,7 +43,7 @@
         },
         {
             "index": 6,
-            "technicalName": "ant_worker",
+            "id": "ant_worker",
             "name": "Worker Ant",
             "displayName": "Worker Ant",
             "description": "It's a bit temperamental, probably from working all the time.",
@@ -52,7 +51,7 @@
         },
         {
             "index": 7,
-            "technicalName": "soldier_ant",
+            "id": "soldier_ant",
             "name": "Soldier Ant",
             "displayName": "Soldier Ant",
             "description": "It's got wings and it's ready to use them.",
@@ -60,7 +59,7 @@
         },
         {
             "index": 8,
-            "technicalName": "ant_queen",
+            "id": "ant_queen",
             "name": "Queen Ant",
             "displayName": "Queen Ant",
             "description": "You must have done something really bad if she's chasing you.",
@@ -68,7 +67,7 @@
         },
         {
             "index": 9,
-            "technicalName": "ant_hole",
+            "id": "ant_hole",
             "name": "Ant Hole",
             "displayName": "Ant Hole",
             "description": "Ants go in, and come out. Can't explain that.",
@@ -76,7 +75,7 @@
         },
         {
             "index": 10,
-            "technicalName": "beetle",
+            "id": "beetle",
             "name": "Beetle",
             "displayName": "Beetle",
             "description": "It's hungry and flowers are its favorite meal.",
@@ -84,7 +83,7 @@
         },
         {
             "index": 11,
-            "technicalName": "hornet",
+            "id": "hornet",
             "name": "Hornet",
             "displayName": "Hornet",
             "description": "These aren't quite as nice as the little bees.",
@@ -92,7 +91,7 @@
         },
         {
             "index": 12,
-            "technicalName": "centipede",
+            "id": "centipede",
             "name": "Centipede",
             "displayName": "Centipede",
             "description": "It's just there doing its thing.",
@@ -100,7 +99,7 @@
         },
         {
             "index": 13,
-            "technicalName": "centipede_body",
+            "id": "centipede_body",
             "name": "Centipede",
             "displayName": "Centipede",
             "description": "It's just there doing its thing.",
@@ -108,7 +107,7 @@
         },
         {
             "index": 14,
-            "technicalName": "centipede_evil",
+            "id": "centipede_evil",
             "name": "Evil Centipede",
             "displayName": "Centipede",
             "description": "This one loves flowers.",
@@ -116,7 +115,7 @@
         },
         {
             "index": 15,
-            "technicalName": "centipede_evil_body",
+            "id": "centipede_evil_body",
             "name": "Evil Centipede",
             "displayName": "Centipede",
             "description": "This one loves flowers.",
@@ -124,7 +123,7 @@
         },
         {
             "index": 16,
-            "technicalName": "centipede_desert",
+            "id": "centipede_desert",
             "name": "Desert Centipede",
             "displayName": "Centipede",
             "description": "Gotta go fast.",
@@ -132,7 +131,7 @@
         },
         {
             "index": 17,
-            "technicalName": "centipede_desert_body",
+            "id": "centipede_desert_body",
             "name": "Desert Centipede",
             "displayName": "Centipede",
             "description": "Gotta go fast.",
@@ -140,7 +139,7 @@
         },
         {
             "index": 18,
-            "technicalName": "square",
+            "id": "square",
             "name": "Square",
             "displayName": "Square",
             "description": "This shape... it looks familiar...",
@@ -148,7 +147,7 @@
         },
         {
             "index": 19,
-            "technicalName": "ladybug_dark",
+            "id": "ladybug_dark",
             "name": "Dark Ladybug",
             "displayName": "Ladybug",
             "description": "Cute and harmless... if left unprovoked.",
@@ -156,7 +155,7 @@
         },
         {
             "index": 20,
-            "technicalName": "ladybug_shiny",
+            "id": "ladybug_shiny",
             "name": "Shiny Ladybug",
             "displayName": "Ladybug",
             "description": "Shiny, cute and mostly harmless.",
@@ -164,7 +163,7 @@
         },
         {
             "index": 21,
-            "technicalName": "spider",
+            "id": "spider",
             "name": "Spider",
             "displayName": "Spider",
             "description": "Spooky.",
@@ -172,7 +171,7 @@
         },
         {
             "index": 22,
-            "technicalName": "scorpion",
+            "id": "scorpion",
             "name": "Scorpion",
             "displayName": "Scorpion",
             "description": "IT STINGS!",
@@ -180,7 +179,7 @@
         },
         {
             "index": 23,
-            "technicalName": "fire_ant_soldier",
+            "id": "fire_ant_soldier",
             "name": "Soldier Fire Ant",
             "displayName": "Soldier Fire Ant",
             "description": "This ant is on fireeeeeeeeeeeeee.",
@@ -188,7 +187,7 @@
         },
         {
             "index": 24,
-            "technicalName": "fire_ant_burrow",
+            "id": "fire_ant_burrow",
             "name": "Fire Ant Burrow",
             "displayName": "Fire Ant Burrow",
             "description": "What could be in here?",
@@ -196,7 +195,7 @@
         },
         {
             "index": 25,
-            "technicalName": "sandstorm",
+            "id": "sandstorm",
             "name": "Sandstorm",
             "displayName": "Sandstorm",
             "description": "Darude (1999)",
@@ -204,7 +203,7 @@
         },
         {
             "index": 26,
-            "technicalName": "bubble",
+            "id": "bubble",
             "name": "Bubble",
             "displayName": "Bubble",
             "description": "Pop",
@@ -212,7 +211,7 @@
         },
         {
             "index": 27,
-            "technicalName": "bumble_bee",
+            "id": "bumble_bee",
             "name": "Bumble Bee",
             "displayName": "Bumble Bee",
             "description": "GOTTA RUN.",
@@ -220,7 +219,7 @@
         },
         {
             "index": 28,
-            "technicalName": "shell",
+            "id": "shell",
             "name": "Shell",
             "displayName": "Shell",
             "description": "Not an advertisement.",
@@ -228,7 +227,7 @@
         },
         {
             "index": 29,
-            "technicalName": "starfish",
+            "id": "starfish",
             "name": "Starfish",
             "displayName": "Starfish",
             "description": "His name is Patrick.",
@@ -236,7 +235,7 @@
         },
         {
             "index": 30,
-            "technicalName": "crab",
+            "id": "crab",
             "name": "Crab",
             "displayName": "Crab",
             "description": "Mr. Crab.",
@@ -244,7 +243,7 @@
         },
         {
             "index": 31,
-            "technicalName": "jellyfish",
+            "id": "jellyfish",
             "name": "Jellyfish",
             "displayName": "Jellyfish",
             "description": "Makes the most delicious jam.",
@@ -252,7 +251,7 @@
         },
         {
             "index": 32,
-            "technicalName": "digger",
+            "id": "digger",
             "name": "Digger",
             "displayName": "Digger",
             "description": "Wrong game, bud.",
@@ -260,7 +259,7 @@
         },
         {
             "index": 33,
-            "technicalName": "sponge",
+            "id": "sponge",
             "name": "Sponge",
             "displayName": "Sponge",
             "description": "Bob.",
@@ -268,7 +267,7 @@
         },
         {
             "index": 34,
-            "technicalName": "leech",
+            "id": "leech",
             "name": "Leech",
             "displayName": "Leech",
             "description": "Slurp slurp.",
@@ -276,7 +275,7 @@
         },
         {
             "index": 35,
-            "technicalName": "leech_body",
+            "id": "leech_body",
             "name": "Leech",
             "displayName": "Leech",
             "description": "Slurp slurp.",
@@ -284,7 +283,7 @@
         },
         {
             "index": 36,
-            "technicalName": "dandelion",
+            "id": "dandelion",
             "name": "Dandelion",
             "displayName": "Dandelion",
             "description": "Puffy.",
@@ -292,7 +291,7 @@
         },
         {
             "index": 37,
-            "technicalName": "fire_ant_baby",
+            "id": "fire_ant_baby",
             "name": "Baby Fire Ant",
             "displayName": "Baby Fire Ant",
             "description": "This ant is on fireeeeeeeeeeeeee.",
@@ -300,7 +299,7 @@
         },
         {
             "index": 38,
-            "technicalName": "fire_ant_worker",
+            "id": "fire_ant_worker",
             "name": "Worker Fire Ant",
             "displayName": "Worker Fire Ant",
             "description": "This ant is on fireeeeeeeeeeeeee.",
@@ -308,7 +307,7 @@
         },
         {
             "index": 39,
-            "technicalName": "fire_ant_queen",
+            "id": "fire_ant_queen",
             "name": "Queen Fire Ant",
             "displayName": "Queen Fire Ant",
             "description": "This ant is on fireeeeeeeeeeeeee.",
@@ -316,7 +315,7 @@
         },
         {
             "index": 40,
-            "technicalName": "ant_egg",
+            "id": "ant_egg",
             "name": "Ant Egg",
             "displayName": "Ant Egg",
             "description": "Not yet an ant but perhaps soon.",
@@ -324,7 +323,7 @@
         },
         {
             "index": 41,
-            "technicalName": "fire_ant_egg",
+            "id": "fire_ant_egg",
             "name": "Fire Ant Egg",
             "displayName": "Fire Ant Egg",
             "description": "This ant is not yet on fire.",
@@ -332,7 +331,7 @@
         },
         {
             "index": 42,
-            "technicalName": "fly",
+            "id": "fly",
             "name": "Fly",
             "displayName": "Fly",
             "description": "Hzzzzzzzzzzzz.",
@@ -340,7 +339,7 @@
         },
         {
             "index": 43,
-            "technicalName": "leafbug",
+            "id": "leafbug",
             "name": "Leafbug",
             "displayName": "Leafbug",
             "description": "It's not a leaf, but it is a bug.",
@@ -348,7 +347,7 @@
         },
         {
             "index": 44,
-            "technicalName": "mantis",
+            "id": "mantis",
             "name": "Mantis",
             "displayName": "Mantis",
             "description": "You better pray you don't become dinner.",
@@ -356,7 +355,7 @@
         },
         {
             "index": 45,
-            "technicalName": "termite_baby",
+            "id": "termite_baby",
             "name": "Baby Termite",
             "displayName": "Baby Termite",
             "description": "Weak and defenseless, but big dreams.<n/>These creatures appear to be connected somehow.",
@@ -364,7 +363,7 @@
         },
         {
             "index": 46,
-            "technicalName": "termite_worker",
+            "id": "termite_worker",
             "name": "Worker Termite",
             "displayName": "Worker Termite",
             "description": "It's a bit temperamental, probably from working all the time.<n/>These creatures appear to be connected somehow.",
@@ -372,7 +371,7 @@
         },
         {
             "index": 47,
-            "technicalName": "termite_soldier",
+            "id": "termite_soldier",
             "name": "Soldier Termite",
             "displayName": "Soldier Termite",
             "description": "It's got wings and it's ready to use them.<n/>These creatures appear to be connected somehow.",
@@ -380,7 +379,7 @@
         },
         {
             "index": 48,
-            "technicalName": "termite_overmind",
+            "id": "termite_overmind",
             "name": "Termite Overmind",
             "displayName": "Termite Overmind",
             "description": "The one who oversees all.",
@@ -388,7 +387,7 @@
         },
         {
             "index": 49,
-            "technicalName": "termite_mound",
+            "id": "termite_mound",
             "name": "Termite Mound",
             "displayName": "Termite Mound",
             "description": "Termites go in, and come out. Can't explain that.",
@@ -396,7 +395,7 @@
         },
         {
             "index": 50,
-            "technicalName": "termite_egg",
+            "id": "termite_egg",
             "name": "Termite Egg",
             "displayName": "Termite Egg",
             "description": "Not yet a termite but perhaps soon.",
@@ -404,7 +403,7 @@
         },
         {
             "index": 51,
-            "technicalName": "bush",
+            "id": "bush",
             "name": "Bush",
             "displayName": "Bush",
             "description": "Don't misunderestimate me.",
@@ -412,7 +411,7 @@
         },
         {
             "index": 52,
-            "technicalName": "roach",
+            "id": "roach",
             "name": "Roach",
             "displayName": "Roach",
             "description": "Gotta go FAST... until they get tired.",
@@ -420,7 +419,7 @@
         },
         {
             "index": 53,
-            "technicalName": "moth",
+            "id": "moth",
             "name": "Moth",
             "displayName": "Moth",
             "description": "Easily scared, be nice.",
@@ -428,7 +427,7 @@
         },
         {
             "index": 54,
-            "technicalName": "firefly",
+            "id": "firefly",
             "name": "Firefly",
             "displayName": "Firefly",
             "description": "Oooooh shiny.",
@@ -436,7 +435,7 @@
         },
         {
             "index": 55,
-            "technicalName": "beetle_hel",
+            "id": "beetle_hel",
             "name": "Hel Beetle",
             "displayName": "Beetle",
             "description": "Scourge that spawns in the other plane.",
@@ -444,7 +443,7 @@
         },
         {
             "index": 56,
-            "technicalName": "wasp",
+            "id": "wasp",
             "name": "Wasp",
             "displayName": "Wasp",
             "description": "They are ANGRY.",
@@ -452,7 +451,7 @@
         },
         {
             "index": 57,
-            "technicalName": "target_dummy",
+            "id": "target_dummy",
             "name": "Target Dummy",
             "displayName": "Dummy",
             "description": "How do you have this in your gallery?",
@@ -460,7 +459,7 @@
         },
         {
             "index": 58,
-            "technicalName": "spider_hel",
+            "id": "spider_hel",
             "name": "Hel Spider",
             "displayName": "Spider",
             "description": "Scourge that spawns in the other plane.",
@@ -468,7 +467,7 @@
         },
         {
             "index": 59,
-            "technicalName": "centipede_hel",
+            "id": "centipede_hel",
             "name": "Hel Centipede",
             "displayName": "Centipede",
             "description": "Scourge that spawns in the other plane.",
@@ -476,7 +475,7 @@
         },
         {
             "index": 60,
-            "technicalName": "centipede_hel_body",
+            "id": "centipede_hel_body",
             "name": "Hel Centipede",
             "displayName": "Centipede",
             "description": "Scourge that spawns in the other plane.",
@@ -484,7 +483,7 @@
         },
         {
             "index": 61,
-            "technicalName": "wasp_hel",
+            "id": "wasp_hel",
             "name": "Hel Wasp",
             "displayName": "Wasp",
             "description": "Scourge that spawns in the other plane.",
@@ -492,7 +491,7 @@
         },
         {
             "index": 62,
-            "technicalName": "trader",
+            "id": "trader",
             "name": "Trader",
             "displayName": "Trader",
             "description": "",
@@ -500,7 +499,7 @@
         },
         {
             "index": 63,
-            "technicalName": "gambler",
+            "id": "gambler",
             "name": "Gambler",
             "displayName": "Gambler",
             "description": "This can happen to YOU.",
@@ -508,7 +507,7 @@
         },
         {
             "index": 64,
-            "technicalName": "oracle",
+            "id": "oracle",
             "name": "Oracle",
             "displayName": "Oracle",
             "description": "",
@@ -516,7 +515,7 @@
         },
         {
             "index": 65,
-            "technicalName": "firefly",
+            "id": "firefly",
             "name": "Magic Firefly",
             "displayName": "Firefly",
             "description": "There's something magical about this one.",
@@ -524,7 +523,7 @@
         },
         {
             "index": 66,
-            "technicalName": "titan",
+            "id": "titan",
             "name": "Titan",
             "displayName": "Titan",
             "description": "",
@@ -532,7 +531,7 @@
         },
         {
             "index": 67,
-            "technicalName": "beetle_nazar",
+            "id": "beetle_nazar",
             "name": "Nazar Beetle",
             "displayName": "Beetle",
             "description": "This one has a different pattern... what does that mean?",
@@ -540,7 +539,7 @@
         },
     	{
     		"index": 68,
-            "technicalName": "worm",
+            "id": "worm",
     		"name": "Worm",
     		"displayName": "Worm",
     		"description": "It's supposed to eat dirt but this one's eating flowers.",
@@ -548,7 +547,7 @@
     	},
     	{
     		"index": 69,
-            "technicalName": "worm_guts",
+            "id": "worm_guts",
     		"name": "Worm guts",
     		"displayName": "Worm guts",
     		"description": "You're not supposed to see this text. I'm calling the police.",
