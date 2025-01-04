@@ -1,1111 +1,2802 @@
 {
-    "__credit": "k2r_n2iq",
     "mob": [
         {
-            "index": 1,
-            "id": "rock",
-            "name": "Rock",
-            "displayName": "Rock",
-            "description": "A rock. It doesn't do much.",
-            "overriddenSpawnMessage": "Something mountain-like appears in the distance..."
-        },
-        {
-            "index": 2,
-            "id": "cactus",
-            "name": "Cactus",
-            "displayName": "Cactus",
-            "description": "Avoid touching it, it hurts.",
-            "overriddenSpawnMessage": "A tower of thorns rises from the sands..."
-        },
-        {
-            "index": 3,
-            "id": "ladybug",
-            "name": "Ladybug",
-            "displayName": "Ladybug",
-            "description": "Cute and harmless.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 4,
-            "id": "bee",
-            "name": "Bee",
-            "displayName": "Bee",
-            "description": "It stings. Don't touch it.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 5,
-            "id": "ant_baby",
-            "name": "Baby Ant",
-            "displayName": "Baby Ant",
-            "description": "Weak and defenseless, but big dreams.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 6,
-            "id": "ant_worker",
-            "name": "Worker Ant",
-            "displayName": "Worker Ant",
-            "description": "It's a bit temperamental, probably from working all the time.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 7,
-            "id": "soldier_ant",
-            "name": "Soldier Ant",
-            "displayName": "Soldier Ant",
-            "description": "It's got wings and it's ready to use them.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 8,
-            "id": "ant_queen",
-            "name": "Queen Ant",
-            "displayName": "Queen Ant",
-            "description": "You must have done something really bad if she's chasing you.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 9,
-            "id": "ant_hole",
-            "name": "Ant Hole",
-            "displayName": "Ant Hole",
-            "description": "Ants go in, and come out. Can't explain that.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 10,
-            "id": "beetle",
-            "name": "Beetle",
-            "displayName": "Beetle",
-            "description": "It's hungry and flowers are its favorite meal.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 11,
-            "id": "hornet",
-            "name": "Hornet",
-            "displayName": "Hornet",
-            "description": "These aren't quite as nice as the little bees.",
-            "overriddenSpawnMessage": "A big yellow spot shows up in the distance..."
-        },
-        {
-            "index": 12,
-            "id": "centipede",
-            "name": "Centipede",
-            "displayName": "Centipede",
-            "description": "It's just there doing its thing.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 13,
-            "id": "centipede_body",
-            "name": "Centipede",
-            "displayName": "Centipede",
-            "description": "It's just there doing its thing.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 14,
-            "id": "centipede_evil",
-            "name": "Evil Centipede",
-            "displayName": "Centipede",
-            "description": "This one loves flowers.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 15,
-            "id": "centipede_evil_body",
-            "name": "Evil Centipede",
-            "displayName": "Centipede",
-            "description": "This one loves flowers.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 16,
-            "id": "centipede_desert",
-            "name": "Desert Centipede",
-            "displayName": "Centipede",
-            "description": "Gotta go fast.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 17,
-            "id": "centipede_desert_body",
-            "name": "Desert Centipede",
-            "displayName": "Centipede",
-            "description": "Gotta go fast.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 18,
-            "id": "square",
-            "name": "Square",
-            "displayName": "Square",
-            "description": "This shape... it looks familiar...",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 19,
-            "id": "ladybug_dark",
-            "name": "Dark Ladybug",
-            "displayName": "Ladybug",
-            "description": "Cute and harmless... if left unprovoked.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 20,
-            "id": "ladybug_shiny",
-            "name": "Shiny Ladybug",
-            "displayName": "Ladybug",
-            "description": "Shiny, cute and mostly harmless.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 21,
-            "id": "spider",
-            "name": "Spider",
-            "displayName": "Spider",
-            "description": "Spooky.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 22,
-            "id": "scorpion",
-            "name": "Scorpion",
-            "displayName": "Scorpion",
-            "description": "IT STINGS!",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 23,
-            "id": "fire_ant_soldier",
-            "name": "Soldier Fire Ant",
-            "displayName": "Soldier Fire Ant",
-            "description": "This ant is on fireeeeeeeeeeeeee.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 24,
-            "id": "fire_ant_burrow",
-            "name": "Fire Ant Burrow",
-            "displayName": "Fire Ant Burrow",
-            "description": "What could be in here?",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 25,
-            "id": "sandstorm",
-            "name": "Sandstorm",
-            "displayName": "Sandstorm",
-            "description": "Darude (1999)",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 26,
-            "id": "bubble",
-            "name": "Bubble",
-            "displayName": "Bubble",
-            "description": "Pop",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 27,
-            "id": "bumble_bee",
-            "name": "Bumble Bee",
-            "displayName": "Bumble Bee",
-            "description": "GOTTA RUN.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 28,
-            "id": "shell",
-            "name": "Shell",
-            "displayName": "Shell",
-            "description": "Not an advertisement.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 29,
-            "id": "starfish",
-            "name": "Starfish",
-            "displayName": "Starfish",
-            "description": "His name is Patrick.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 30,
-            "id": "crab",
-            "name": "Crab",
-            "displayName": "Crab",
-            "description": "Mr. Crab.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 31,
-            "id": "jellyfish",
-            "name": "Jellyfish",
-            "displayName": "Jellyfish",
-            "description": "Makes the most delicious jam.",
-            "overriddenSpawnMessage": "You hear lightning strikes coming from a far distance..."
-        },
-        {
-            "index": 32,
-            "id": "digger",
-            "name": "Digger",
-            "displayName": "Digger",
-            "description": "Wrong game, bud.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 33,
-            "id": "sponge",
-            "name": "Sponge",
-            "displayName": "Sponge",
-            "description": "Bob.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 34,
-            "id": "leech",
-            "name": "Leech",
-            "displayName": "Leech",
-            "description": "Slurp slurp.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 35,
-            "id": "leech_body",
-            "name": "Leech",
-            "displayName": "Leech",
-            "description": "Slurp slurp.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 36,
-            "id": "dandelion",
-            "name": "Dandelion",
-            "displayName": "Dandelion",
-            "description": "Puffy.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 37,
-            "id": "fire_ant_baby",
-            "name": "Baby Fire Ant",
-            "displayName": "Baby Fire Ant",
-            "description": "This ant is on fireeeeeeeeeeeeee.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 38,
-            "id": "fire_ant_worker",
-            "name": "Worker Fire Ant",
-            "displayName": "Worker Fire Ant",
-            "description": "This ant is on fireeeeeeeeeeeeee.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 39,
-            "id": "fire_ant_queen",
-            "name": "Queen Fire Ant",
-            "displayName": "Queen Fire Ant",
-            "description": "This ant is on fireeeeeeeeeeeeee.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 40,
-            "id": "ant_egg",
-            "name": "Ant Egg",
-            "displayName": "Ant Egg",
-            "description": "Not yet an ant but perhaps soon.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 41,
-            "id": "fire_ant_egg",
-            "name": "Fire Ant Egg",
-            "displayName": "Fire Ant Egg",
-            "description": "This ant is not yet on fire.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 42,
-            "id": "fly",
-            "name": "Fly",
-            "displayName": "Fly",
-            "description": "Hzzzzzzzzzzzz.",
-            "overriddenSpawnMessage": "A buzzing noise echoes through the sewer tunnels"
-        },
-        {
-            "index": 43,
-            "id": "leafbug",
-            "name": "Leafbug",
-            "displayName": "Leafbug",
-            "description": "It's not a leaf, but it is a bug.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 44,
-            "id": "mantis",
-            "name": "Mantis",
-            "displayName": "Mantis",
-            "description": "You better pray you don't become dinner.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 45,
-            "id": "termite_baby",
-            "name": "Baby Termite",
-            "displayName": "Baby Termite",
-            "description": "Weak and defenseless, but big dreams.<n/>These creatures appear to be connected somehow.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 46,
-            "id": "termite_worker",
-            "name": "Worker Termite",
-            "displayName": "Worker Termite",
-            "description": "It's a bit temperamental, probably from working all the time.<n/>These creatures appear to be connected somehow.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 47,
-            "id": "termite_soldier",
-            "name": "Soldier Termite",
-            "displayName": "Soldier Termite",
-            "description": "It's got wings and it's ready to use them.<n/>These creatures appear to be connected somehow.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 48,
-            "id": "termite_overmind",
-            "name": "Termite Overmind",
-            "displayName": "Termite Overmind",
-            "description": "The one who oversees all.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 49,
-            "id": "termite_mound",
-            "name": "Termite Mound",
-            "displayName": "Termite Mound",
-            "description": "Termites go in, and come out. Can't explain that.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 50,
-            "id": "termite_egg",
-            "name": "Termite Egg",
-            "displayName": "Termite Egg",
-            "description": "Not yet a termite but perhaps soon.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 51,
-            "id": "bush",
-            "name": "Bush",
-            "displayName": "Bush",
-            "description": "Don't misunderestimate me.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 52,
-            "id": "roach",
-            "name": "Roach",
-            "displayName": "Roach",
-            "description": "Gotta go FAST... until they get tired.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 53,
-            "id": "moth",
-            "name": "Moth",
-            "displayName": "Moth",
-            "description": "Easily scared, be nice.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 54,
-            "id": "firefly",
-            "name": "Firefly",
-            "displayName": "Firefly",
-            "description": "Oooooh shiny.",
-            "overriddenSpawnMessage": "There's a bright light in the horizon..."
-        },
-        {
-            "index": 55,
-            "id": "beetle_hel",
-            "name": "Hel Beetle",
-            "displayName": "Beetle",
-            "description": "Scourge that spawns in the other plane.",
-            "overriddenSpawnMessage": "You sense ominous vibrations coming from a different realm..."
-        },
-        {
-            "index": 56,
-            "id": "wasp",
-            "name": "Wasp",
-            "displayName": "Wasp",
-            "description": "They are ANGRY.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 57,
-            "id": "target_dummy",
-            "name": "Target Dummy",
-            "displayName": "Dummy",
-            "description": "How do you have this in your gallery?",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 58,
-            "id": "spider_hel",
-            "name": "Hel Spider",
-            "displayName": "Spider",
-            "description": "Scourge that spawns in the other plane.",
-            "overriddenSpawnMessage": "You sense ominous vibrations coming from a different realm..."
-        },
-        {
-            "index": 59,
-            "id": "centipede_hel",
-            "name": "Hel Centipede",
-            "displayName": "Centipede",
-            "description": "Scourge that spawns in the other plane.",
-            "overriddenSpawnMessage": "You sense ominous vibrations coming from a different realm..."
-        },
-        {
-            "index": 60,
-            "id": "centipede_hel_body",
-            "name": "Hel Centipede",
-            "displayName": "Centipede",
-            "description": "Scourge that spawns in the other plane.",
-            "overriddenSpawnMessage": "You sense ominous vibrations coming from a different realm..."
-        },
-        {
-            "index": 61,
-            "id": "wasp_hel",
-            "name": "Hel Wasp",
-            "displayName": "Wasp",
-            "description": "Scourge that spawns in the other plane.",
-            "overriddenSpawnMessage": "You sense ominous vibrations coming from a different realm..."
-        },
-        {
-            "index": 62,
-            "id": "trader",
-            "name": "Trader",
-            "displayName": "Trader",
-            "description": "",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 63,
-            "id": "gambler",
-            "name": "Gambler",
-            "displayName": "Gambler",
-            "description": "This can happen to YOU.",
-            "overriddenSpawnMessage": "You hear someone whisper faintly... \"just... one more game...\""
-        },
-        {
-            "index": 64,
-            "id": "oracle",
-            "name": "Oracle",
-            "displayName": "Oracle",
-            "description": "",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 65,
-            "id": "firefly",
-            "name": "Magic Firefly",
-            "displayName": "Firefly",
-            "description": "There's something magical about this one.",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 66,
-            "id": "titan",
-            "name": "Titan",
-            "displayName": "Titan",
-            "description": "",
-            "overriddenSpawnMessage": null
-        },
-        {
-            "index": 67,
-            "id": "beetle_nazar",
-            "name": "Nazar Beetle",
-            "displayName": "Beetle",
-            "description": "This one has a different pattern... what does that mean?",
-            "overriddenSpawnMessage": null
-        },
-    	{
-    		"index": 68,
-            "id": "worm",
-    		"name": "Worm",
-    		"displayName": "Worm",
-    		"description": "It's supposed to eat dirt but this one's eating flowers.",
-    		"overriddenSpawnMessage": null
-    	},
-    	{
-    		"index": 69,
-            "id": "worm_guts",
-    		"name": "Worm guts",
-    		"displayName": "Worm guts",
-    		"description": "You're not supposed to see this text. I'm calling the police.",
-    		"overriddenSpawnMessage": null
-    	}
+            "drops": [
+                {
+                    "baseChance": 0.15000000596046448,
+                    "type": 3
+                },
+                {
+                    "baseChance": 0.05000000074505806,
+                    "type": 18
+                },
+                {
+                    "baseChance": 0.004999999888241291,
+                    "type": 77
+                }
+            ],
+            "i18n": {
+                "description": "A rock. It doesn't do much.",
+                "name": "Rock"
+            },
+            "id": 1,
+            "sid": "rock"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.15000000596046448,
+                    "type": 11
+                }
+            ],
+            "i18n": {
+                "description": "Avoid touching it, it hurts.",
+                "name": "Cactus"
+            },
+            "id": 2,
+            "sid": "cactus"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.25,
+                    "type": 2
+                },
+                {
+                    "baseChance": 0.25,
+                    "type": 5
+                }
+            ],
+            "i18n": {
+                "description": "Cute and harmless.",
+                "name": "Ladybug"
+            },
+            "id": 3,
+            "sid": "ladybug"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.25,
+                    "type": 6
+                },
+                {
+                    "baseChance": 0.10000000149011612,
+                    "type": 21
+                },
+                {
+                    "baseChance": 0.10000000149011612,
+                    "type": 14
+                }
+            ],
+            "i18n": {
+                "description": "It stings. Don't touch it.",
+                "name": "Bee"
+            },
+            "id": 4,
+            "sid": "bee"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.25,
+                    "type": 2
+                },
+                {
+                    "baseChance": 0.15000000596046448,
+                    "type": 22
+                },
+                {
+                    "baseChance": 0.25,
+                    "type": 24
+                }
+            ],
+            "i18n": {
+                "description": "Weak and defenseless, but big dreams.",
+                "name": "Baby Ant"
+            },
+            "id": 5,
+            "sid": "ant_baby"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.15000000596046448,
+                    "type": 22
+                },
+                {
+                    "baseChance": 0.15000000596046448,
+                    "type": 25
+                }
+            ],
+            "i18n": {
+                "description": "It's a bit temperamental, probably from working all the time.",
+                "name": "Worker Ant"
+            },
+            "id": 6,
+            "sid": "ant_worker"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.25,
+                    "type": 46
+                },
+                {
+                    "baseChance": 0.30000001192092896,
+                    "type": 79
+                }
+            ],
+            "i18n": {
+                "description": "It's got wings and it's ready to use them.",
+                "name": "Soldier Ant"
+            },
+            "id": 7,
+            "sid": "ant_soldier"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.30000001192092896,
+                    "type": 49
+                },
+                {
+                    "baseChance": 0.5,
+                    "type": 51
+                }
+            ],
+            "i18n": {
+                "description": "You must have done something really bad if she's chasing you.",
+                "name": "Queen Ant"
+            },
+            "id": 8,
+            "sid": "ant_queen"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.25,
+                    "type": 41
+                },
+                {
+                    "baseChance": 0.20000000298023224,
+                    "type": 73
+                }
+            ],
+            "i18n": {
+                "description": "Ants go in, and come out. Can't explain that.",
+                "name": "Ant Hole"
+            },
+            "id": 9,
+            "sid": "ant_hole"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.25,
+                    "type": 16
+                },
+                {
+                    "baseChance": 0.009999999776482582,
+                    "type": 66
+                }
+            ],
+            "i18n": {
+                "description": "It's hungry and flowers are its favorite meal.",
+                "name": "Beetle"
+            },
+            "id": 10,
+            "sid": "beetle"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.25,
+                    "type": 9
+                },
+                {
+                    "baseChance": 0.25,
+                    "type": 50
+                },
+                {
+                    "baseChance": 0.10000000149011612,
+                    "type": 17
+                }
+            ],
+            "i18n": {
+                "description": "These aren't quite as nice as the little bees.",
+                "name": "Hornet"
+            },
+            "id": 11,
+            "sid": "hornet"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.05000000074505806,
+                    "type": 22
+                },
+                {
+                    "baseChance": 0.05000000074505806,
+                    "type": 44
+                }
+            ],
+            "i18n": {
+                "description": "It's just there doing its thing.",
+                "name": "Centipede"
+            },
+            "id": 12,
+            "sid": "centipede"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.05000000074505806,
+                    "type": 22
+                },
+                {
+                    "baseChance": 0.05000000074505806,
+                    "type": 44
+                }
+            ],
+            "i18n": {
+                "description": "It's just there doing its thing.",
+                "name": "Centipede"
+            },
+            "id": 13,
+            "sid": "centipede_body"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.05000000074505806,
+                    "type": 7
+                },
+                {
+                    "baseChance": 0.05000000074505806,
+                    "type": 10
+                }
+            ],
+            "i18n": {
+                "description": "This one loves flowers.",
+                "name": "Centipede"
+            },
+            "id": 14,
+            "sid": "centipede_evil"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.05000000074505806,
+                    "type": 7
+                },
+                {
+                    "baseChance": 0.05000000074505806,
+                    "type": 10
+                }
+            ],
+            "i18n": {
+                "description": "This one loves flowers.",
+                "name": "Centipede"
+            },
+            "id": 15,
+            "sid": "centipede_evil_body"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.15000000596046448,
+                    "type": 23
+                },
+                {
+                    "baseChance": 0.05000000074505806,
+                    "type": 47
+                }
+            ],
+            "i18n": {
+                "description": "Gotta go fast.",
+                "name": "Centipede"
+            },
+            "id": 16,
+            "sid": "centipede_desert"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.15000000596046448,
+                    "type": 23
+                },
+                {
+                    "baseChance": 0.05000000074505806,
+                    "type": 47
+                }
+            ],
+            "i18n": {
+                "description": "Gotta go fast.",
+                "name": "Centipede"
+            },
+            "id": 17,
+            "sid": "centipede_desert_body"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 1,
+                    "type": 4
+                }
+            ],
+            "i18n": {
+                "description": "This shape... it looks familiar...",
+                "name": "Square"
+            },
+            "id": 18,
+            "sid": "square"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.25,
+                    "type": 38
+                },
+                {
+                    "baseChance": 0.10000000149011612,
+                    "type": 19
+                }
+            ],
+            "i18n": {
+                "description": "Cute and harmless... if left unprovoked.",
+                "name": "Ladybug"
+            },
+            "id": 19,
+            "sid": "ladybug_dark"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 1,
+                    "type": 5
+                },
+                {
+                    "baseChance": 1,
+                    "type": 38
+                },
+                {
+                    "baseChance": 0.5,
+                    "type": 30
+                }
+            ],
+            "i18n": {
+                "description": "Shiny, cute and mostly harmless.",
+                "name": "Ladybug"
+            },
+            "id": 20,
+            "sid": "ladybug_shiny"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.25,
+                    "type": 12
+                },
+                {
+                    "baseChance": 0.25,
+                    "type": 20
+                },
+                {
+                    "baseChance": 0.009999999776482582,
+                    "type": 43
+                }
+            ],
+            "i18n": {
+                "description": "Spooky.",
+                "name": "Spider"
+            },
+            "id": 21,
+            "sid": "spider"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.25,
+                    "type": 7
+                },
+                {
+                    "baseChance": 0.25,
+                    "type": 27
+                }
+            ],
+            "i18n": {
+                "description": "IT STINGS!",
+                "name": "Scorpion"
+            },
+            "id": 22,
+            "sid": "scorpion"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.30000001192092896,
+                    "type": 28
+                },
+                {
+                    "baseChance": 0.30000001192092896,
+                    "type": 78
+                }
+            ],
+            "i18n": {
+                "description": "This ant is on fireeeeeeeeeeeeee.",
+                "name": "Soldier Fire Ant"
+            },
+            "id": 23,
+            "sid": "fire_ant_soldier"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.5,
+                    "type": 29
+                },
+                {
+                    "baseChance": 0.30000001192092896,
+                    "type": 72
+                }
+            ],
+            "i18n": {
+                "description": "What could be in here?",
+                "name": "Fire Ant Burrow"
+            },
+            "id": 24,
+            "sid": "fire_ant_burrow"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.15000000596046448,
+                    "type": 26
+                },
+                {
+                    "baseChance": 0.10000000149011612,
+                    "type": 79
+                },
+                {
+                    "baseChance": 0.05000000074505806,
+                    "type": 45
+                }
+            ],
+            "i18n": {
+                "description": "Darude (1999)",
+                "name": "Sandstorm"
+            },
+            "id": 25,
+            "sid": "sandstorm"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 1,
+                    "type": 48
+                },
+                {
+                    "baseChance": 0.25,
+                    "type": 13
+                }
+            ],
+            "i18n": {
+                "description": "Pop",
+                "name": "Bubble"
+            },
+            "id": 26,
+            "sid": "bubble"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.20000000298023224,
+                    "type": 21
+                },
+                {
+                    "baseChance": 0.8500000238418579,
+                    "type": 14
+                }
+            ],
+            "i18n": {
+                "description": "GOTTA RUN.",
+                "name": "Bumble Bee"
+            },
+            "id": 27,
+            "sid": "bumble_bee"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.009999999776482582,
+                    "type": 29
+                },
+                {
+                    "baseChance": 0.15000000596046448,
+                    "type": 36
+                },
+                {
+                    "baseChance": 0.25,
+                    "type": 32
+                }
+            ],
+            "i18n": {
+                "description": "Not an advertisement.",
+                "name": "Shell"
+            },
+            "id": 28,
+            "sid": "shell"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.05000000074505806,
+                    "type": 26
+                },
+                {
+                    "baseChance": 0.05000000074505806,
+                    "type": 23
+                },
+                {
+                    "baseChance": 0.25,
+                    "type": 31
+                }
+            ],
+            "i18n": {
+                "description": "His name is Patrick.",
+                "name": "Starfish"
+            },
+            "id": 29,
+            "sid": "starfish"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.05000000074505806,
+                    "type": 26
+                },
+                {
+                    "baseChance": 0.25,
+                    "type": 35
+                }
+            ],
+            "i18n": {
+                "description": "Mr. Crab.",
+                "name": "Crab"
+            },
+            "id": 30,
+            "sid": "crab"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.15000000596046448,
+                    "type": 33
+                },
+                {
+                    "baseChance": 0.25,
+                    "type": 34
+                }
+            ],
+            "i18n": {
+                "description": "Makes the most delicious jam.",
+                "name": "Jellyfish"
+            },
+            "id": 31,
+            "sid": "jellyfish"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.15000000596046448,
+                    "type": 37
+                },
+                {
+                    "baseChance": 0.15000000596046448,
+                    "type": 39
+                }
+            ],
+            "i18n": {
+                "description": "Wrong game, bud.",
+                "name": "Digger"
+            },
+            "id": 32,
+            "sid": "digger"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.25,
+                    "type": 40
+                },
+                {
+                    "baseChance": 0.10000000149011612,
+                    "type": 90
+                }
+            ],
+            "i18n": {
+                "description": "Bob.",
+                "name": "Sponge"
+            },
+            "id": 33,
+            "sid": "sponge"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.25,
+                    "type": 42
+                },
+                {
+                    "baseChance": 0.25,
+                    "type": 12
+                }
+            ],
+            "i18n": {
+                "description": "Slurp slurp.",
+                "name": "Leech"
+            },
+            "id": 34,
+            "sid": "leech"
+        },
+        {
+            "drops": [],
+            "i18n": {
+                "description": "Slurp slurp.",
+                "name": "Leech"
+            },
+            "id": 35,
+            "sid": "leech_body"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.30000001192092896,
+                    "type": 15
+                }
+            ],
+            "i18n": {
+                "description": "Puffy.",
+                "name": "Dandelion"
+            },
+            "id": 36,
+            "sid": "dandelion"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.25,
+                    "type": 2
+                },
+                {
+                    "baseChance": 0.10000000149011612,
+                    "type": 28
+                }
+            ],
+            "i18n": {
+                "description": "This ant is on fireeeeeeeeeeeeee.",
+                "name": "Baby Fire Ant"
+            },
+            "id": 37,
+            "sid": "fire_ant_baby"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.15000000596046448,
+                    "type": 28
+                },
+                {
+                    "baseChance": 0.15000000596046448,
+                    "type": 25
+                }
+            ],
+            "i18n": {
+                "description": "This ant is on fireeeeeeeeeeeeee.",
+                "name": "Worker Fire Ant"
+            },
+            "id": 38,
+            "sid": "fire_ant_worker"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.30000001192092896,
+                    "type": 49
+                },
+                {
+                    "baseChance": 0.5,
+                    "type": 51
+                }
+            ],
+            "i18n": {
+                "description": "This ant is on fireeeeeeeeeeeeee.",
+                "name": "Queen Fire Ant"
+            },
+            "id": 39,
+            "sid": "fire_ant_queen"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.25,
+                    "type": 51
+                }
+            ],
+            "i18n": {
+                "description": "Not yet an ant but perhaps soon.",
+                "name": "Ant Egg"
+            },
+            "id": 40,
+            "sid": "ant_egg"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.25,
+                    "type": 51
+                }
+            ],
+            "i18n": {
+                "description": "This ant is not yet on fire.",
+                "name": "Fire Ant Egg"
+            },
+            "id": 41,
+            "sid": "fire_ant_egg"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.25,
+                    "type": 52
+                },
+                {
+                    "baseChance": 0.25,
+                    "type": 8
+                },
+                {
+                    "baseChance": 0.10000000149011612,
+                    "type": 68
+                }
+            ],
+            "i18n": {
+                "description": "Hzzzzzzzzzzzz.",
+                "name": "Fly"
+            },
+            "id": 42,
+            "sid": "fly"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.25,
+                    "type": 22
+                },
+                {
+                    "baseChance": 0.25,
+                    "type": 65
+                }
+            ],
+            "i18n": {
+                "description": "It's not a leaf, but it is a bug.",
+                "name": "Leafbug"
+            },
+            "id": 43,
+            "sid": "leafbug"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.25,
+                    "type": 44
+                },
+                {
+                    "baseChance": 0.25,
+                    "type": 64
+                }
+            ],
+            "i18n": {
+                "description": "You better pray you don't become dinner.",
+                "name": "Mantis"
+            },
+            "id": 44,
+            "sid": "mantis"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.05000000074505806,
+                    "type": 53
+                },
+                {
+                    "baseChance": 0.25,
+                    "type": 57
+                }
+            ],
+            "i18n": {
+                "description": "Weak and defenseless, but big dreams.<n/>These creatures appear to be connected somehow.",
+                "name": "Baby Termite"
+            },
+            "id": 45,
+            "sid": "termite_baby"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.05000000074505806,
+                    "type": 53
+                },
+                {
+                    "baseChance": 0.15000000596046448,
+                    "type": 59
+                }
+            ],
+            "i18n": {
+                "description": "It's a bit temperamental, probably from working all the time.<n/>These creatures appear to be connected somehow.",
+                "name": "Worker Termite"
+            },
+            "id": 46,
+            "sid": "termite_worker"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.05000000074505806,
+                    "type": 53
+                },
+                {
+                    "baseChance": 0.15000000596046448,
+                    "type": 58
+                }
+            ],
+            "i18n": {
+                "description": "It's got wings and it's ready to use them.<n/>These creatures appear to be connected somehow.",
+                "name": "Soldier Termite"
+            },
+            "id": 47,
+            "sid": "termite_soldier"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.15000000596046448,
+                    "type": 60
+                },
+                {
+                    "baseChance": 0.5,
+                    "type": 53
+                },
+                {
+                    "baseChance": 1,
+                    "type": 71
+                }
+            ],
+            "i18n": {
+                "description": "The one who oversees all.",
+                "name": "Termite Overmind"
+            },
+            "id": 48,
+            "sid": "termite_overmind"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.15000000596046448,
+                    "type": 53
+                },
+                {
+                    "baseChance": 0.25,
+                    "type": 41
+                },
+                {
+                    "baseChance": 0.20000000298023224,
+                    "type": 62
+                }
+            ],
+            "i18n": {
+                "description": "Termites go in, and come out. Can't explain that.",
+                "name": "Termite Mound"
+            },
+            "id": 49,
+            "sid": "termite_mound"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.25,
+                    "type": 51
+                },
+                {
+                    "baseChance": 0.05000000074505806,
+                    "type": 70
+                }
+            ],
+            "i18n": {
+                "description": "Not yet a termite but perhaps soon.",
+                "name": "Termite Egg"
+            },
+            "id": 50,
+            "sid": "termite_egg"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.25,
+                    "type": 56
+                }
+            ],
+            "i18n": {
+                "description": "Don't misunderestimate me.",
+                "name": "Bush"
+            },
+            "id": 51,
+            "sid": "bush"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.25,
+                    "type": 17
+                },
+                {
+                    "baseChance": 0.05000000074505806,
+                    "type": 54
+                }
+            ],
+            "i18n": {
+                "description": "Gotta go FAST... until they get tired.",
+                "name": "Roach"
+            },
+            "id": 52,
+            "sid": "roach"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.25,
+                    "type": 8
+                },
+                {
+                    "baseChance": 0.25,
+                    "type": 55
+                }
+            ],
+            "i18n": {
+                "description": "Easily scared, be nice.",
+                "name": "Moth"
+            },
+            "id": 53,
+            "sid": "moth"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.25,
+                    "type": 8
+                },
+                {
+                    "baseChance": 0.25,
+                    "type": 55
+                },
+                {
+                    "baseChance": 0.05000000074505806,
+                    "type": 69
+                }
+            ],
+            "i18n": {
+                "description": "Oooooh shiny.",
+                "name": "Firefly"
+            },
+            "id": 54,
+            "sid": "firefly"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.009999999776482582,
+                    "type": 61
+                },
+                {
+                    "baseChance": 0.019999999552965164,
+                    "type": 16
+                },
+                {
+                    "baseChance": 0.10000000149011612,
+                    "type": 67
+                }
+            ],
+            "i18n": {
+                "description": "Scourge that spawns in the other plane.",
+                "name": "Beetle"
+            },
+            "id": 55,
+            "sid": "beetle_hel"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.75,
+                    "type": 9
+                },
+                {
+                    "baseChance": 0.20000000298023224,
+                    "type": 17
+                },
+                {
+                    "baseChance": 0.10000000149011612,
+                    "type": 63
+                }
+            ],
+            "i18n": {
+                "description": "They are ANGRY.",
+                "name": "Wasp"
+            },
+            "id": 56,
+            "sid": "wasp"
+        },
+        {
+            "drops": [],
+            "i18n": {
+                "description": "How do you have this in your gallery?",
+                "name": "Target Dummy"
+            },
+            "id": 57,
+            "sid": "dummy"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.009999999776482582,
+                    "type": 61
+                },
+                {
+                    "baseChance": 0.009999999776482582,
+                    "type": 43
+                },
+                {
+                    "baseChance": 0.10000000149011612,
+                    "type": 76
+                }
+            ],
+            "i18n": {
+                "description": "Scourge that spawns in the other plane.",
+                "name": "Spider"
+            },
+            "id": 58,
+            "sid": "spider_hel"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.0010000000474974513,
+                    "type": 61
+                },
+                {
+                    "baseChance": 0.009999999776482582,
+                    "type": 75
+                }
+            ],
+            "i18n": {
+                "description": "Scourge that spawns in the other plane.",
+                "name": "Centipede"
+            },
+            "id": 59,
+            "sid": "centipede_hel"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.0010000000474974513,
+                    "type": 61
+                },
+                {
+                    "baseChance": 0.009999999776482582,
+                    "type": 75
+                }
+            ],
+            "i18n": {
+                "description": "Scourge that spawns in the other plane.",
+                "name": "Centipede"
+            },
+            "id": 60,
+            "sid": "centipede_hel_body"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.009999999776482582,
+                    "type": 61
+                },
+                {
+                    "baseChance": 0.75,
+                    "type": 9
+                },
+                {
+                    "baseChance": 0.10000000149011612,
+                    "type": 75
+                }
+            ],
+            "i18n": {
+                "description": "Scourge that spawns in the other plane.",
+                "name": "Wasp"
+            },
+            "id": 61,
+            "sid": "wasp_hel"
+        },
+        {
+            "drops": [],
+            "i18n": {
+                "description": "",
+                "name": "Trader"
+            },
+            "id": 62,
+            "sid": "trader"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 1,
+                    "type": 75
+                },
+                {
+                    "baseChance": 1,
+                    "type": 76
+                },
+                {
+                    "baseChance": 1,
+                    "type": 67
+                },
+                {
+                    "baseChance": 1,
+                    "type": 80
+                }
+            ],
+            "i18n": {
+                "description": "This can happen to YOU.",
+                "name": "Gambler"
+            },
+            "id": 63,
+            "sid": "gambler"
+        },
+        {
+            "drops": [],
+            "i18n": {
+                "description": "",
+                "name": "Oracle"
+            },
+            "id": 64,
+            "sid": "oracle"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.2800000011920929,
+                    "type": 81
+                },
+                {
+                    "baseChance": 1,
+                    "type": 69
+                }
+            ],
+            "i18n": {
+                "description": "There's something magical about this one.",
+                "name": "Firefly"
+            },
+            "id": 65,
+            "sid": "firefly_magic"
+        },
+        {
+            "drops": [],
+            "i18n": {
+                "description": "",
+                "name": "Titan"
+            },
+            "id": 66,
+            "sid": "titan"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 1,
+                    "type": 16
+                },
+                {
+                    "baseChance": 0.03999999910593033,
+                    "type": 66
+                },
+                {
+                    "baseChance": 0.009999999776482582,
+                    "type": 92
+                }
+            ],
+            "i18n": {
+                "description": "This one has a different pattern... what does that mean?",
+                "name": "Beetle"
+            },
+            "id": 67,
+            "sid": "beetle_nazar"
+        },
+        {
+            "drops": [
+                {
+                    "baseChance": 0.15000000596046448,
+                    "type": 73
+                },
+                {
+                    "baseChance": 0.10000000149011612,
+                    "type": 41
+                }
+            ],
+            "i18n": {
+                "description": "It's supposed to eat dirt but this one's eating flowers.",
+                "name": "Worm"
+            },
+            "id": 68,
+            "sid": "worm"
+        },
+        {
+            "drops": [],
+            "i18n": {
+                "description": "You're not supposed to see this text. I'm calling the police.",
+                "name": "Worm guts"
+            },
+            "id": 69,
+            "sid": "worm_guts"
+        }
     ],
     "petal": [
         {
-            "index": 1,
-            "name": "Basic",
-            "displayName": "Basic",
-            "description": "A nice petal, not too strong but not too weak."
-        },
-        {
-            "index": 2,
-            "name": "Light",
-            "displayName": "Light",
-            "description": "Weaker than most petals, but recharges very quickly."
-        },
-        {
-            "index": 3,
-            "name": "Rock",
-            "displayName": "Rock",
-            "description": "Extremely durable, but takes a bit longer to recharge."
-        },
-        {
-            "index": 4,
-            "name": "Square",
-            "displayName": "Square",
-            "description": "This shape... it looks familiar..."
-        },
-        {
-            "index": 5,
-            "name": "Rose",
-            "displayName": "Rose",
-            "description": "Its healing properties are amazing. Not so good at combat though."
-        },
-        {
-            "index": 6,
-            "name": "Stinger",
-            "displayName": "Stinger",
-            "description": "It really hurts, but it's very fragile."
-        },
-        {
-            "index": 7,
-            "name": "Iris",
-            "displayName": "Iris",
-            "description": "Very poisonous, but takes a little while to do its work."
-        },
-        {
-            "index": 8,
-            "name": "Wing",
-            "displayName": "Wing",
-            "description": "It comes and goes."
-        },
-        {
-            "index": 9,
-            "name": "Missile",
-            "displayName": "Missile",
-            "description": "You can actually shoot this one."
-        },
-        {
-            "index": 10,
-            "name": "Grapes",
-            "displayName": "Grapes",
-            "description": "It goes poof. Now with a secret ingredient: poison."
-        },
-        {
-            "index": 11,
-            "name": "Cactus",
-            "displayName": "Cactus",
-            "description": "Not very strong, but somehow increases your maximum health."
-        },
-        {
-            "index": 12,
-            "name": "Faster",
-            "displayName": "Faster",
-            "description": "It's so light it makes your other petals spin faster."
-        },
-        {
-            "index": 13,
-            "name": "Bubble",
-            "displayName": "Bubble",
-            "description": "Physics are for the weak."
-        },
-        {
-            "index": 14,
-            "name": "Pollen",
-            "displayName": "Pollen",
-            "description": "Asthmatics beware."
-        },
-        {
-            "index": 15,
-            "name": "Dandelion",
-            "displayName": "Dandelion",
-            "description": "Its interesting properties inhibits healing effects on affected units.<n/>Affected units have their healing reduced by 20%. Stacks with itself."
-        },
-        {
-            "index": 16,
-            "name": "Beetle Egg",
-            "displayName": "Egg",
-            "description": "Something interesting might pop out of this."
-        },
-        {
-            "index": 17,
-            "name": "Antennae",
-            "displayName": "Antennae",
-            "description": "Allows your flower to sense foes farther away."
-        },
-        {
-            "index": 18,
-            "name": "Heavy",
-            "displayName": "Heavy",
-            "description": "This thing is so heavy that nothing gets in the way.<n/>Slows down petal rotation speed when equipped."
-        },
-        {
-            "index": 19,
-            "name": "Yin Yang",
-            "displayName": "Yin Yang",
-            "description": "This mysterious petal affects the rotation of your petals in unpredictable ways."
-        },
-        {
-            "index": 20,
-            "name": "Web",
-            "displayName": "Web",
-            "description": "It's really sticky."
-        },
-        {
-            "index": 21,
-            "name": "Honey",
-            "displayName": "Honey",
-            "description": "Mobs love this. Attracts them in a large radius.<n/>Mobs will prioritize this over flowers.<n/>Affected units develop immunity to its effects after some time."
-        },
-        {
-            "index": 22,
-            "name": "Leaf",
-            "displayName": "Leaf",
-            "description": "Gathers energy from the sun to heal your flower passively."
-        },
-        {
-            "index": 23,
-            "name": "Salt",
-            "displayName": "Salt",
-            "description": "Reflects some of the damage you take back to the enemy that dealt it.<n/>Higher rarity mobs have higher resistance to damage reflection."
-        },
-        {
-            "index": 24,
-            "name": "Rice",
-            "displayName": "Rice",
-            "description": "Spawns very quickly, but not very strong."
-        },
-        {
-            "index": 25,
-            "name": "Corn",
-            "displayName": "Corn",
-            "description": "Takes a long time to spawn, but has a lot of health."
-        },
-        {
-            "index": 26,
-            "name": "Sand",
-            "displayName": "Sand",
-            "description": "A bunch of sand particles."
-        },
-        {
-            "index": 27,
-            "name": "Pincer",
-            "displayName": "Pincer",
-            "description": "Debilitates enemies temporarily, reducing their movement speed."
-        },
-        {
-            "index": 28,
-            "name": "Yucca",
-            "displayName": "Yucca",
-            "description": "Heals your flower but only while in the defensive position."
-        },
-        {
-            "index": 29,
-            "name": "Magnet",
-            "displayName": "Magnet",
-            "description": "Increases drop pick up range."
-        },
-        {
-            "index": 30,
-            "name": "Yggdrasil",
-            "displayName": "Yggdrasil",
-            "description": "A dried leaf from the Yggdrasil tree.<n/>Rumored to be able to bring the fallen back to life."
-        },
-        {
-            "index": 31,
-            "name": "Starfish",
-            "displayName": "Starfish",
-            "description": "Increases health regen while below 75% health."
-        },
-        {
-            "index": 32,
-            "name": "Pearl",
-            "displayName": "Pearl",
-            "description": "Just drop it off somewhere and use your kinetic powers so you don't lose it."
-        },
-        {
-            "index": 33,
-            "name": "Lightning",
-            "displayName": "Lightning",
-            "description": "Strikes several nearby enemies."
-        },
-        {
-            "index": 34,
-            "name": "Jelly",
-            "displayName": "Jelly",
-            "description": "No one likes touching this."
-        },
-        {
-            "index": 35,
-            "name": "Claw",
-            "displayName": "Claw",
-            "description": "Deals extra damage if the victim is above 80% health.<n/>-50% damage vs other flowers."
-        },
-        {
-            "index": 36,
-            "name": "Shell",
-            "displayName": "Shell",
-            "description": "Adds a temporary shield to yourself or allies."
-        },
-        {
-            "index": 37,
-            "name": "Cutter",
-            "displayName": "Cutter",
-            "description": "A friend used to own this... now it's time for revenge.<n/>Increases body damage."
-        },
-        {
-            "index": 38,
-            "name": "Dahlia",
-            "displayName": "Dahlia",
-            "description": "A small amount of heal but fairly consistent."
-        },
-        {
-            "index": 39,
-            "name": "Uranium",
-            "displayName": "Uranium",
-            "description": "Periodically releases radiation.<n/>-75% damage versus other flowers.<n/>Effect strength depends on distance to petal."
-        },
-        {
-            "index": 40,
-            "name": "Sponge",
-            "displayName": "Sponge",
-            "description": "Spreads damage taken by the flower over a period of time.<n/>If destroyed, deals remaining damage all at once.<n/>Does not delay <c val=\"#ce76db\">Poison</c> damage."
-        },
-        {
-            "index": 41,
-            "name": "Soil",
-            "displayName": "Soil",
-            "description": "Increases health, but also increases flower size and decreases movement speed."
-        },
-        {
-            "index": 42,
-            "name": "Fangs",
-            "displayName": "Fangs",
-            "description": "Heals based on damage dealt by this petal."
-        },
-        {
-            "index": 43,
-            "name": "Third Eye",
-            "displayName": "Third Eye",
-            "description": "Allows your flower to expand your petals further out."
-        },
-        {
-            "index": 44,
-            "name": "Peas",
-            "displayName": "Peas",
-            "description": "It goes poof."
-        },
-        {
-            "index": 45,
-            "name": "Mysterious Stick",
-            "displayName": "Stick",
-            "description": "A mysterious stick that summons the forces of the wind."
-        },
-        {
-            "index": 46,
-            "name": "Clover",
-            "displayName": "Clover",
-            "description": "Increases your luck.<n/>Luck is used by specific petals to change their stats."
-        },
-        {
-            "index": 47,
-            "name": "Mysterious Powder",
-            "displayName": "Powder",
-            "description": "Increases movement speed.<n/>Disabled if flower takes damage or if near a mob higher than a certain rarity."
-        },
-        {
-            "index": 48,
-            "name": "Air",
-            "displayName": "Air",
-            "description": "It's literally nothing."
-        },
-        {
-            "index": 49,
-            "name": "Basil",
-            "displayName": "Basil",
-            "description": "Increases all healing received."
-        },
-        {
-            "index": 50,
-            "name": "Orange",
-            "displayName": "Orange",
-            "description": "A sweet citrus fruit."
-        },
-        {
-            "index": 51,
-            "name": "Ant Egg",
-            "displayName": "Egg",
-            "description": "Something interesting might pop out of this."
-        },
-        {
-            "index": 52,
-            "name": "Poo",
-            "displayName": "Poo",
-            "description": "Makes mobs less likely to want to attack you."
-        },
-        {
-            "index": 53,
-            "name": "Mysterious Relic",
-            "displayName": "Relic",
-            "description": "A strange relic. Significantly increases maximum health.<n/>Damage taken is spread among other wearers."
-        },
-        {
-            "index": 54,
-            "name": "Lotus",
-            "displayName": "Lotus",
-            "description": "Absorbs poison damage taken by the flower."
-        },
-        {
-            "index": 55,
-            "name": "Light Bulb",
-            "displayName": "Bulb",
-            "description": "A shiny lightbulb. Draws aggro from mobs."
-        },
-        {
-            "index": 56,
-            "name": "Cotton",
-            "displayName": "Cotton",
-            "description": "Absorbs damage taken by the flower."
-        },
-        {
-            "index": 57,
-            "name": "Carrot",
-            "displayName": "Carrot",
-            "description": "Sturdy and reliable. Can be shot and bounces off walls."
-        },
-        {
-            "index": 58,
-            "name": "Bone",
-            "displayName": "Bone",
-            "description": "Sturdy."
-        },
-        {
-            "index": 59,
-            "name": "Plank",
-            "displayName": "Plank",
-            "description": "Does 20x damage vs projectiles and petals."
-        },
-        {
-            "index": 60,
-            "name": "Tomato",
-            "displayName": "Tomato",
-            "description": "Gets stronger over time."
-        },
-        {
-            "index": 61,
-            "name": "Dark Mark",
-            "displayName": "Mark",
-            "description": "A dark mark that binds itself to a fallen soul."
-        },
-        {
-            "index": 62,
-            "name": "Rubber",
-            "displayName": "Rubber",
-            "description": "Increases knockback received. Also absorbs lightning damage dealt to the flower."
-        },
-        {
-            "index": 63,
-            "name": "Blood Stinger",
-            "displayName": "Stinger",
-            "description": "It really hurts, but it's very fragile.<n/>Deals some of the damage dealt back to the flower."
-        },
-        {
-            "index": 64,
-            "name": "Bur",
-            "displayName": "Bur",
-            "description": "Decreases armor of affected unit. Does not stack with itself."
-        },
-        {
-            "index": 65,
-            "name": "Root",
-            "displayName": "Root",
-            "description": "Provides additional armor but only while in the defensive position."
-        },
-        {
-            "index": 66,
-            "name": "Ankh",
-            "displayName": "Ankh",
-            "description": "An ancient relic.<n/>When destroyed, will teleport the flower back to where it was destroyed."
-        },
-        {
-            "index": 67,
-            "name": "Dice",
-            "displayName": "Dice",
-            "description": "Has a 5% chance of dealing 35x damage.<n/>Chance increases by 4% per point in luck."
-        },
-        {
-            "index": 68,
-            "name": "Talisman of Evasion",
-            "displayName": "Talisman",
-            "description": "A necklace that allows the wearer to anticipate enemy attacks."
-        },
-        {
-            "index": 69,
-            "name": "Battery",
-            "displayName": "Battery",
-            "description": "Discharges electricity whenever the flower gets hit."
-        },
-        {
-            "index": 70,
-            "name": "Amulet",
-            "displayName": "Amulet",
-            "description": "Converts a percentage of overheal into shields."
-        },
-        {
-            "index": 71,
-            "name": "Compass",
-            "displayName": "Compass",
-            "description": "This crappy thing might be able to find something interesting..."
-        },
-        {
-            "index": 72,
-            "name": "Disc",
-            "displayName": "Disc",
-            "description": "Reduces damage taken from collisions with mobs and flowers."
-        },
-        {
-            "index": 73,
-            "name": "Shovel",
-            "displayName": "Shovel",
-            "description": "Becomes untargetable but unable to use petals for a limited time."
-        },
-        {
-            "index": 74,
-            "name": "Coin",
-            "displayName": "Coin",
-            "description": "The power of capitalism compels you!"
-        },
-        {
-            "index": 75,
-            "name": "Poker Chip",
-            "displayName": "Chip",
-            "description": "ALL IN."
-        },
-        {
-            "index": 76,
-            "name": "Card",
-            "displayName": "Card",
-            "description": "A playing card. Likely marked."
-        },
-        {
-            "index": 77,
-            "name": "Moon Rock",
-            "displayName": "Moon",
-            "description": "This thing is so big your petals orbit it instead.<n/>Where did you find this anyway?"
-        },
-        {
-            "index": 78,
-            "name": "Privet Berry",
-            "displayName": "Privet",
-            "description": "Deals extra <c val=\"#ce76db\">Poison</c> damage based on the existing <c val=\"#ce76db\">Poison</c> damage per second."
-        },
-        {
-            "index": 79,
-            "name": "Glass",
-            "displayName": "Glass",
-            "description": "Phases through enemies.<n/>Cannot damage enemies more often than a certain interval."
-        },
-        {
-            "index": 80,
-            "name": "Corruption",
-            "displayName": "Corruption",
-            "description": "Corrupts one's soul, turning them against their own kind."
-        },
-        {
-            "index": 81,
-            "name": "Mana Orb",
-            "displayName": "Orb",
-            "description": "Creates mana."
-        },
-        {
-            "index": 82,
-            "name": "Blueberries",
-            "displayName": "Blueberries",
-            "description": "It goes poof. Now with the extra secret ingredient: lightning."
-        },
-        {
-            "index": 83,
-            "name": "Magic Cotton",
-            "displayName": "Cotton",
-            "description": "Absorbs damage taken by the flower."
-        },
-        {
-            "index": 84,
-            "name": "Magic Stinger",
-            "displayName": "Stinger",
-            "description": "It really hurts, but it's very fragile."
-        },
-        {
-            "index": 85,
-            "name": "Magic Leaf",
-            "displayName": "Leaf",
-            "description": "Gathers mana from the environment passively."
-        },
-        {
-            "index": 86,
-            "name": "Magic Cactus",
-            "displayName": "Cactus",
-            "description": "Increases maximum mana capacity."
-        },
-        {
-            "index": 87,
-            "name": "Magic Eye",
-            "displayName": "Magic Eye",
-            "description": "Consumes half the current mana and deals damage based on that value."
-        },
-        {
-            "index": 88,
-            "name": "Magic Missile",
-            "displayName": "Missile",
-            "description": "You can actually shoot this one... with magic."
-        },
-        {
-            "index": 89,
-            "name": "Magic Stick",
-            "displayName": "Stick",
-            "description": "A mysterious stick that summons the forces of the wind... with magic."
-        },
-        {
-            "index": 90,
-            "name": "Coral",
-            "displayName": "Coral",
-            "description": "Breaks apart on impact.<n/>Each piece has 50% of the stats of the predecessor."
-        },
-        {
-            "index": 91,
-            "name": "Magic Bubble",
-            "displayName": "Bubble",
-            "description": "Physics are for the magicless."
-        },
-        {
-            "index": 92,
-            "name": "Nazar Amulet",
-            "displayName": "Nazar",
-            "description": "Reduces one damage instance damage by 98%."
+            "i18n": {
+                "description": "A nice petal, not too strong but not too weak.",
+                "fullName": "Basic",
+                "name": "Basic"
+            },
+            "id": 1,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false
+        },
+        {
+            "i18n": {
+                "description": "Weaker than most petals, but recharges very quickly.",
+                "fullName": "Light",
+                "name": "Light"
+            },
+            "id": 2,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 4
+        },
+        {
+            "i18n": {
+                "description": "Extremely durable, but takes a bit longer to recharge.",
+                "fullName": "Rock",
+                "name": "Rock"
+            },
+            "id": 3,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 3
+        },
+        {
+            "allowedDropRarities": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "i18n": {
+                "description": "This shape... it looks familiar...",
+                "fullName": "Square",
+                "name": "Square"
+            },
+            "id": 4,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false
+        },
+        {
+            "i18n": {
+                "description": "Its healing properties are amazing. Not so good at combat though.",
+                "fullName": "Rose",
+                "name": "Rose"
+            },
+            "id": 5,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 3
+        },
+        {
+            "i18n": {
+                "description": "It really hurts, but it's very fragile.",
+                "fullName": "Stinger",
+                "name": "Stinger"
+            },
+            "id": 6,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "magicVersion": 84,
+            "premiumPrice": 4
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "Very poisonous, but takes a little while to do its work.",
+                "fullName": "Iris",
+                "name": "Iris"
+            },
+            "id": 7,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 2
+        },
+        {
+            "i18n": {
+                "description": "It comes and goes.",
+                "fullName": "Wing",
+                "name": "Wing"
+            },
+            "id": 8,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 2
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "You can actually shoot this one.",
+                "fullName": "Missile",
+                "name": "Missile"
+            },
+            "id": 9,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "magicVersion": 88,
+            "premiumPrice": 1
+        },
+        {
+            "i18n": {
+                "description": "It goes poof. Now with a secret ingredient: poison.",
+                "fullName": "Grapes",
+                "name": "Grapes"
+            },
+            "id": 10,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "magicVersion": 82,
+            "premiumPrice": 2
+        },
+        {
+            "i18n": {
+                "description": "Not very strong, but somehow increases your maximum health.",
+                "fullName": "Cactus",
+                "name": "Cactus"
+            },
+            "id": 11,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "magicVersion": 86,
+            "premiumPrice": 2
+        },
+        {
+            "i18n": {
+                "description": "It's so light it makes your other petals spin faster.",
+                "fullName": "Faster",
+                "name": "Faster"
+            },
+            "id": 12,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 2
+        },
+        {
+            "i18n": {
+                "description": "Physics are for the weak.",
+                "fullName": "Bubble",
+                "name": "Bubble"
+            },
+            "id": 13,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "magicVersion": 91,
+            "premiumPrice": 4
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "Asthmatics beware.",
+                "fullName": "Pollen",
+                "name": "Pollen"
+            },
+            "id": 14,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 4
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "Its interesting properties inhibits healing effects on affected units.<n/>Affected units have their healing reduced by 20%. Stacks with itself.",
+                "fullName": "Dandelion",
+                "name": "Dandelion"
+            },
+            "id": 15,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 1
+        },
+        {
+            "i18n": {
+                "description": "Something interesting might pop out of this.",
+                "fullName": "Beetle Egg",
+                "name": "Egg"
+            },
+            "id": 16,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 3
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "Allows your flower to sense foes farther away.",
+                "fullName": "Antennae",
+                "name": "Antennae"
+            },
+            "id": 17,
+            "isPassive": true,
+            "isStackable": false,
+            "magicPetal": false,
+            "premiumPrice": 2
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "This thing is so heavy that nothing gets in the way.<n/>Slows down petal rotation speed when equipped.",
+                "fullName": "Heavy",
+                "name": "Heavy"
+            },
+            "id": 18,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 4
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "This mysterious petal affects the rotation of your petals in unpredictable ways.",
+                "fullName": "Yin Yang",
+                "name": "Yin Yang"
+            },
+            "id": 19,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 3
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "It's really sticky.",
+                "fullName": "Web",
+                "name": "Web"
+            },
+            "id": 20,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 2
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "Mobs love this. Attracts them in a large radius.<n/>Mobs will prioritize this over flowers.<n/>Affected units develop immunity to its effects after some time.",
+                "fullName": "Honey",
+                "name": "Honey"
+            },
+            "id": 21,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 3
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "Gathers energy from the sun to heal your flower passively.",
+                "fullName": "Leaf",
+                "name": "Leaf"
+            },
+            "id": 22,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "magicVersion": 85,
+            "premiumPrice": 3
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "Reflects some of the damage you take back to the enemy that dealt it.<n/>Higher rarity mobs have higher resistance to damage reflection.",
+                "fullName": "Salt",
+                "name": "Salt"
+            },
+            "id": 23,
+            "isPassive": false,
+            "isStackable": false,
+            "magicPetal": false,
+            "premiumPrice": 3
+        },
+        {
+            "i18n": {
+                "description": "Spawns very quickly, but not very strong.",
+                "fullName": "Rice",
+                "name": "Rice"
+            },
+            "id": 24,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 4
+        },
+        {
+            "i18n": {
+                "description": "Takes a long time to spawn, but has a lot of health.",
+                "fullName": "Corn",
+                "name": "Corn"
+            },
+            "id": 25,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 4
+        },
+        {
+            "i18n": {
+                "description": "A bunch of sand particles.",
+                "fullName": "Sand",
+                "name": "Sand"
+            },
+            "id": 26,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 4
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "Debilitates enemies temporarily, reducing their movement speed.",
+                "fullName": "Pincer",
+                "name": "Pincer"
+            },
+            "id": 27,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 2
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "Heals your flower but only while in the defensive position.",
+                "fullName": "Yucca",
+                "name": "Yucca"
+            },
+            "id": 28,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 1
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "Increases drop pick up range.",
+                "fullName": "Magnet",
+                "name": "Magnet"
+            },
+            "id": 29,
+            "isPassive": false,
+            "isStackable": false,
+            "magicPetal": false,
+            "premiumPrice": 3
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "A dried leaf from the Yggdrasil tree.<n/>Rumored to be able to bring the fallen back to life.",
+                "fullName": "Yggdrasil",
+                "name": "Yggdrasil"
+            },
+            "id": 30,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 100
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "Increases health regen while below 75% health.",
+                "fullName": "Starfish",
+                "name": "Starfish"
+            },
+            "id": 31,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 3
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "Just drop it off somewhere and use your kinetic powers so you don't lose it.",
+                "fullName": "Pearl",
+                "name": "Pearl"
+            },
+            "id": 32,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 1
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "Strikes several nearby enemies.",
+                "fullName": "Lightning",
+                "name": "Lightning"
+            },
+            "id": 33,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 3
+        },
+        {
+            "i18n": {
+                "description": "No one likes touching this.",
+                "fullName": "Jelly",
+                "name": "Jelly"
+            },
+            "id": 34,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 2
+        },
+        {
+            "i18n": {
+                "description": "Deals extra damage if the victim is above 80% health.<n/>-50% damage vs other flowers.",
+                "fullName": "Claw",
+                "name": "Claw"
+            },
+            "id": 35,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 3
+        },
+        {
+            "i18n": {
+                "description": "Adds a temporary shield to yourself or allies.",
+                "fullName": "Shell",
+                "name": "Shell"
+            },
+            "id": 36,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 2
+        },
+        {
+            "i18n": {
+                "description": "A friend used to own this... now it's time for revenge.<n/>Increases body damage.",
+                "fullName": "Cutter",
+                "name": "Cutter"
+            },
+            "id": 37,
+            "isPassive": true,
+            "isStackable": false,
+            "magicPetal": false,
+            "premiumPrice": 20
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "A small amount of heal but fairly consistent.",
+                "fullName": "Dahlia",
+                "name": "Dahlia"
+            },
+            "id": 38,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 1
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "Periodically releases radiation.<n/>-75% damage versus other flowers.<n/>Effect strength depends on distance to petal.",
+                "fullName": "Uranium",
+                "name": "Uranium"
+            },
+            "id": 39,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 5
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "Spreads damage taken by the flower over a period of time.<n/>If destroyed, deals remaining damage all at once.<n/>Does not delay <c val=\"#ce76db\">Poison</c> damage.",
+                "fullName": "Sponge",
+                "name": "Sponge"
+            },
+            "id": 40,
+            "isPassive": false,
+            "isStackable": false,
+            "magicPetal": false,
+            "premiumPrice": 4
+        },
+        {
+            "i18n": {
+                "description": "Increases health, but also increases flower size and decreases movement speed.",
+                "fullName": "Soil",
+                "name": "Soil"
+            },
+            "id": 41,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 6
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "Heals based on damage dealt by this petal.",
+                "fullName": "Fangs",
+                "name": "Fangs"
+            },
+            "id": 42,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 2
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "Allows your flower to expand your petals further out.",
+                "fullName": "Third Eye",
+                "name": "Third Eye"
+            },
+            "id": 43,
+            "isPassive": true,
+            "isStackable": false,
+            "magicPetal": false,
+            "magicVersion": 87,
+            "premiumPrice": 10
+        },
+        {
+            "i18n": {
+                "description": "It goes poof.",
+                "fullName": "Peas",
+                "name": "Peas"
+            },
+            "id": 44,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "magicVersion": 82,
+            "premiumPrice": 2
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "A mysterious stick that summons the forces of the wind.",
+                "fullName": "Mysterious Stick",
+                "name": "Stick"
+            },
+            "id": 45,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "magicVersion": 89,
+            "premiumPrice": 5
+        },
+        {
+            "i18n": {
+                "description": "Increases your luck.<n/>Luck is used by specific petals to change their stats.",
+                "fullName": "Clover",
+                "name": "Clover"
+            },
+            "id": 46,
+            "isPassive": false,
+            "isStackable": false,
+            "magicPetal": false,
+            "premiumPrice": 2
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "Increases movement speed.<n/>Disabled if flower takes damage or if near a mob higher than a certain rarity.",
+                "fullName": "Mysterious Powder",
+                "name": "Powder"
+            },
+            "id": 47,
+            "isPassive": false,
+            "isStackable": false,
+            "magicPetal": false,
+            "premiumPrice": 2
+        },
+        {
+            "i18n": {
+                "description": "It's literally nothing.",
+                "fullName": "Air",
+                "name": "Air"
+            },
+            "id": 48,
+            "isPassive": true,
+            "isStackable": false,
+            "magicPetal": false,
+            "premiumPrice": 0.5
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "Increases all healing received.",
+                "fullName": "Basil",
+                "name": "Basil"
+            },
+            "id": 49,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 3
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "A sweet citrus fruit.",
+                "fullName": "Orange",
+                "name": "Orange"
+            },
+            "id": 50,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 1
+        },
+        {
+            "i18n": {
+                "description": "Something interesting might pop out of this.",
+                "fullName": "Ant Egg",
+                "name": "Egg"
+            },
+            "id": 51,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 2
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "Makes mobs less likely to want to attack you.",
+                "fullName": "Poo",
+                "name": "Poo"
+            },
+            "id": 52,
+            "isPassive": false,
+            "isStackable": false,
+            "magicPetal": false,
+            "premiumPrice": 1
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "A strange relic. Significantly increases maximum health.<n/>Damage taken is spread among other wearers.",
+                "fullName": "Mysterious Relic",
+                "name": "Relic"
+            },
+            "id": 53,
+            "isPassive": true,
+            "isStackable": false,
+            "magicPetal": false,
+            "premiumPrice": 1
+        },
+        {
+            "i18n": {
+                "description": "Absorbs poison damage taken by the flower.",
+                "fullName": "Lotus",
+                "name": "Lotus"
+            },
+            "id": 54,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 2
+        },
+        {
+            "i18n": {
+                "description": "A shiny lightbulb. Draws aggro from mobs.",
+                "fullName": "Light Bulb",
+                "name": "Bulb"
+            },
+            "id": 55,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 2
+        },
+        {
+            "i18n": {
+                "description": "Absorbs damage taken by the flower.",
+                "fullName": "Cotton",
+                "name": "Cotton"
+            },
+            "id": 56,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "magicVersion": 83,
+            "premiumPrice": 2
+        },
+        {
+            "i18n": {
+                "description": "Sturdy and reliable. Can be shot and bounces off walls.",
+                "fullName": "Carrot",
+                "name": "Carrot"
+            },
+            "id": 57,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 2
+        },
+        {
+            "i18n": {
+                "description": "Sturdy.",
+                "fullName": "Bone",
+                "name": "Bone"
+            },
+            "id": 58,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 3
+        },
+        {
+            "i18n": {
+                "description": "Does 20x damage vs projectiles and petals.",
+                "fullName": "Plank",
+                "name": "Plank"
+            },
+            "id": 59,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 2
+        },
+        {
+            "i18n": {
+                "description": "Gets stronger over time.",
+                "fullName": "Tomato",
+                "name": "Tomato"
+            },
+            "id": 60,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 3
+        },
+        {
+            "i18n": {
+                "description": "A dark mark that binds itself to a fallen soul.",
+                "fullName": "Dark Mark",
+                "name": "Mark"
+            },
+            "id": 61,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 3
+        },
+        {
+            "i18n": {
+                "description": "Increases knockback received. Also absorbs lightning damage dealt to the flower.",
+                "fullName": "Rubber",
+                "name": "Rubber"
+            },
+            "id": 62,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 3
+        },
+        {
+            "i18n": {
+                "description": "It really hurts, but it's very fragile.<n/>Deals some of the damage dealt back to the flower.",
+                "fullName": "Blood Stinger",
+                "name": "Stinger"
+            },
+            "id": 63,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "magicVersion": 84,
+            "premiumPrice": 3
+        },
+        {
+            "i18n": {
+                "description": "Decreases armor of affected unit. Does not stack with itself.",
+                "fullName": "Bur",
+                "name": "Bur"
+            },
+            "id": 64,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 4
+        },
+        {
+            "i18n": {
+                "description": "Provides additional armor but only while in the defensive position.",
+                "fullName": "Root",
+                "name": "Root"
+            },
+            "id": 65,
+            "isPassive": false,
+            "isStackable": false,
+            "magicPetal": false,
+            "premiumPrice": 2
+        },
+        {
+            "i18n": {
+                "description": "An ancient relic.<n/>When destroyed, will teleport the flower back to where it was destroyed.",
+                "fullName": "Ankh",
+                "name": "Ankh"
+            },
+            "id": 66,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 3
+        },
+        {
+            "i18n": {
+                "description": "Has a 5% chance of dealing 35x damage.<n/>Chance increases by 4% per point in luck.",
+                "fullName": "Dice",
+                "name": "Dice"
+            },
+            "id": 67,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 4
+        },
+        {
+            "i18n": {
+                "description": "A necklace that allows the wearer to anticipate enemy attacks.",
+                "fullName": "Talisman of Evasion",
+                "name": "Talisman"
+            },
+            "id": 68,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 1
+        },
+        {
+            "i18n": {
+                "description": "Discharges electricity whenever the flower gets hit.",
+                "fullName": "Battery",
+                "name": "Battery"
+            },
+            "id": 69,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 1
+        },
+        {
+            "i18n": {
+                "description": "Converts a percentage of overheal into shields.",
+                "fullName": "Amulet",
+                "name": "Amulet"
+            },
+            "id": 70,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 3
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "This crappy thing might be able to find something interesting...",
+                "fullName": "Compass",
+                "name": "Compass"
+            },
+            "id": 71,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 5
+        },
+        {
+            "i18n": {
+                "description": "Reduces damage taken from collisions with mobs and flowers.",
+                "fullName": "Disc",
+                "name": "Disc"
+            },
+            "id": 72,
+            "isPassive": true,
+            "isStackable": false,
+            "magicPetal": false,
+            "premiumPrice": 5
+        },
+        {
+            "i18n": {
+                "description": "Becomes untargetable but unable to use petals for a limited time.",
+                "fullName": "Shovel",
+                "name": "Shovel"
+            },
+            "id": 73,
+            "isPassive": false,
+            "isStackable": false,
+            "magicPetal": false,
+            "premiumPrice": 3
+        },
+        {
+            "i18n": {
+                "description": "The power of capitalism compels you!",
+                "fullName": "Coin",
+                "name": "Coin"
+            },
+            "id": 74,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false
+        },
+        {
+            "i18n": {
+                "description": "ALL IN.",
+                "fullName": "Poker Chip",
+                "name": "Chip"
+            },
+            "id": 75,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "A playing card. Likely marked.",
+                "fullName": "Card",
+                "name": "Card"
+            },
+            "id": 76,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 4
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "This thing is so big your petals orbit it instead.<n/>Where did you find this anyway?",
+                "fullName": "Moon Rock",
+                "name": "Moon"
+            },
+            "id": 77,
+            "isPassive": false,
+            "isStackable": false,
+            "magicPetal": false,
+            "premiumPrice": 10
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "Deals extra <c val=\"#ce76db\">Poison</c> damage based on the existing <c val=\"#ce76db\">Poison</c> damage per second.",
+                "fullName": "Privet Berry",
+                "name": "Privet"
+            },
+            "id": 78,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 1
+        },
+        {
+            "i18n": {
+                "description": "Phases through enemies.<n/>Cannot damage enemies more often than a certain interval.",
+                "fullName": "Glass",
+                "name": "Glass"
+            },
+            "id": 79,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 1
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "Corrupts one's soul, turning them against their own kind.",
+                "fullName": "Corruption",
+                "name": "Corruption"
+            },
+            "id": 80,
+            "isPassive": true,
+            "isStackable": true,
+            "magicPetal": false,
+            "minShopRarity": 7,
+            "premiumPrice": 5
+        },
+        {
+            "i18n": {
+                "description": "Creates mana.",
+                "fullName": "Mana Orb",
+                "name": "Orb"
+            },
+            "id": 81,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 5
+        },
+        {
+            "i18n": {
+                "description": "It goes poof. Now with the extra secret ingredient: lightning.",
+                "fullName": "Blueberries",
+                "name": "Blueberries"
+            },
+            "id": 82,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": true,
+            "premiumPrice": 2
+        },
+        {
+            "i18n": {
+                "description": "Absorbs damage taken by the flower.",
+                "fullName": "Magic Cotton",
+                "name": "Cotton"
+            },
+            "id": 83,
+            "isPassive": false,
+            "isStackable": false,
+            "magicPetal": true,
+            "premiumPrice": 2
+        },
+        {
+            "i18n": {
+                "description": "It really hurts, but it's very fragile.",
+                "fullName": "Magic Stinger",
+                "name": "Stinger"
+            },
+            "id": 84,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": true,
+            "premiumPrice": 4
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "Gathers mana from the environment passively.",
+                "fullName": "Magic Leaf",
+                "name": "Leaf"
+            },
+            "id": 85,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": true,
+            "premiumPrice": 3
+        },
+        {
+            "i18n": {
+                "description": "Increases maximum mana capacity.",
+                "fullName": "Magic Cactus",
+                "name": "Cactus"
+            },
+            "id": 86,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": true,
+            "premiumPrice": 2
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "Consumes half the current mana and deals damage based on that value.",
+                "fullName": "Magic Eye",
+                "name": "Magic Eye"
+            },
+            "id": 87,
+            "isPassive": true,
+            "isStackable": false,
+            "magicPetal": true,
+            "premiumPrice": 10
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "You can actually shoot this one... with magic.",
+                "fullName": "Magic Missile",
+                "name": "Missile"
+            },
+            "id": 88,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": true,
+            "premiumPrice": 1
+        },
+        {
+            "allowedDropRarities": [
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "A mysterious stick that summons the forces of the wind... with magic.",
+                "fullName": "Magic Stick",
+                "name": "Stick"
+            },
+            "id": 89,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": true,
+            "premiumPrice": 5
+        },
+        {
+            "i18n": {
+                "description": "Breaks apart on impact.<n/>Each piece has 50% of the stats of the predecessor.",
+                "fullName": "Coral",
+                "name": "Coral"
+            },
+            "id": 90,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": false,
+            "premiumPrice": 1
+        },
+        {
+            "i18n": {
+                "description": "Physics are for the magicless.",
+                "fullName": "Magic Bubble",
+                "name": "Bubble"
+            },
+            "id": 91,
+            "isPassive": false,
+            "isStackable": true,
+            "magicPetal": true,
+            "premiumPrice": 4
+        },
+        {
+            "allowedDropRarities": [
+                true,
+                false,
+                false,
+                true,
+                false,
+                false,
+                true,
+                true,
+                true
+            ],
+            "i18n": {
+                "description": "Reduces one damage instance damage by 98%.",
+                "fullName": "Nazar Amulet",
+                "name": "Nazar"
+            },
+            "id": 92,
+            "isPassive": false,
+            "isStackable": false,
+            "magicPetal": false,
+            "premiumPrice": 5
         }
     ],
     "rarity": [
