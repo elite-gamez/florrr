@@ -11,8 +11,8 @@ Everything here are created by Furaken, Opfer and k2r_n2iq.
 Smaller contributors are already given credits in specific scripts.
 
 ## Game Utils
-window.florrio.utils.generateMobImage(size, type, rarity, flags)
-window.florrio.utils.generatePetalImage(size, type, rarity, flags)
-window.florrio.utils.calculateDropChance(baseDropChance, mobRarity, petalRarity)
-window.florrio.utils.getMobs()
+window.florrio.utils.generateMobImage(size, type, rarity, flags)<br>
+window.florrio.utils.generatePetalImage(size, type, rarity, flags)<br>
+window.florrio.utils.calculateDropChance(baseDropChance, mobRarity, petalRarity)<br>
+window.florrio.utils.getMobs()<br>
 window.florrio.utils.getPetals()
