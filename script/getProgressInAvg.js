@@ -1,12 +1,17 @@
-function findSequence(seq, mem) {
-    let match = 0
-    for (let addr = 0; addr < mem.length; addr++) {
-        if (mem[addr] === seq[match]) match++
-        else if (mem[addr] === seq[0]) match = 1
-        else match = 0
-        if (match === seq.length) return addr - match + 1
+function findSequences(seq, arr) {
+    const res = []
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < seq.length; j++) {
+            if (arr[i + j] !== seq[j]) break
+            if (j === seq.length - 1) res.push(i)
+        }
     }
+    return res
 }
+
+var addr,
+    chances = [0.64, 0.32, 0.16, 0.08, 0.04, 0.02, 0.01, 0, 0],
+    rarity = ["Common", "Unusual", "Rare", "Epic", "Legendary", "Mythic", "Ultra", "Super", "Unique"]
 
 function getPetalAddr(id, rarity) {
     return addr + (id * chances.length) - (chances.length - rarity)
@@ -17,9 +22,7 @@ function getAvg(chance) {
 }
 
 function getPercent(basicPetalNumber, endRarity, petals, ignoreRarities) {
-    let addr = findSequence(basicPetalNumber, Module.HEAPU32)
-    let chances = [0.64, 0.32, 0.16, 0.08, 0.04, 0.02, 0.01, 0, 0]
-    let rarity = ["Common", "Unusual", "Rare", "Epic", "Legendary", "Mythic", "Ultra", "Super", "Unique"]
+    addr = findSequences(basicPetalNumber, Module.HEAPU32)[0]
     petals.forEach(petalName => {
         let id = window.florrio.utils.getPetals().find(x => x.i18n.fullName == petalName).id
         let percent = 0
@@ -47,7 +50,11 @@ getPercent(
     "Super", // desired craft rarity
     [
         "Bone", // input petal's fullName
-        "Mysterious Relic"
+        "Mysterious Relic",
+        "Compass",
+        "Tomato",
+        "Plank",
+        "Carrot"
     ],
     [
         // ignore rarities
