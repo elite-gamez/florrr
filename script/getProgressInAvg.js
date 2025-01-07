@@ -1,4 +1,4 @@
-function findSequences(seq, arr) {
+function findSequences(seq, arr) { // findSequences() by MaxNest
     const res = []
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < seq.length; j++) {
