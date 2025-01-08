@@ -50,7 +50,7 @@ let servers = {},
 updateServers()
 setInterval(() => {
     updateServers()
-}, 5 * 1000)
+}, 30 * 1000)
 
 /*
     getCp6IdByBiome(biome) will give you available cp6 codes if a biome
