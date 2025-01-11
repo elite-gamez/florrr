@@ -10,9 +10,9 @@ function updateServers() {
                     AS: {}
                 }
             }
-            servers[matrixs[i]].NA[data.servers["vultr-miami"].id] = Math.floor(Date.now() / 1000)
-            servers[matrixs[i]].EU[data.servers["vultr-frankfurt"].id] = Math.floor(Date.now() / 1000)
-            servers[matrixs[i]].AS[data.servers["vultr-tokyo"].id] = Math.floor(Date.now() / 1000)
+            if (data?.servers?.["vultr-miami"]?.id) servers[matrixs[i]].NA[data.servers["vultr-miami"].id] = Math.floor(Date.now() / 1000)
+            if (data?.servers?.["vultr-frankfurt"]?.id) servers[matrixs[i]].EU[data.servers["vultr-frankfurt"].id] = Math.floor(Date.now() / 1000)
+            if (data?.servers?.["vultr-tokyo"]?.id) servers[matrixs[i]].AS[data.servers["vultr-tokyo"].id] = Math.floor(Date.now() / 1000)
         });
     }
     for (const [keyMatrix, valueMatrix] of Object.entries(servers)) {
@@ -28,7 +28,7 @@ function getServerByCp6Code(cp6Code) {
     for (const [biome, serversObj] of Object.entries(servers)) {
         for (const [server, obj] of Object.entries(serversObj)) {
             if (Object.keys(obj).includes(cp6Code)) {
-                return {server, biome, cp6Code}
+                return { server, biome, cp6Code }
             }
         }
     }
