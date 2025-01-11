@@ -1,6 +1,7 @@
 {
     "mob": [
         {
+            "id": 1,
             "drops": [
                 {
                     "baseChance": 0.15000000596046448,
@@ -16,13 +17,13 @@
                 }
             ],
             "i18n": {
-                "description": "A rock. It doesn't do much.",
-                "name": "Rock"
+                "name": "Rock",
+                "description": "A rock. It doesn't do much."
             },
-            "id": 1,
             "sid": "rock"
         },
         {
+            "id": 2,
             "drops": [
                 {
                     "baseChance": 0.15000000596046448,
@@ -30,13 +31,13 @@
                 }
             ],
             "i18n": {
-                "description": "Avoid touching it, it hurts.",
-                "name": "Cactus"
+                "name": "Cactus",
+                "description": "Avoid touching it, it hurts."
             },
-            "id": 2,
             "sid": "cactus"
         },
         {
+            "id": 3,
             "drops": [
                 {
                     "baseChance": 0.25,
@@ -48,13 +49,13 @@
                 }
             ],
             "i18n": {
-                "description": "Cute and harmless.",
-                "name": "Ladybug"
+                "name": "Ladybug",
+                "description": "Cute and harmless."
             },
-            "id": 3,
             "sid": "ladybug"
         },
         {
+            "id": 4,
             "drops": [
                 {
                     "baseChance": 0.25,
@@ -70,13 +71,13 @@
                 }
             ],
             "i18n": {
-                "description": "It stings. Don't touch it.",
-                "name": "Bee"
+                "name": "Bee",
+                "description": "It stings. Don't touch it."
             },
-            "id": 4,
             "sid": "bee"
         },
         {
+            "id": 5,
             "drops": [
                 {
                     "baseChance": 0.25,
@@ -92,13 +93,13 @@
                 }
             ],
             "i18n": {
-                "description": "Weak and defenseless, but big dreams.",
-                "name": "Baby Ant"
+                "name": "Baby Ant",
+                "description": "Weak and defenseless, but big dreams."
             },
-            "id": 5,
             "sid": "ant_baby"
         },
         {
+            "id": 6,
             "drops": [
                 {
                     "baseChance": 0.15000000596046448,
@@ -110,13 +111,13 @@
                 }
             ],
             "i18n": {
-                "description": "It's a bit temperamental, probably from working all the time.",
-                "name": "Worker Ant"
+                "name": "Worker Ant",
+                "description": "It's a bit temperamental, probably from working all the time."
             },
-            "id": 6,
             "sid": "ant_worker"
         },
         {
+            "id": 7,
             "drops": [
                 {
                     "baseChance": 0.25,
@@ -128,13 +129,13 @@
                 }
             ],
             "i18n": {
-                "description": "It's got wings and it's ready to use them.",
-                "name": "Soldier Ant"
+                "name": "Soldier Ant",
+                "description": "It's got wings and it's ready to use them."
             },
-            "id": 7,
             "sid": "ant_soldier"
         },
         {
+            "id": 8,
             "drops": [
                 {
                     "baseChance": 0.30000001192092896,
@@ -146,13 +147,13 @@
                 }
             ],
             "i18n": {
-                "description": "You must have done something really bad if she's chasing you.",
-                "name": "Queen Ant"
+                "name": "Queen Ant",
+                "description": "You must have done something really bad if she's chasing you."
             },
-            "id": 8,
             "sid": "ant_queen"
         },
         {
+            "id": 9,
             "drops": [
                 {
                     "baseChance": 0.25,
@@ -164,13 +165,13 @@
                 }
             ],
             "i18n": {
-                "description": "Ants go in, and come out. Can't explain that.",
-                "name": "Ant Hole"
+                "name": "Ant Hole",
+                "description": "Ants go in, and come out. Can't explain that."
             },
-            "id": 9,
             "sid": "ant_hole"
         },
         {
+            "id": 10,
             "drops": [
                 {
                     "baseChance": 0.25,
@@ -182,13 +183,13 @@
                 }
             ],
             "i18n": {
-                "description": "It's hungry and flowers are its favorite meal.",
-                "name": "Beetle"
+                "name": "Beetle",
+                "description": "It's hungry and flowers are its favorite meal."
             },
-            "id": 10,
             "sid": "beetle"
         },
         {
+            "id": 11,
             "drops": [
                 {
                     "baseChance": 0.25,
@@ -204,13 +205,13 @@
                 }
             ],
             "i18n": {
-                "description": "These aren't quite as nice as the little bees.",
-                "name": "Hornet"
+                "name": "Hornet",
+                "description": "These aren't quite as nice as the little bees."
             },
-            "id": 11,
             "sid": "hornet"
         },
         {
+            "id": 12,
             "drops": [
                 {
                     "baseChance": 0.05000000074505806,
@@ -222,13 +223,13 @@
                 }
             ],
             "i18n": {
-                "description": "It's just there doing its thing.",
-                "name": "Centipede"
+                "name": "Centipede",
+                "description": "It's just there doing its thing."
             },
-            "id": 12,
             "sid": "centipede"
         },
         {
+            "id": 13,
             "drops": [
                 {
                     "baseChance": 0.05000000074505806,
@@ -240,13 +241,13 @@
                 }
             ],
             "i18n": {
-                "description": "It's just there doing its thing.",
-                "name": "Centipede"
+                "name": "Centipede",
+                "description": "It's just there doing its thing."
             },
-            "id": 13,
             "sid": "centipede_body"
         },
         {
+            "id": 14,
             "drops": [
                 {
                     "baseChance": 0.05000000074505806,
@@ -258,13 +259,13 @@
                 }
             ],
             "i18n": {
-                "description": "This one loves flowers.",
-                "name": "Centipede"
+                "name": "Centipede",
+                "description": "This one loves flowers."
             },
-            "id": 14,
             "sid": "centipede_evil"
         },
         {
+            "id": 15,
             "drops": [
                 {
                     "baseChance": 0.05000000074505806,
@@ -276,13 +277,13 @@
                 }
             ],
             "i18n": {
-                "description": "This one loves flowers.",
-                "name": "Centipede"
+                "name": "Centipede",
+                "description": "This one loves flowers."
             },
-            "id": 15,
             "sid": "centipede_evil_body"
         },
         {
+            "id": 16,
             "drops": [
                 {
                     "baseChance": 0.15000000596046448,
@@ -294,13 +295,13 @@
                 }
             ],
             "i18n": {
-                "description": "Gotta go fast.",
-                "name": "Centipede"
+                "name": "Centipede",
+                "description": "Gotta go fast."
             },
-            "id": 16,
             "sid": "centipede_desert"
         },
         {
+            "id": 17,
             "drops": [
                 {
                     "baseChance": 0.15000000596046448,
@@ -312,13 +313,13 @@
                 }
             ],
             "i18n": {
-                "description": "Gotta go fast.",
-                "name": "Centipede"
+                "name": "Centipede",
+                "description": "Gotta go fast."
             },
-            "id": 17,
             "sid": "centipede_desert_body"
         },
         {
+            "id": 18,
             "drops": [
                 {
                     "baseChance": 1,
@@ -326,13 +327,13 @@
                 }
             ],
             "i18n": {
-                "description": "This shape... it looks familiar...",
-                "name": "Square"
+                "name": "Square",
+                "description": "This shape... it looks familiar..."
             },
-            "id": 18,
             "sid": "square"
         },
         {
+            "id": 19,
             "drops": [
                 {
                     "baseChance": 0.25,
@@ -344,13 +345,13 @@
                 }
             ],
             "i18n": {
-                "description": "Cute and harmless... if left unprovoked.",
-                "name": "Ladybug"
+                "name": "Ladybug",
+                "description": "Cute and harmless... if left unprovoked."
             },
-            "id": 19,
             "sid": "ladybug_dark"
         },
         {
+            "id": 20,
             "drops": [
                 {
                     "baseChance": 1,
@@ -366,13 +367,13 @@
                 }
             ],
             "i18n": {
-                "description": "Shiny, cute and mostly harmless.",
-                "name": "Ladybug"
+                "name": "Ladybug",
+                "description": "Shiny, cute and mostly harmless."
             },
-            "id": 20,
             "sid": "ladybug_shiny"
         },
         {
+            "id": 21,
             "drops": [
                 {
                     "baseChance": 0.25,
@@ -388,13 +389,13 @@
                 }
             ],
             "i18n": {
-                "description": "Spooky.",
-                "name": "Spider"
+                "name": "Spider",
+                "description": "Spooky."
             },
-            "id": 21,
             "sid": "spider"
         },
         {
+            "id": 22,
             "drops": [
                 {
                     "baseChance": 0.25,
@@ -406,13 +407,13 @@
                 }
             ],
             "i18n": {
-                "description": "IT STINGS!",
-                "name": "Scorpion"
+                "name": "Scorpion",
+                "description": "IT STINGS!"
             },
-            "id": 22,
             "sid": "scorpion"
         },
         {
+            "id": 23,
             "drops": [
                 {
                     "baseChance": 0.30000001192092896,
@@ -424,13 +425,13 @@
                 }
             ],
             "i18n": {
-                "description": "This ant is on fireeeeeeeeeeeeee.",
-                "name": "Soldier Fire Ant"
+                "name": "Soldier Fire Ant",
+                "description": "This ant is on fireeeeeeeeeeeeee."
             },
-            "id": 23,
             "sid": "fire_ant_soldier"
         },
         {
+            "id": 24,
             "drops": [
                 {
                     "baseChance": 0.5,
@@ -442,13 +443,13 @@
                 }
             ],
             "i18n": {
-                "description": "What could be in here?",
-                "name": "Fire Ant Burrow"
+                "name": "Fire Ant Burrow",
+                "description": "What could be in here?"
             },
-            "id": 24,
             "sid": "fire_ant_burrow"
         },
         {
+            "id": 25,
             "drops": [
                 {
                     "baseChance": 0.15000000596046448,
@@ -464,13 +465,13 @@
                 }
             ],
             "i18n": {
-                "description": "Darude (1999)",
-                "name": "Sandstorm"
+                "name": "Sandstorm",
+                "description": "Darude (1999)"
             },
-            "id": 25,
             "sid": "sandstorm"
         },
         {
+            "id": 26,
             "drops": [
                 {
                     "baseChance": 1,
@@ -482,13 +483,13 @@
                 }
             ],
             "i18n": {
-                "description": "Pop",
-                "name": "Bubble"
+                "name": "Bubble",
+                "description": "Pop"
             },
-            "id": 26,
             "sid": "bubble"
         },
         {
+            "id": 27,
             "drops": [
                 {
                     "baseChance": 0.20000000298023224,
@@ -500,13 +501,13 @@
                 }
             ],
             "i18n": {
-                "description": "GOTTA RUN.",
-                "name": "Bumble Bee"
+                "name": "Bumble Bee",
+                "description": "GOTTA RUN."
             },
-            "id": 27,
             "sid": "bumble_bee"
         },
         {
+            "id": 28,
             "drops": [
                 {
                     "baseChance": 0.009999999776482582,
@@ -522,13 +523,13 @@
                 }
             ],
             "i18n": {
-                "description": "Not an advertisement.",
-                "name": "Shell"
+                "name": "Shell",
+                "description": "Not an advertisement."
             },
-            "id": 28,
             "sid": "shell"
         },
         {
+            "id": 29,
             "drops": [
                 {
                     "baseChance": 0.05000000074505806,
@@ -544,13 +545,13 @@
                 }
             ],
             "i18n": {
-                "description": "His name is Patrick.",
-                "name": "Starfish"
+                "name": "Starfish",
+                "description": "His name is Patrick."
             },
-            "id": 29,
             "sid": "starfish"
         },
         {
+            "id": 30,
             "drops": [
                 {
                     "baseChance": 0.05000000074505806,
@@ -562,13 +563,13 @@
                 }
             ],
             "i18n": {
-                "description": "Mr. Crab.",
-                "name": "Crab"
+                "name": "Crab",
+                "description": "Mr. Crab."
             },
-            "id": 30,
             "sid": "crab"
         },
         {
+            "id": 31,
             "drops": [
                 {
                     "baseChance": 0.15000000596046448,
@@ -580,13 +581,13 @@
                 }
             ],
             "i18n": {
-                "description": "Makes the most delicious jam.",
-                "name": "Jellyfish"
+                "name": "Jellyfish",
+                "description": "Makes the most delicious jam."
             },
-            "id": 31,
             "sid": "jellyfish"
         },
         {
+            "id": 32,
             "drops": [
                 {
                     "baseChance": 0.15000000596046448,
@@ -598,13 +599,13 @@
                 }
             ],
             "i18n": {
-                "description": "Wrong game, bud.",
-                "name": "Digger"
+                "name": "Digger",
+                "description": "Wrong game, bud."
             },
-            "id": 32,
             "sid": "digger"
         },
         {
+            "id": 33,
             "drops": [
                 {
                     "baseChance": 0.25,
@@ -616,13 +617,13 @@
                 }
             ],
             "i18n": {
-                "description": "Bob.",
-                "name": "Sponge"
+                "name": "Sponge",
+                "description": "Bob."
             },
-            "id": 33,
             "sid": "sponge"
         },
         {
+            "id": 34,
             "drops": [
                 {
                     "baseChance": 0.25,
@@ -634,22 +635,22 @@
                 }
             ],
             "i18n": {
-                "description": "Slurp slurp.",
-                "name": "Leech"
+                "name": "Leech",
+                "description": "Slurp slurp."
             },
-            "id": 34,
             "sid": "leech"
         },
         {
+            "id": 35,
             "drops": [],
             "i18n": {
-                "description": "Slurp slurp.",
-                "name": "Leech"
+                "name": "Leech",
+                "description": "Slurp slurp."
             },
-            "id": 35,
             "sid": "leech_body"
         },
         {
+            "id": 36,
             "drops": [
                 {
                     "baseChance": 0.30000001192092896,
@@ -657,13 +658,13 @@
                 }
             ],
             "i18n": {
-                "description": "Puffy.",
-                "name": "Dandelion"
+                "name": "Dandelion",
+                "description": "Puffy."
             },
-            "id": 36,
             "sid": "dandelion"
         },
         {
+            "id": 37,
             "drops": [
                 {
                     "baseChance": 0.25,
@@ -675,13 +676,13 @@
                 }
             ],
             "i18n": {
-                "description": "This ant is on fireeeeeeeeeeeeee.",
-                "name": "Baby Fire Ant"
+                "name": "Baby Fire Ant",
+                "description": "This ant is on fireeeeeeeeeeeeee."
             },
-            "id": 37,
             "sid": "fire_ant_baby"
         },
         {
+            "id": 38,
             "drops": [
                 {
                     "baseChance": 0.15000000596046448,
@@ -693,13 +694,13 @@
                 }
             ],
             "i18n": {
-                "description": "This ant is on fireeeeeeeeeeeeee.",
-                "name": "Worker Fire Ant"
+                "name": "Worker Fire Ant",
+                "description": "This ant is on fireeeeeeeeeeeeee."
             },
-            "id": 38,
             "sid": "fire_ant_worker"
         },
         {
+            "id": 39,
             "drops": [
                 {
                     "baseChance": 0.30000001192092896,
@@ -711,13 +712,13 @@
                 }
             ],
             "i18n": {
-                "description": "This ant is on fireeeeeeeeeeeeee.",
-                "name": "Queen Fire Ant"
+                "name": "Queen Fire Ant",
+                "description": "This ant is on fireeeeeeeeeeeeee."
             },
-            "id": 39,
             "sid": "fire_ant_queen"
         },
         {
+            "id": 40,
             "drops": [
                 {
                     "baseChance": 0.25,
@@ -725,13 +726,13 @@
                 }
             ],
             "i18n": {
-                "description": "Not yet an ant but perhaps soon.",
-                "name": "Ant Egg"
+                "name": "Ant Egg",
+                "description": "Not yet an ant but perhaps soon."
             },
-            "id": 40,
             "sid": "ant_egg"
         },
         {
+            "id": 41,
             "drops": [
                 {
                     "baseChance": 0.25,
@@ -739,13 +740,13 @@
                 }
             ],
             "i18n": {
-                "description": "This ant is not yet on fire.",
-                "name": "Fire Ant Egg"
+                "name": "Fire Ant Egg",
+                "description": "This ant is not yet on fire."
             },
-            "id": 41,
             "sid": "fire_ant_egg"
         },
         {
+            "id": 42,
             "drops": [
                 {
                     "baseChance": 0.25,
@@ -761,13 +762,13 @@
                 }
             ],
             "i18n": {
-                "description": "Hzzzzzzzzzzzz.",
-                "name": "Fly"
+                "name": "Fly",
+                "description": "Hzzzzzzzzzzzz."
             },
-            "id": 42,
             "sid": "fly"
         },
         {
+            "id": 43,
             "drops": [
                 {
                     "baseChance": 0.25,
@@ -779,13 +780,13 @@
                 }
             ],
             "i18n": {
-                "description": "It's not a leaf, but it is a bug.",
-                "name": "Leafbug"
+                "name": "Leafbug",
+                "description": "It's not a leaf, but it is a bug."
             },
-            "id": 43,
             "sid": "leafbug"
         },
         {
+            "id": 44,
             "drops": [
                 {
                     "baseChance": 0.25,
@@ -797,13 +798,13 @@
                 }
             ],
             "i18n": {
-                "description": "You better pray you don't become dinner.",
-                "name": "Mantis"
+                "name": "Mantis",
+                "description": "You better pray you don't become dinner."
             },
-            "id": 44,
             "sid": "mantis"
         },
         {
+            "id": 45,
             "drops": [
                 {
                     "baseChance": 0.05000000074505806,
@@ -815,13 +816,13 @@
                 }
             ],
             "i18n": {
-                "description": "Weak and defenseless, but big dreams.<n/>These creatures appear to be connected somehow.",
-                "name": "Baby Termite"
+                "name": "Baby Termite",
+                "description": "Weak and defenseless, but big dreams.<n/>These creatures appear to be connected somehow."
             },
-            "id": 45,
             "sid": "termite_baby"
         },
         {
+            "id": 46,
             "drops": [
                 {
                     "baseChance": 0.05000000074505806,
@@ -833,13 +834,13 @@
                 }
             ],
             "i18n": {
-                "description": "It's a bit temperamental, probably from working all the time.<n/>These creatures appear to be connected somehow.",
-                "name": "Worker Termite"
+                "name": "Worker Termite",
+                "description": "It's a bit temperamental, probably from working all the time.<n/>These creatures appear to be connected somehow."
             },
-            "id": 46,
             "sid": "termite_worker"
         },
         {
+            "id": 47,
             "drops": [
                 {
                     "baseChance": 0.05000000074505806,
@@ -851,13 +852,13 @@
                 }
             ],
             "i18n": {
-                "description": "It's got wings and it's ready to use them.<n/>These creatures appear to be connected somehow.",
-                "name": "Soldier Termite"
+                "name": "Soldier Termite",
+                "description": "It's got wings and it's ready to use them.<n/>These creatures appear to be connected somehow."
             },
-            "id": 47,
             "sid": "termite_soldier"
         },
         {
+            "id": 48,
             "drops": [
                 {
                     "baseChance": 0.15000000596046448,
@@ -873,13 +874,13 @@
                 }
             ],
             "i18n": {
-                "description": "The one who oversees all.",
-                "name": "Termite Overmind"
+                "name": "Termite Overmind",
+                "description": "The one who oversees all."
             },
-            "id": 48,
             "sid": "termite_overmind"
         },
         {
+            "id": 49,
             "drops": [
                 {
                     "baseChance": 0.15000000596046448,
@@ -895,13 +896,13 @@
                 }
             ],
             "i18n": {
-                "description": "Termites go in, and come out. Can't explain that.",
-                "name": "Termite Mound"
+                "name": "Termite Mound",
+                "description": "Termites go in, and come out. Can't explain that."
             },
-            "id": 49,
             "sid": "termite_mound"
         },
         {
+            "id": 50,
             "drops": [
                 {
                     "baseChance": 0.25,
@@ -913,13 +914,13 @@
                 }
             ],
             "i18n": {
-                "description": "Not yet a termite but perhaps soon.",
-                "name": "Termite Egg"
+                "name": "Termite Egg",
+                "description": "Not yet a termite but perhaps soon."
             },
-            "id": 50,
             "sid": "termite_egg"
         },
         {
+            "id": 51,
             "drops": [
                 {
                     "baseChance": 0.25,
@@ -927,13 +928,13 @@
                 }
             ],
             "i18n": {
-                "description": "Don't misunderestimate me.",
-                "name": "Bush"
+                "name": "Bush",
+                "description": "Don't misunderestimate me."
             },
-            "id": 51,
             "sid": "bush"
         },
         {
+            "id": 52,
             "drops": [
                 {
                     "baseChance": 0.25,
@@ -945,13 +946,13 @@
                 }
             ],
             "i18n": {
-                "description": "Gotta go FAST... until they get tired.",
-                "name": "Roach"
+                "name": "Roach",
+                "description": "Gotta go FAST... until they get tired."
             },
-            "id": 52,
             "sid": "roach"
         },
         {
+            "id": 53,
             "drops": [
                 {
                     "baseChance": 0.25,
@@ -963,13 +964,13 @@
                 }
             ],
             "i18n": {
-                "description": "Easily scared, be nice.",
-                "name": "Moth"
+                "name": "Moth",
+                "description": "Easily scared, be nice."
             },
-            "id": 53,
             "sid": "moth"
         },
         {
+            "id": 54,
             "drops": [
                 {
                     "baseChance": 0.25,
@@ -985,13 +986,13 @@
                 }
             ],
             "i18n": {
-                "description": "Oooooh shiny.",
-                "name": "Firefly"
+                "name": "Firefly",
+                "description": "Oooooh shiny."
             },
-            "id": 54,
             "sid": "firefly"
         },
         {
+            "id": 55,
             "drops": [
                 {
                     "baseChance": 0.009999999776482582,
@@ -1007,13 +1008,13 @@
                 }
             ],
             "i18n": {
-                "description": "Scourge that spawns in the other plane.",
-                "name": "Beetle"
+                "name": "Beetle",
+                "description": "Scourge that spawns in the other plane."
             },
-            "id": 55,
             "sid": "beetle_hel"
         },
         {
+            "id": 56,
             "drops": [
                 {
                     "baseChance": 0.75,
@@ -1029,22 +1030,22 @@
                 }
             ],
             "i18n": {
-                "description": "They are ANGRY.",
-                "name": "Wasp"
+                "name": "Wasp",
+                "description": "They are ANGRY."
             },
-            "id": 56,
             "sid": "wasp"
         },
         {
+            "id": 57,
             "drops": [],
             "i18n": {
-                "description": "How do you have this in your gallery?",
-                "name": "Target Dummy"
+                "name": "Target Dummy",
+                "description": "How do you have this in your gallery?"
             },
-            "id": 57,
             "sid": "dummy"
         },
         {
+            "id": 58,
             "drops": [
                 {
                     "baseChance": 0.009999999776482582,
@@ -1060,13 +1061,13 @@
                 }
             ],
             "i18n": {
-                "description": "Scourge that spawns in the other plane.",
-                "name": "Spider"
+                "name": "Spider",
+                "description": "Scourge that spawns in the other plane."
             },
-            "id": 58,
             "sid": "spider_hel"
         },
         {
+            "id": 59,
             "drops": [
                 {
                     "baseChance": 0.0010000000474974513,
@@ -1078,13 +1079,13 @@
                 }
             ],
             "i18n": {
-                "description": "Scourge that spawns in the other plane.",
-                "name": "Centipede"
+                "name": "Centipede",
+                "description": "Scourge that spawns in the other plane."
             },
-            "id": 59,
             "sid": "centipede_hel"
         },
         {
+            "id": 60,
             "drops": [
                 {
                     "baseChance": 0.0010000000474974513,
@@ -1096,13 +1097,13 @@
                 }
             ],
             "i18n": {
-                "description": "Scourge that spawns in the other plane.",
-                "name": "Centipede"
+                "name": "Centipede",
+                "description": "Scourge that spawns in the other plane."
             },
-            "id": 60,
             "sid": "centipede_hel_body"
         },
         {
+            "id": 61,
             "drops": [
                 {
                     "baseChance": 0.009999999776482582,
@@ -1118,22 +1119,22 @@
                 }
             ],
             "i18n": {
-                "description": "Scourge that spawns in the other plane.",
-                "name": "Wasp"
+                "name": "Wasp",
+                "description": "Scourge that spawns in the other plane."
             },
-            "id": 61,
             "sid": "wasp_hel"
         },
         {
+            "id": 62,
             "drops": [],
             "i18n": {
-                "description": "",
-                "name": "Trader"
+                "name": "Trader",
+                "description": ""
             },
-            "id": 62,
             "sid": "trader"
         },
         {
+            "id": 63,
             "drops": [
                 {
                     "baseChance": 1,
@@ -1153,22 +1154,22 @@
                 }
             ],
             "i18n": {
-                "description": "This can happen to YOU.",
-                "name": "Gambler"
+                "name": "Gambler",
+                "description": "This can happen to YOU."
             },
-            "id": 63,
             "sid": "gambler"
         },
         {
+            "id": 64,
             "drops": [],
             "i18n": {
-                "description": "",
-                "name": "Oracle"
+                "name": "Oracle",
+                "description": ""
             },
-            "id": 64,
             "sid": "oracle"
         },
         {
+            "id": 65,
             "drops": [
                 {
                     "baseChance": 0.2800000011920929,
@@ -1180,22 +1181,22 @@
                 }
             ],
             "i18n": {
-                "description": "There's something magical about this one.",
-                "name": "Firefly"
+                "name": "Firefly",
+                "description": "There's something magical about this one."
             },
-            "id": 65,
             "sid": "firefly_magic"
         },
         {
+            "id": 66,
             "drops": [],
             "i18n": {
-                "description": "",
-                "name": "Titan"
+                "name": "Titan",
+                "description": ""
             },
-            "id": 66,
             "sid": "titan"
         },
         {
+            "id": 67,
             "drops": [
                 {
                     "baseChance": 1,
@@ -1211,13 +1212,13 @@
                 }
             ],
             "i18n": {
-                "description": "This one has a different pattern... what does that mean?",
-                "name": "Beetle"
+                "name": "Beetle",
+                "description": "This one has a different pattern... what does that mean?"
             },
-            "id": 67,
             "sid": "beetle_nazar"
         },
         {
+            "id": 68,
             "drops": [
                 {
                     "baseChance": 0.15000000596046448,
@@ -1229,59 +1230,76 @@
                 }
             ],
             "i18n": {
-                "description": "It's supposed to eat dirt but this one's eating flowers.",
-                "name": "Worm"
+                "name": "Worm",
+                "description": "It's supposed to eat dirt but this one's eating flowers."
             },
-            "id": 68,
             "sid": "worm"
         },
         {
+            "id": 69,
             "drops": [],
             "i18n": {
-                "description": "You're not supposed to see this text. I'm calling the police.",
-                "name": "Worm guts"
+                "name": "Worm guts",
+                "description": "You're not supposed to see this text. I'm calling the police."
             },
-            "id": 69,
             "sid": "worm_guts"
+        },
+        {
+            "id": 70,
+            "drops": [
+                {
+                    "baseChance": 0.0010000000474974513,
+                    "type": 93
+                }
+            ],
+            "i18n": {
+                "name": "Mecha Flower",
+                "description": "Someone has been making these mechanical flowers... What could this mean?"
+            },
+            "sid": "mecha_flower"
         }
     ],
     "petal": [
         {
-            "i18n": {
-                "description": "A nice petal, not too strong but not too weak.",
-                "fullName": "Basic",
-                "name": "Basic"
-            },
             "id": 1,
-            "isPassive": false,
-            "isStackable": true,
-            "magicPetal": false
-        },
-        {
-            "i18n": {
-                "description": "Weaker than most petals, but recharges very quickly.",
-                "fullName": "Light",
-                "name": "Light"
-            },
-            "id": 2,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Basic",
+                "fullName": "Basic",
+                "description": "A nice petal, not too strong but not too weak."
+            }
+        },
+        {
+            "id": 2,
+            "isStackable": true,
+            "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Light",
+                "fullName": "Light",
+                "description": "Weaker than most petals, but recharges very quickly."
+            },
             "premiumPrice": 4
         },
         {
-            "i18n": {
-                "description": "Extremely durable, but takes a bit longer to recharge.",
-                "fullName": "Rock",
-                "name": "Rock"
-            },
             "id": 3,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Rock",
+                "fullName": "Rock",
+                "description": "Extremely durable, but takes a bit longer to recharge."
+            },
             "premiumPrice": 3
         },
         {
+            "id": 4,
+            "isStackable": true,
+            "magicPetal": false,
+            "isPassive": false,
             "allowedDropRarities": [
                 true,
                 false,
@@ -1294,174 +1312,157 @@
                 false
             ],
             "i18n": {
-                "description": "This shape... it looks familiar...",
+                "name": "Square",
                 "fullName": "Square",
-                "name": "Square"
-            },
-            "id": 4,
-            "isPassive": false,
-            "isStackable": true,
-            "magicPetal": false
+                "description": "This shape... it looks familiar..."
+            }
         },
         {
-            "i18n": {
-                "description": "Its healing properties are amazing. Not so good at combat though.",
-                "fullName": "Rose",
-                "name": "Rose"
-            },
             "id": 5,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Rose",
+                "fullName": "Rose",
+                "description": "Its healing properties are amazing. Not so good at combat though."
+            },
             "premiumPrice": 3
         },
         {
-            "i18n": {
-                "description": "It really hurts, but it's very fragile.",
-                "fullName": "Stinger",
-                "name": "Stinger"
-            },
             "id": 6,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
-            "magicVersion": 84,
-            "premiumPrice": 4
+            "isPassive": false,
+            "i18n": {
+                "name": "Stinger",
+                "fullName": "Stinger",
+                "description": "It really hurts, but it's very fragile."
+            },
+            "premiumPrice": 4,
+            "magicVersion": 84
         },
         {
-            "allowedDropRarities": [
-                false,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
-            ],
-            "i18n": {
-                "description": "Very poisonous, but takes a little while to do its work.",
-                "fullName": "Iris",
-                "name": "Iris"
-            },
             "id": 7,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
-            "premiumPrice": 2
+            "isPassive": false,
+            "i18n": {
+                "name": "Iris",
+                "fullName": "Iris",
+                "description": "Very poisonous, but takes a little while to do its work.<n/>-50% damage vs other flowers."
+            },
+            "premiumPrice": 2,
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ]
         },
         {
-            "i18n": {
-                "description": "It comes and goes.",
-                "fullName": "Wing",
-                "name": "Wing"
-            },
             "id": 8,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Wing",
+                "fullName": "Wing",
+                "description": "It comes and goes."
+            },
             "premiumPrice": 2
         },
         {
-            "allowedDropRarities": [
-                false,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
-            ],
-            "i18n": {
-                "description": "You can actually shoot this one.",
-                "fullName": "Missile",
-                "name": "Missile"
-            },
             "id": 9,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Missile",
+                "fullName": "Missile",
+                "description": "You can actually shoot this one."
+            },
+            "premiumPrice": 1,
             "magicVersion": 88,
-            "premiumPrice": 1
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ]
         },
         {
-            "i18n": {
-                "description": "It goes poof. Now with a secret ingredient: poison.",
-                "fullName": "Grapes",
-                "name": "Grapes"
-            },
             "id": 10,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
-            "magicVersion": 82,
-            "premiumPrice": 2
+            "isPassive": false,
+            "i18n": {
+                "name": "Grapes",
+                "fullName": "Grapes",
+                "description": "It goes poof. Now with a secret ingredient: poison."
+            },
+            "premiumPrice": 2,
+            "magicVersion": 82
         },
         {
-            "i18n": {
-                "description": "Not very strong, but somehow increases your maximum health.",
-                "fullName": "Cactus",
-                "name": "Cactus"
-            },
             "id": 11,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
-            "magicVersion": 86,
-            "premiumPrice": 2
+            "isPassive": false,
+            "i18n": {
+                "name": "Cactus",
+                "fullName": "Cactus",
+                "description": "Not very strong, but somehow increases your maximum health."
+            },
+            "premiumPrice": 2,
+            "magicVersion": 86
         },
         {
-            "i18n": {
-                "description": "It's so light it makes your other petals spin faster.",
-                "fullName": "Faster",
-                "name": "Faster"
-            },
             "id": 12,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Faster",
+                "fullName": "Faster",
+                "description": "It's so light it makes your other petals spin faster."
+            },
             "premiumPrice": 2
         },
         {
-            "i18n": {
-                "description": "Physics are for the weak.",
-                "fullName": "Bubble",
-                "name": "Bubble"
-            },
             "id": 13,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
-            "magicVersion": 91,
-            "premiumPrice": 4
+            "isPassive": false,
+            "i18n": {
+                "name": "Bubble",
+                "fullName": "Bubble",
+                "description": "Physics are for the weak."
+            },
+            "premiumPrice": 4,
+            "magicVersion": 91
         },
         {
-            "allowedDropRarities": [
-                false,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
-            ],
-            "i18n": {
-                "description": "Asthmatics beware.",
-                "fullName": "Pollen",
-                "name": "Pollen"
-            },
             "id": 14,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
-            "premiumPrice": 4
-        },
-        {
+            "isPassive": false,
+            "i18n": {
+                "name": "Pollen",
+                "fullName": "Pollen",
+                "description": "Asthmatics beware."
+            },
+            "premiumPrice": 4,
             "allowedDropRarities": [
                 false,
                 true,
@@ -1472,54 +1473,54 @@
                 true,
                 true,
                 true
-            ],
-            "i18n": {
-                "description": "Its interesting properties inhibits healing effects on affected units.<n/>Affected units have their healing reduced by 20%. Stacks with itself.",
-                "fullName": "Dandelion",
-                "name": "Dandelion"
-            },
+            ]
+        },
+        {
             "id": 15,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
-            "premiumPrice": 1
+            "isPassive": false,
+            "i18n": {
+                "name": "Dandelion",
+                "fullName": "Dandelion",
+                "description": "Its interesting properties inhibits healing effects on affected units.<n/>Affected units have their healing reduced by 20%. Stacks with itself."
+            },
+            "premiumPrice": 1,
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ]
         },
         {
-            "i18n": {
-                "description": "Something interesting might pop out of this.",
-                "fullName": "Beetle Egg",
-                "name": "Egg"
-            },
             "id": 16,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Egg",
+                "fullName": "Beetle Egg",
+                "description": "Something interesting might pop out of this."
+            },
             "premiumPrice": 3
         },
         {
-            "allowedDropRarities": [
-                false,
-                false,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
-            ],
-            "i18n": {
-                "description": "Allows your flower to sense foes farther away.",
-                "fullName": "Antennae",
-                "name": "Antennae"
-            },
             "id": 17,
-            "isPassive": true,
             "isStackable": false,
             "magicPetal": false,
-            "premiumPrice": 2
-        },
-        {
+            "isPassive": true,
+            "i18n": {
+                "name": "Antennae",
+                "fullName": "Antennae",
+                "description": "Allows your flower to sense foes farther away."
+            },
+            "premiumPrice": 2,
             "allowedDropRarities": [
                 false,
                 false,
@@ -1530,19 +1531,19 @@
                 true,
                 true,
                 true
-            ],
-            "i18n": {
-                "description": "This thing is so heavy that nothing gets in the way.<n/>Slows down petal rotation speed when equipped.",
-                "fullName": "Heavy",
-                "name": "Heavy"
-            },
+            ]
+        },
+        {
             "id": 18,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
-            "premiumPrice": 4
-        },
-        {
+            "isPassive": false,
+            "i18n": {
+                "name": "Heavy",
+                "fullName": "Heavy",
+                "description": "This thing is so heavy that nothing gets in the way.<n/>Slows down petal rotation speed when equipped."
+            },
+            "premiumPrice": 4,
             "allowedDropRarities": [
                 false,
                 false,
@@ -1553,20 +1554,21 @@
                 true,
                 true,
                 true
-            ],
-            "i18n": {
-                "description": "This mysterious petal affects the rotation of your petals in unpredictable ways.",
-                "fullName": "Yin Yang",
-                "name": "Yin Yang"
-            },
+            ]
+        },
+        {
             "id": 19,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
-            "premiumPrice": 3
-        },
-        {
+            "isPassive": false,
+            "i18n": {
+                "name": "Yin Yang",
+                "fullName": "Yin Yang",
+                "description": "This mysterious petal affects the rotation of your petals in unpredictable ways."
+            },
+            "premiumPrice": 3,
             "allowedDropRarities": [
+                false,
                 false,
                 true,
                 true,
@@ -1574,24 +1576,23 @@
                 true,
                 true,
                 true,
-                true,
                 true
-            ],
-            "i18n": {
-                "description": "It's really sticky.",
-                "fullName": "Web",
-                "name": "Web"
-            },
+            ]
+        },
+        {
             "id": 20,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
-            "premiumPrice": 2
-        },
-        {
+            "isPassive": false,
+            "i18n": {
+                "name": "Web",
+                "fullName": "Web",
+                "description": "It's really sticky."
+            },
+            "premiumPrice": 2,
             "allowedDropRarities": [
                 false,
-                false,
+                true,
                 true,
                 true,
                 true,
@@ -1599,20 +1600,21 @@
                 true,
                 true,
                 true
-            ],
-            "i18n": {
-                "description": "Mobs love this. Attracts them in a large radius.<n/>Mobs will prioritize this over flowers.<n/>Affected units develop immunity to its effects after some time.",
-                "fullName": "Honey",
-                "name": "Honey"
-            },
+            ]
+        },
+        {
             "id": 21,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
-            "premiumPrice": 3
-        },
-        {
+            "isPassive": false,
+            "i18n": {
+                "name": "Honey",
+                "fullName": "Honey",
+                "description": "Mobs love this. Attracts them in a large radius.<n/>Mobs will prioritize this over flowers.<n/>Affected units develop immunity to its effects after some time."
+            },
+            "premiumPrice": 3,
             "allowedDropRarities": [
+                false,
                 false,
                 true,
                 true,
@@ -1620,22 +1622,21 @@
                 true,
                 true,
                 true,
-                true,
                 true
-            ],
-            "i18n": {
-                "description": "Gathers energy from the sun to heal your flower passively.",
-                "fullName": "Leaf",
-                "name": "Leaf"
-            },
+            ]
+        },
+        {
             "id": 22,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Leaf",
+                "fullName": "Leaf",
+                "description": "Gathers energy from the sun to heal your flower passively."
+            },
+            "premiumPrice": 3,
             "magicVersion": 85,
-            "premiumPrice": 3
-        },
-        {
             "allowedDropRarities": [
                 false,
                 true,
@@ -1646,78 +1647,78 @@
                 true,
                 true,
                 true
-            ],
-            "i18n": {
-                "description": "Reflects some of the damage you take back to the enemy that dealt it.<n/>Higher rarity mobs have higher resistance to damage reflection.",
-                "fullName": "Salt",
-                "name": "Salt"
-            },
+            ]
+        },
+        {
             "id": 23,
-            "isPassive": false,
             "isStackable": false,
             "magicPetal": false,
-            "premiumPrice": 3
+            "isPassive": false,
+            "i18n": {
+                "name": "Salt",
+                "fullName": "Salt",
+                "description": "Reflects some of the damage you take back to the enemy that dealt it.<n/>Higher rarity mobs have higher resistance to damage reflection."
+            },
+            "premiumPrice": 3,
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ]
         },
         {
-            "i18n": {
-                "description": "Spawns very quickly, but not very strong.",
-                "fullName": "Rice",
-                "name": "Rice"
-            },
             "id": 24,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Rice",
+                "fullName": "Rice",
+                "description": "Spawns very quickly, but not very strong."
+            },
             "premiumPrice": 4
         },
         {
-            "i18n": {
-                "description": "Takes a long time to spawn, but has a lot of health.",
-                "fullName": "Corn",
-                "name": "Corn"
-            },
             "id": 25,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Corn",
+                "fullName": "Corn",
+                "description": "Takes a long time to spawn, but has a lot of health."
+            },
             "premiumPrice": 4
         },
         {
-            "i18n": {
-                "description": "A bunch of sand particles.",
-                "fullName": "Sand",
-                "name": "Sand"
-            },
             "id": 26,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Sand",
+                "fullName": "Sand",
+                "description": "A bunch of sand particles."
+            },
             "premiumPrice": 4
         },
         {
-            "allowedDropRarities": [
-                false,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
-            ],
-            "i18n": {
-                "description": "Debilitates enemies temporarily, reducing their movement speed.",
-                "fullName": "Pincer",
-                "name": "Pincer"
-            },
             "id": 27,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
-            "premiumPrice": 2
-        },
-        {
+            "isPassive": false,
+            "i18n": {
+                "name": "Pincer",
+                "fullName": "Pincer",
+                "description": "Debilitates enemies temporarily, reducing their movement speed."
+            },
+            "premiumPrice": 2,
             "allowedDropRarities": [
                 false,
                 true,
@@ -1728,22 +1729,22 @@
                 true,
                 true,
                 true
-            ],
-            "i18n": {
-                "description": "Heals your flower but only while in the defensive position.",
-                "fullName": "Yucca",
-                "name": "Yucca"
-            },
+            ]
+        },
+        {
             "id": 28,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
-            "premiumPrice": 1
-        },
-        {
+            "isPassive": false,
+            "i18n": {
+                "name": "Yucca",
+                "fullName": "Yucca",
+                "description": "Heals your flower but only while in the defensive position."
+            },
+            "premiumPrice": 1,
             "allowedDropRarities": [
                 false,
-                false,
+                true,
                 true,
                 true,
                 true,
@@ -1751,65 +1752,65 @@
                 true,
                 true,
                 true
-            ],
-            "i18n": {
-                "description": "Increases drop pick up range.",
-                "fullName": "Magnet",
-                "name": "Magnet"
-            },
+            ]
+        },
+        {
             "id": 29,
-            "isPassive": false,
             "isStackable": false,
             "magicPetal": false,
-            "premiumPrice": 3
-        },
-        {
+            "isPassive": false,
+            "i18n": {
+                "name": "Magnet",
+                "fullName": "Magnet",
+                "description": "Increases drop pick up range."
+            },
+            "premiumPrice": 3,
             "allowedDropRarities": [
                 false,
                 false,
-                false,
-                false,
+                true,
+                true,
                 true,
                 true,
                 true,
                 true,
                 true
-            ],
-            "i18n": {
-                "description": "A dried leaf from the Yggdrasil tree.<n/>Rumored to be able to bring the fallen back to life.",
-                "fullName": "Yggdrasil",
-                "name": "Yggdrasil"
-            },
+            ]
+        },
+        {
             "id": 30,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
-            "premiumPrice": 100
-        },
-        {
+            "isPassive": false,
+            "i18n": {
+                "name": "Yggdrasil",
+                "fullName": "Yggdrasil",
+                "description": "A dried leaf from the Yggdrasil tree.<n/>Rumored to be able to bring the fallen back to life."
+            },
+            "premiumPrice": 100,
             "allowedDropRarities": [
+                false,
+                false,
+                false,
                 false,
                 true,
                 true,
                 true,
                 true,
-                true,
-                true,
-                true,
                 true
-            ],
-            "i18n": {
-                "description": "Increases health regen while below 75% health.",
-                "fullName": "Starfish",
-                "name": "Starfish"
-            },
+            ]
+        },
+        {
             "id": 31,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
-            "premiumPrice": 3
-        },
-        {
+            "isPassive": false,
+            "i18n": {
+                "name": "Starfish",
+                "fullName": "Starfish",
+                "description": "Increases health regen while below 75% health."
+            },
+            "premiumPrice": 3,
             "allowedDropRarities": [
                 false,
                 true,
@@ -1820,19 +1821,19 @@
                 true,
                 true,
                 true
-            ],
-            "i18n": {
-                "description": "Just drop it off somewhere and use your kinetic powers so you don't lose it.",
-                "fullName": "Pearl",
-                "name": "Pearl"
-            },
+            ]
+        },
+        {
             "id": 32,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
-            "premiumPrice": 1
-        },
-        {
+            "isPassive": false,
+            "i18n": {
+                "name": "Pearl",
+                "fullName": "Pearl",
+                "description": "Just drop it off somewhere and use your kinetic powers so you don't lose it."
+            },
+            "premiumPrice": 1,
             "allowedDropRarities": [
                 false,
                 true,
@@ -1843,93 +1844,93 @@
                 true,
                 true,
                 true
-            ],
-            "i18n": {
-                "description": "Strikes several nearby enemies.",
-                "fullName": "Lightning",
-                "name": "Lightning"
-            },
+            ]
+        },
+        {
             "id": 33,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
-            "premiumPrice": 3
+            "isPassive": false,
+            "i18n": {
+                "name": "Lightning",
+                "fullName": "Lightning",
+                "description": "Strikes several nearby enemies."
+            },
+            "premiumPrice": 3,
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ]
         },
         {
-            "i18n": {
-                "description": "No one likes touching this.",
-                "fullName": "Jelly",
-                "name": "Jelly"
-            },
             "id": 34,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Jelly",
+                "fullName": "Jelly",
+                "description": "No one likes touching this."
+            },
             "premiumPrice": 2
         },
         {
-            "i18n": {
-                "description": "Deals extra damage if the victim is above 80% health.<n/>-50% damage vs other flowers.",
-                "fullName": "Claw",
-                "name": "Claw"
-            },
             "id": 35,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Claw",
+                "fullName": "Claw",
+                "description": "Deals extra damage if the victim is above 80% health.<n/>-50% damage vs other flowers."
+            },
             "premiumPrice": 3
         },
         {
-            "i18n": {
-                "description": "Adds a temporary shield to yourself or allies.",
-                "fullName": "Shell",
-                "name": "Shell"
-            },
             "id": 36,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Shell",
+                "fullName": "Shell",
+                "description": "Adds a temporary shield to yourself or allies."
+            },
             "premiumPrice": 2
         },
         {
-            "i18n": {
-                "description": "A friend used to own this... now it's time for revenge.<n/>Increases body damage.",
-                "fullName": "Cutter",
-                "name": "Cutter"
-            },
             "id": 37,
-            "isPassive": true,
             "isStackable": false,
             "magicPetal": false,
+            "isPassive": true,
+            "i18n": {
+                "name": "Cutter",
+                "fullName": "Cutter",
+                "description": "A friend used to own this... now it's time for revenge.<n/>Increases body damage."
+            },
             "premiumPrice": 20
         },
         {
-            "allowedDropRarities": [
-                false,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
-            ],
-            "i18n": {
-                "description": "A small amount of heal but fairly consistent.",
-                "fullName": "Dahlia",
-                "name": "Dahlia"
-            },
             "id": 38,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
-            "premiumPrice": 1
-        },
-        {
+            "isPassive": false,
+            "i18n": {
+                "name": "Dahlia",
+                "fullName": "Dahlia",
+                "description": "A small amount of heal but fairly consistent."
+            },
+            "premiumPrice": 1,
             "allowedDropRarities": [
                 false,
-                false,
+                true,
                 true,
                 true,
                 true,
@@ -1937,20 +1938,21 @@
                 true,
                 true,
                 true
-            ],
-            "i18n": {
-                "description": "Periodically releases radiation.<n/>-75% damage versus other flowers.<n/>Effect strength depends on distance to petal.",
-                "fullName": "Uranium",
-                "name": "Uranium"
-            },
+            ]
+        },
+        {
             "id": 39,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
-            "premiumPrice": 5
-        },
-        {
+            "isPassive": false,
+            "i18n": {
+                "name": "Uranium",
+                "fullName": "Uranium",
+                "description": "Periodically releases radiation.<n/>-75% damage versus other flowers.<n/>Effect strength depends on distance to petal."
+            },
+            "premiumPrice": 5,
             "allowedDropRarities": [
+                false,
                 false,
                 true,
                 true,
@@ -1958,129 +1960,151 @@
                 true,
                 true,
                 true,
-                true,
                 true
-            ],
-            "i18n": {
-                "description": "Spreads damage taken by the flower over a period of time.<n/>If destroyed, deals remaining damage all at once.<n/>Does not delay <c val=\"#ce76db\">Poison</c> damage.",
-                "fullName": "Sponge",
-                "name": "Sponge"
-            },
+            ]
+        },
+        {
             "id": 40,
-            "isPassive": false,
             "isStackable": false,
             "magicPetal": false,
-            "premiumPrice": 4
+            "isPassive": false,
+            "i18n": {
+                "name": "Sponge",
+                "fullName": "Sponge",
+                "description": "Spreads damage taken by the flower over a period of time.<n/>If destroyed, deals remaining damage all at once.<n/>Does not delay <c val=\"#ce76db\">Poison</c> damage."
+            },
+            "premiumPrice": 4,
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ]
         },
         {
-            "i18n": {
-                "description": "Increases health, but also increases flower size and decreases movement speed.",
-                "fullName": "Soil",
-                "name": "Soil"
-            },
             "id": 41,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Soil",
+                "fullName": "Soil",
+                "description": "Increases health, but also increases flower size and decreases movement speed."
+            },
             "premiumPrice": 6
         },
         {
-            "allowedDropRarities": [
-                false,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
-            ],
-            "i18n": {
-                "description": "Heals based on damage dealt by this petal.",
-                "fullName": "Fangs",
-                "name": "Fangs"
-            },
             "id": 42,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
-            "premiumPrice": 2
-        },
-        {
+            "isPassive": false,
+            "i18n": {
+                "name": "Fangs",
+                "fullName": "Fangs",
+                "description": "Heals based on damage dealt by this petal."
+            },
+            "premiumPrice": 2,
             "allowedDropRarities": [
                 false,
-                false,
-                false,
-                false,
-                false,
+                true,
+                true,
+                true,
+                true,
                 true,
                 true,
                 true,
                 true
-            ],
-            "i18n": {
-                "description": "Allows your flower to expand your petals further out.",
-                "fullName": "Third Eye",
-                "name": "Third Eye"
-            },
+            ]
+        },
+        {
             "id": 43,
-            "isPassive": true,
             "isStackable": false,
             "magicPetal": false,
+            "isPassive": true,
+            "i18n": {
+                "name": "Third Eye",
+                "fullName": "Third Eye",
+                "description": "Allows your flower to expand your petals further out."
+            },
+            "premiumPrice": 10,
             "magicVersion": 87,
-            "premiumPrice": 10
+            "allowedDropRarities": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+            ]
         },
         {
-            "i18n": {
-                "description": "It goes poof.",
-                "fullName": "Peas",
-                "name": "Peas"
-            },
             "id": 44,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
-            "magicVersion": 82,
-            "premiumPrice": 2
+            "isPassive": false,
+            "i18n": {
+                "name": "Peas",
+                "fullName": "Peas",
+                "description": "It goes poof."
+            },
+            "premiumPrice": 2,
+            "magicVersion": 82
         },
         {
-            "allowedDropRarities": [
-                false,
-                false,
-                false,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
-            ],
-            "i18n": {
-                "description": "A mysterious stick that summons the forces of the wind.",
-                "fullName": "Mysterious Stick",
-                "name": "Stick"
-            },
             "id": 45,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Stick",
+                "fullName": "Mysterious Stick",
+                "description": "A mysterious stick that summons the forces of the wind."
+            },
+            "premiumPrice": 5,
             "magicVersion": 89,
-            "premiumPrice": 5
+            "allowedDropRarities": [
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ]
         },
         {
-            "i18n": {
-                "description": "Increases your luck.<n/>Luck is used by specific petals to change their stats.",
-                "fullName": "Clover",
-                "name": "Clover"
-            },
             "id": 46,
-            "isPassive": false,
             "isStackable": false,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Clover",
+                "fullName": "Clover",
+                "description": "Increases your luck.<n/>Luck is used by specific petals to change their stats."
+            },
             "premiumPrice": 2
         },
         {
+            "id": 47,
+            "isStackable": false,
+            "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Powder",
+                "fullName": "Mysterious Powder",
+                "description": "Increases movement speed.<n/>Disabled if flower takes damage or if near a mob higher than a certain rarity."
+            },
+            "premiumPrice": 2,
             "allowedDropRarities": [
                 false,
                 false,
@@ -2091,112 +2115,89 @@
                 true,
                 true,
                 true
-            ],
-            "i18n": {
-                "description": "Increases movement speed.<n/>Disabled if flower takes damage or if near a mob higher than a certain rarity.",
-                "fullName": "Mysterious Powder",
-                "name": "Powder"
-            },
-            "id": 47,
-            "isPassive": false,
-            "isStackable": false,
-            "magicPetal": false,
-            "premiumPrice": 2
+            ]
         },
         {
-            "i18n": {
-                "description": "It's literally nothing.",
-                "fullName": "Air",
-                "name": "Air"
-            },
             "id": 48,
-            "isPassive": true,
             "isStackable": false,
             "magicPetal": false,
+            "isPassive": true,
+            "i18n": {
+                "name": "Air",
+                "fullName": "Air",
+                "description": "It's literally nothing."
+            },
             "premiumPrice": 0.5
         },
         {
-            "allowedDropRarities": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                true,
-                true,
-                true,
-                true
-            ],
-            "i18n": {
-                "description": "Increases all healing received.",
-                "fullName": "Basil",
-                "name": "Basil"
-            },
             "id": 49,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
-            "premiumPrice": 3
-        },
-        {
+            "isPassive": false,
+            "i18n": {
+                "name": "Basil",
+                "fullName": "Basil",
+                "description": "Increases all healing received."
+            },
+            "premiumPrice": 3,
             "allowedDropRarities": [
+                false,
+                false,
+                false,
+                false,
                 false,
                 true,
                 true,
                 true,
-                true,
-                true,
-                true,
-                true,
                 true
-            ],
-            "i18n": {
-                "description": "A sweet citrus fruit.",
-                "fullName": "Orange",
-                "name": "Orange"
-            },
+            ]
+        },
+        {
             "id": 50,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
-            "premiumPrice": 1
+            "isPassive": false,
+            "i18n": {
+                "name": "Orange",
+                "fullName": "Orange",
+                "description": "A sweet citrus fruit."
+            },
+            "premiumPrice": 1,
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ]
         },
         {
-            "i18n": {
-                "description": "Something interesting might pop out of this.",
-                "fullName": "Ant Egg",
-                "name": "Egg"
-            },
             "id": 51,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Egg",
+                "fullName": "Ant Egg",
+                "description": "Something interesting might pop out of this."
+            },
             "premiumPrice": 2
         },
         {
-            "allowedDropRarities": [
-                false,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
-            ],
-            "i18n": {
-                "description": "Makes mobs less likely to want to attack you.",
-                "fullName": "Poo",
-                "name": "Poo"
-            },
             "id": 52,
-            "isPassive": false,
             "isStackable": false,
             "magicPetal": false,
-            "premiumPrice": 1
-        },
-        {
+            "isPassive": false,
+            "i18n": {
+                "name": "Poo",
+                "fullName": "Poo",
+                "description": "Makes mobs less likely to want to attack you."
+            },
+            "premiumPrice": 1,
             "allowedDropRarities": [
                 false,
                 true,
@@ -2207,447 +2208,470 @@
                 true,
                 true,
                 true
-            ],
-            "i18n": {
-                "description": "A strange relic. Significantly increases maximum health.<n/>Damage taken is spread among other wearers.",
-                "fullName": "Mysterious Relic",
-                "name": "Relic"
-            },
+            ]
+        },
+        {
             "id": 53,
-            "isPassive": true,
             "isStackable": false,
             "magicPetal": false,
-            "premiumPrice": 1
+            "isPassive": true,
+            "i18n": {
+                "name": "Relic",
+                "fullName": "Mysterious Relic",
+                "description": "A strange relic. Significantly increases maximum health.<n/>Damage taken is spread among other wearers."
+            },
+            "premiumPrice": 1,
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ]
         },
         {
-            "i18n": {
-                "description": "Absorbs poison damage taken by the flower.",
-                "fullName": "Lotus",
-                "name": "Lotus"
-            },
             "id": 54,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Lotus",
+                "fullName": "Lotus",
+                "description": "Absorbs poison damage taken by the flower."
+            },
             "premiumPrice": 2
         },
         {
-            "i18n": {
-                "description": "A shiny lightbulb. Draws aggro from mobs.",
-                "fullName": "Light Bulb",
-                "name": "Bulb"
-            },
             "id": 55,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Bulb",
+                "fullName": "Light Bulb",
+                "description": "A shiny lightbulb. Draws aggro from mobs."
+            },
             "premiumPrice": 2
         },
         {
-            "i18n": {
-                "description": "Absorbs damage taken by the flower.",
-                "fullName": "Cotton",
-                "name": "Cotton"
-            },
             "id": 56,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
-            "magicVersion": 83,
-            "premiumPrice": 2
+            "isPassive": false,
+            "i18n": {
+                "name": "Cotton",
+                "fullName": "Cotton",
+                "description": "Absorbs damage taken by the flower."
+            },
+            "premiumPrice": 2,
+            "magicVersion": 83
         },
         {
-            "i18n": {
-                "description": "Sturdy and reliable. Can be shot and bounces off walls.",
-                "fullName": "Carrot",
-                "name": "Carrot"
-            },
             "id": 57,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Carrot",
+                "fullName": "Carrot",
+                "description": "Sturdy and reliable. Can be shot and bounces off walls."
+            },
             "premiumPrice": 2
         },
         {
-            "i18n": {
-                "description": "Sturdy.",
-                "fullName": "Bone",
-                "name": "Bone"
-            },
             "id": 58,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Bone",
+                "fullName": "Bone",
+                "description": "Sturdy."
+            },
             "premiumPrice": 3
         },
         {
-            "i18n": {
-                "description": "Does 20x damage vs projectiles and petals.",
-                "fullName": "Plank",
-                "name": "Plank"
-            },
             "id": 59,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Plank",
+                "fullName": "Plank",
+                "description": "Does 20x damage vs projectiles and petals."
+            },
             "premiumPrice": 2
         },
         {
-            "i18n": {
-                "description": "Gets stronger over time.",
-                "fullName": "Tomato",
-                "name": "Tomato"
-            },
             "id": 60,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Tomato",
+                "fullName": "Tomato",
+                "description": "Gets stronger over time."
+            },
             "premiumPrice": 3
         },
         {
-            "i18n": {
-                "description": "A dark mark that binds itself to a fallen soul.",
-                "fullName": "Dark Mark",
-                "name": "Mark"
-            },
             "id": 61,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Mark",
+                "fullName": "Dark Mark",
+                "description": "A dark mark that binds itself to a fallen soul."
+            },
             "premiumPrice": 3
         },
         {
-            "i18n": {
-                "description": "Increases knockback received. Also absorbs lightning damage dealt to the flower.",
-                "fullName": "Rubber",
-                "name": "Rubber"
-            },
             "id": 62,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Rubber",
+                "fullName": "Rubber",
+                "description": "Increases knockback received. Also absorbs lightning damage dealt to the flower."
+            },
             "premiumPrice": 3
         },
         {
-            "i18n": {
-                "description": "It really hurts, but it's very fragile.<n/>Deals some of the damage dealt back to the flower.",
-                "fullName": "Blood Stinger",
-                "name": "Stinger"
-            },
             "id": 63,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
-            "magicVersion": 84,
-            "premiumPrice": 3
+            "isPassive": false,
+            "i18n": {
+                "name": "Stinger",
+                "fullName": "Blood Stinger",
+                "description": "It really hurts, but it's very fragile.<n/>Deals damage to self when spawned."
+            },
+            "premiumPrice": 3,
+            "magicVersion": 84
         },
         {
-            "i18n": {
-                "description": "Decreases armor of affected unit. Does not stack with itself.",
-                "fullName": "Bur",
-                "name": "Bur"
-            },
             "id": 64,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Bur",
+                "fullName": "Bur",
+                "description": "Decreases armor of affected unit. Does not stack with itself."
+            },
             "premiumPrice": 4
         },
         {
-            "i18n": {
-                "description": "Provides additional armor but only while in the defensive position.",
-                "fullName": "Root",
-                "name": "Root"
-            },
             "id": 65,
-            "isPassive": false,
             "isStackable": false,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Root",
+                "fullName": "Root",
+                "description": "Provides additional armor but only while in the defensive position."
+            },
             "premiumPrice": 2
         },
         {
-            "i18n": {
-                "description": "An ancient relic.<n/>When destroyed, will teleport the flower back to where it was destroyed.",
-                "fullName": "Ankh",
-                "name": "Ankh"
-            },
             "id": 66,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Ankh",
+                "fullName": "Ankh",
+                "description": "An ancient relic.<n/>When destroyed, will teleport the flower back to where it was destroyed."
+            },
             "premiumPrice": 3
         },
         {
-            "i18n": {
-                "description": "Has a 5% chance of dealing 35x damage.<n/>Chance increases by 4% per point in luck.",
-                "fullName": "Dice",
-                "name": "Dice"
-            },
             "id": 67,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Dice",
+                "fullName": "Dice",
+                "description": "Has a 5% chance of dealing 35x damage.<n/>Chance increases by 4% per point in luck."
+            },
             "premiumPrice": 4
         },
         {
-            "i18n": {
-                "description": "A necklace that allows the wearer to anticipate enemy attacks.",
-                "fullName": "Talisman of Evasion",
-                "name": "Talisman"
-            },
             "id": 68,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Talisman",
+                "fullName": "Talisman of Evasion",
+                "description": "A necklace that allows the wearer to anticipate enemy attacks."
+            },
             "premiumPrice": 1
         },
         {
-            "i18n": {
-                "description": "Discharges electricity whenever the flower gets hit.",
-                "fullName": "Battery",
-                "name": "Battery"
-            },
             "id": 69,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Battery",
+                "fullName": "Battery",
+                "description": "Discharges electricity whenever the flower gets hit."
+            },
             "premiumPrice": 1
         },
         {
-            "i18n": {
-                "description": "Converts a percentage of overheal into shields.",
-                "fullName": "Amulet",
-                "name": "Amulet"
-            },
             "id": 70,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Amulet",
+                "fullName": "Amulet",
+                "description": "Converts a percentage of overheal into shields."
+            },
             "premiumPrice": 3
         },
         {
-            "allowedDropRarities": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                true,
-                true,
-                true
-            ],
-            "i18n": {
-                "description": "This crappy thing might be able to find something interesting...",
-                "fullName": "Compass",
-                "name": "Compass"
-            },
             "id": 71,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
-            "premiumPrice": 5
+            "isPassive": false,
+            "i18n": {
+                "name": "Compass",
+                "fullName": "Compass",
+                "description": "This crappy thing might be able to find something interesting..."
+            },
+            "premiumPrice": 5,
+            "allowedDropRarities": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true
+            ]
         },
         {
-            "i18n": {
-                "description": "Reduces damage taken from collisions with mobs and flowers.",
-                "fullName": "Disc",
-                "name": "Disc"
-            },
             "id": 72,
-            "isPassive": true,
             "isStackable": false,
             "magicPetal": false,
+            "isPassive": true,
+            "i18n": {
+                "name": "Disc",
+                "fullName": "Disc",
+                "description": "Reduces damage taken from collisions with mobs and flowers."
+            },
             "premiumPrice": 5
         },
         {
-            "i18n": {
-                "description": "Becomes untargetable but unable to use petals for a limited time.",
-                "fullName": "Shovel",
-                "name": "Shovel"
-            },
             "id": 73,
-            "isPassive": false,
             "isStackable": false,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Shovel",
+                "fullName": "Shovel",
+                "description": "Becomes untargetable but unable to use petals for a limited time."
+            },
             "premiumPrice": 3
         },
         {
-            "i18n": {
-                "description": "The power of capitalism compels you!",
-                "fullName": "Coin",
-                "name": "Coin"
-            },
             "id": 74,
-            "isPassive": false,
             "isStackable": true,
-            "magicPetal": false
+            "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Coin",
+                "fullName": "Coin",
+                "description": "The power of capitalism compels you!"
+            }
         },
         {
-            "i18n": {
-                "description": "ALL IN.",
-                "fullName": "Poker Chip",
-                "name": "Chip"
-            },
             "id": 75,
-            "isPassive": false,
             "isStackable": true,
-            "magicPetal": false
+            "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Chip",
+                "fullName": "Poker Chip",
+                "description": "ALL IN."
+            }
         },
         {
-            "allowedDropRarities": [
-                false,
-                false,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
-            ],
-            "i18n": {
-                "description": "A playing card. Likely marked.",
-                "fullName": "Card",
-                "name": "Card"
-            },
             "id": 76,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
-            "premiumPrice": 4
-        },
-        {
+            "isPassive": false,
+            "i18n": {
+                "name": "Card",
+                "fullName": "Card",
+                "description": "A playing card. Likely marked."
+            },
+            "premiumPrice": 4,
             "allowedDropRarities": [
                 false,
                 false,
-                false,
-                false,
-                false,
-                false,
+                true,
+                true,
+                true,
+                true,
                 true,
                 true,
                 true
-            ],
-            "i18n": {
-                "description": "This thing is so big your petals orbit it instead.<n/>Where did you find this anyway?",
-                "fullName": "Moon Rock",
-                "name": "Moon"
-            },
+            ]
+        },
+        {
             "id": 77,
-            "isPassive": false,
             "isStackable": false,
             "magicPetal": false,
-            "premiumPrice": 10
-        },
-        {
+            "isPassive": false,
+            "i18n": {
+                "name": "Moon",
+                "fullName": "Moon Rock",
+                "description": "This thing is so big your petals orbit it instead.<n/>Where did you find this anyway?"
+            },
+            "premiumPrice": 10,
             "allowedDropRarities": [
+                false,
+                false,
+                false,
+                false,
+                false,
                 false,
                 true,
                 true,
-                true,
-                true,
-                true,
-                true,
-                true,
                 true
-            ],
-            "i18n": {
-                "description": "Deals extra <c val=\"#ce76db\">Poison</c> damage based on the existing <c val=\"#ce76db\">Poison</c> damage per second.",
-                "fullName": "Privet Berry",
-                "name": "Privet"
-            },
+            ]
+        },
+        {
             "id": 78,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
-            "premiumPrice": 1
+            "isPassive": false,
+            "i18n": {
+                "name": "Privet",
+                "fullName": "Privet Berry",
+                "description": "Deals extra <c val=\"#ce76db\">Poison</c> damage based on the existing <c val=\"#ce76db\">Poison</c> damage per second."
+            },
+            "premiumPrice": 1,
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ]
         },
         {
-            "i18n": {
-                "description": "Phases through enemies.<n/>Cannot damage enemies more often than a certain interval.",
-                "fullName": "Glass",
-                "name": "Glass"
-            },
             "id": 79,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Glass",
+                "fullName": "Glass",
+                "description": "Phases through enemies.<n/>Cannot damage enemies more often than a certain interval."
+            },
             "premiumPrice": 1
         },
         {
-            "allowedDropRarities": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                true,
-                true,
-                true
-            ],
-            "i18n": {
-                "description": "Corrupts one's soul, turning them against their own kind.",
-                "fullName": "Corruption",
-                "name": "Corruption"
-            },
             "id": 80,
-            "isPassive": true,
             "isStackable": true,
             "magicPetal": false,
-            "minShopRarity": 7,
-            "premiumPrice": 5
+            "isPassive": true,
+            "i18n": {
+                "name": "Corruption",
+                "fullName": "Corruption",
+                "description": "Corrupts one's soul, turning them against their own kind."
+            },
+            "premiumPrice": 5,
+            "allowedDropRarities": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true
+            ],
+            "minShopRarity": 7
         },
         {
-            "i18n": {
-                "description": "Creates mana.",
-                "fullName": "Mana Orb",
-                "name": "Orb"
-            },
             "id": 81,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Orb",
+                "fullName": "Mana Orb",
+                "description": "Creates mana."
+            },
             "premiumPrice": 5
         },
         {
-            "i18n": {
-                "description": "It goes poof. Now with the extra secret ingredient: lightning.",
-                "fullName": "Blueberries",
-                "name": "Blueberries"
-            },
             "id": 82,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": true,
+            "isPassive": false,
+            "i18n": {
+                "name": "Blueberries",
+                "fullName": "Blueberries",
+                "description": "It goes poof. Now with the extra secret ingredient: lightning."
+            },
             "premiumPrice": 2
         },
         {
-            "i18n": {
-                "description": "Absorbs damage taken by the flower.",
-                "fullName": "Magic Cotton",
-                "name": "Cotton"
-            },
             "id": 83,
-            "isPassive": false,
             "isStackable": false,
             "magicPetal": true,
+            "isPassive": false,
+            "i18n": {
+                "name": "Cotton",
+                "fullName": "Magic Cotton",
+                "description": "Absorbs damage taken by the flower."
+            },
             "premiumPrice": 2
         },
         {
-            "i18n": {
-                "description": "It really hurts, but it's very fragile.",
-                "fullName": "Magic Stinger",
-                "name": "Stinger"
-            },
             "id": 84,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": true,
+            "isPassive": false,
+            "i18n": {
+                "name": "Stinger",
+                "fullName": "Magic Stinger",
+                "description": "It really hurts, but it's very fragile."
+            },
             "premiumPrice": 4
         },
         {
+            "id": 85,
+            "isStackable": true,
+            "magicPetal": true,
+            "isPassive": false,
+            "i18n": {
+                "name": "Leaf",
+                "fullName": "Magic Leaf",
+                "description": "Gathers mana from the environment passively."
+            },
+            "premiumPrice": 3,
             "allowedDropRarities": [
                 false,
                 true,
@@ -2658,77 +2682,77 @@
                 true,
                 true,
                 true
-            ],
-            "i18n": {
-                "description": "Gathers mana from the environment passively.",
-                "fullName": "Magic Leaf",
-                "name": "Leaf"
-            },
-            "id": 85,
-            "isPassive": false,
-            "isStackable": true,
-            "magicPetal": true,
-            "premiumPrice": 3
+            ]
         },
         {
-            "i18n": {
-                "description": "Increases maximum mana capacity.",
-                "fullName": "Magic Cactus",
-                "name": "Cactus"
-            },
             "id": 86,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": true,
+            "isPassive": false,
+            "i18n": {
+                "name": "Cactus",
+                "fullName": "Magic Cactus",
+                "description": "Increases maximum mana capacity."
+            },
             "premiumPrice": 2
         },
         {
-            "allowedDropRarities": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                true,
-                true,
-                true,
-                true
-            ],
-            "i18n": {
-                "description": "Consumes half the current mana and deals damage based on that value.",
-                "fullName": "Magic Eye",
-                "name": "Magic Eye"
-            },
             "id": 87,
-            "isPassive": true,
             "isStackable": false,
             "magicPetal": true,
-            "premiumPrice": 10
-        },
-        {
+            "isPassive": true,
+            "i18n": {
+                "name": "Magic Eye",
+                "fullName": "Magic Eye",
+                "description": "Consumes half the current mana and deals damage based on that value."
+            },
+            "premiumPrice": 10,
             "allowedDropRarities": [
+                false,
+                false,
+                false,
+                false,
                 false,
                 true,
                 true,
                 true,
-                true,
-                true,
-                true,
-                true,
                 true
-            ],
-            "i18n": {
-                "description": "You can actually shoot this one... with magic.",
-                "fullName": "Magic Missile",
-                "name": "Missile"
-            },
+            ]
+        },
+        {
             "id": 88,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": true,
-            "premiumPrice": 1
+            "isPassive": false,
+            "i18n": {
+                "name": "Missile",
+                "fullName": "Magic Missile",
+                "description": "You can actually shoot this one... with magic."
+            },
+            "premiumPrice": 1,
+            "allowedDropRarities": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ]
         },
         {
+            "id": 89,
+            "isStackable": true,
+            "magicPetal": true,
+            "isPassive": false,
+            "i18n": {
+                "name": "Stick",
+                "fullName": "Magic Stick",
+                "description": "A mysterious stick that summons the forces of the wind... with magic."
+            },
+            "premiumPrice": 5,
             "allowedDropRarities": [
                 false,
                 false,
@@ -2739,43 +2763,43 @@
                 true,
                 true,
                 true
-            ],
-            "i18n": {
-                "description": "A mysterious stick that summons the forces of the wind... with magic.",
-                "fullName": "Magic Stick",
-                "name": "Stick"
-            },
-            "id": 89,
-            "isPassive": false,
-            "isStackable": true,
-            "magicPetal": true,
-            "premiumPrice": 5
+            ]
         },
         {
-            "i18n": {
-                "description": "Breaks apart on impact.<n/>Each piece has 50% of the stats of the predecessor.",
-                "fullName": "Coral",
-                "name": "Coral"
-            },
             "id": 90,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Coral",
+                "fullName": "Coral",
+                "description": "Breaks apart on impact.<n/>Each piece has 50% of the stats of the predecessor."
+            },
             "premiumPrice": 1
         },
         {
-            "i18n": {
-                "description": "Physics are for the magicless.",
-                "fullName": "Magic Bubble",
-                "name": "Bubble"
-            },
             "id": 91,
-            "isPassive": false,
             "isStackable": true,
             "magicPetal": true,
+            "isPassive": false,
+            "i18n": {
+                "name": "Bubble",
+                "fullName": "Magic Bubble",
+                "description": "Physics are for the magicless."
+            },
             "premiumPrice": 4
         },
         {
+            "id": 92,
+            "isStackable": false,
+            "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Nazar",
+                "fullName": "Nazar Amulet",
+                "description": "Reduces one damage instance damage by 98%."
+            },
+            "premiumPrice": 5,
             "allowedDropRarities": [
                 true,
                 false,
@@ -2786,17 +2810,30 @@
                 true,
                 true,
                 true
-            ],
-            "i18n": {
-                "description": "Reduces one damage instance damage by 98%.",
-                "fullName": "Nazar Amulet",
-                "name": "Nazar"
-            },
-            "id": 92,
-            "isPassive": false,
-            "isStackable": false,
+            ]
+        },
+        {
+            "id": 93,
+            "isStackable": true,
             "magicPetal": false,
-            "premiumPrice": 5
+            "isPassive": false,
+            "i18n": {
+                "name": "Mimic",
+                "fullName": "Mimic",
+                "description": "Copies the petal to the left of this, with the same rarity as this."
+            },
+            "premiumPrice": 30,
+            "allowedDropRarities": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true
+            ]
         }
     ],
     "rarity": [
@@ -2846,7 +2883,7 @@
             "color": 5592405
         }
     ],
-    "dropChance": {
+    "drop_chance": {
         "rock": {
             "Common": {
                 "Rock": {
@@ -2952,17 +2989,17 @@
             },
             "Unique": {
                 "Rock": {
-                    "Legendary": "0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007709146951002738",
-                    "Mythic": "0.21307098821608217",
-                    "Ultra": "0.7869290117839178"
+                    "Legendary": "0.000000000000000000006147529655265397",
+                    "Mythic": "0.8567466836545221",
+                    "Ultra": "0.1432533163454779"
                 },
                 "Heavy": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000425605238284794",
-                    "Mythic": "0.5972689691310202",
-                    "Ultra": "0.40273103086897977"
+                    "Legendary": "0.00000018318955026651785",
+                    "Mythic": "0.9497666405129861",
+                    "Ultra": "0.0502331762974636"
                 },
                 "Moon Rock": {
-                    "Ultra": "0.05022052277718825"
+                    "Ultra": "0.005139293466577377"
                 }
             }
         },
@@ -3027,9 +3064,9 @@
             },
             "Unique": {
                 "Cactus": {
-                    "Legendary": "0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007709146951002738",
-                    "Mythic": "0.21307098821608217",
-                    "Ultra": "0.7869290117839178"
+                    "Legendary": "0.000000000000000000006147529655265397",
+                    "Mythic": "0.8567466836545221",
+                    "Ultra": "0.1432533163454779"
                 }
             }
         },
@@ -3136,12 +3173,14 @@
             },
             "Unique": {
                 "Light": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 },
                 "Rose": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 }
             }
         },
@@ -3275,18 +3314,19 @@
             },
             "Unique": {
                 "Stinger": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 },
                 "Honey": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018113980432531178",
-                    "Mythic": "0.356742103187549",
-                    "Ultra": "0.6432578968124509"
+                    "Legendary": "0.00000000000003355841105766001",
+                    "Mythic": "0.9020600238643122",
+                    "Ultra": "0.0979399761356543"
                 },
                 "Pollen": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018113980432531178",
-                    "Mythic": "0.356742103187549",
-                    "Ultra": "0.6432578968124509"
+                    "Legendary": "0.00000000000003355841105766001",
+                    "Mythic": "0.9020600238643122",
+                    "Ultra": "0.0979399761356543"
                 }
             }
         },
@@ -3431,17 +3471,19 @@
             },
             "Unique": {
                 "Light": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 },
                 "Leaf": {
-                    "Legendary": "0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007709146951002738",
-                    "Mythic": "0.21307098821608217",
-                    "Ultra": "0.7869290117839178"
+                    "Legendary": "0.000000000000000000006147529655265397",
+                    "Mythic": "0.8567466836545221",
+                    "Ultra": "0.1432533163454779"
                 },
                 "Rice": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 }
             }
         },
@@ -3544,14 +3586,14 @@
             },
             "Unique": {
                 "Leaf": {
-                    "Legendary": "0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007709146951002738",
-                    "Mythic": "0.21307098821608217",
-                    "Ultra": "0.7869290117839178"
+                    "Legendary": "0.000000000000000000006147529655265397",
+                    "Mythic": "0.8567466836545221",
+                    "Ultra": "0.1432533163454779"
                 },
                 "Corn": {
-                    "Legendary": "0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007709146951002738",
-                    "Mythic": "0.21307098821608217",
-                    "Ultra": "0.7869290117839178"
+                    "Legendary": "0.000000000000000000006147529655265397",
+                    "Mythic": "0.8567466836545221",
+                    "Ultra": "0.1432533163454779"
                 }
             }
         },
@@ -3658,12 +3700,14 @@
             },
             "Unique": {
                 "Clover": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 },
                 "Glass": {
-                    "Mythic": "0.04539924601901607",
-                    "Ultra": "0.954600753980984"
+                    "Legendary": "0.00000000000000000000000000000000000000003779211813401899",
+                    "Mythic": "0.7340148799524369",
+                    "Ultra": "0.26598512004756314"
                 }
             }
         },
@@ -3744,12 +3788,13 @@
             },
             "Unique": {
                 "Basil": {
-                    "Mythic": "0.04539924601901607",
-                    "Ultra": "0.954600753980984"
+                    "Mythic": "0.7340148799524369",
+                    "Ultra": "0.26598512004756314"
                 },
                 "Ant Egg": {
-                    "Mythic": "0.005777731784196079",
-                    "Ultra": "0.994222268215804"
+                    "Legendary": "0.00000000000000000000000000000000000000000000000000000000000000000004256022495650595",
+                    "Mythic": "0.5972769264027837",
+                    "Ultra": "0.40272307359721626"
                 }
             }
         },
@@ -3856,13 +3901,14 @@
             },
             "Unique": {
                 "Soil": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 },
                 "Shovel": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000032810525354841867",
-                    "Mythic": "0.12726492818622517",
-                    "Ultra": "0.8727350718137749"
+                    "Legendary": "0.0000000000000000000000000011261631656975666",
+                    "Mythic": "0.8137122866538559",
+                    "Ultra": "0.18628771334614413"
                 }
             }
         },
@@ -3972,13 +4018,14 @@
             },
             "Unique": {
                 "Beetle Egg": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 },
                 "Ankh": {
-                    "Legendary": "0.000000000000033558635086871746",
-                    "Mythic": "0.902051010519214",
-                    "Ultra": "0.09794898948075248"
+                    "Legendary": "0.044934553320222545",
+                    "Mythic": "0.9448099755669742",
+                    "Ultra": "0.010255471112803227"
                 }
             }
         },
@@ -4108,17 +4155,19 @@
             },
             "Unique": {
                 "Missile": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 },
                 "Orange": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 },
                 "Antennae": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018113980432531178",
-                    "Mythic": "0.356742103187549",
-                    "Ultra": "0.6432578968124509"
+                    "Legendary": "0.00000000000003355841105766001",
+                    "Mythic": "0.9020600238643122",
+                    "Ultra": "0.0979399761356543"
                 }
             }
         },
@@ -4226,14 +4275,14 @@
             },
             "Unique": {
                 "Leaf": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000425605238284794",
-                    "Mythic": "0.5972689691310202",
-                    "Ultra": "0.40273103086897977"
+                    "Legendary": "0.00000018318955026651785",
+                    "Mythic": "0.9497666405129861",
+                    "Ultra": "0.0502331762974636"
                 },
                 "Peas": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000425605238284794",
-                    "Mythic": "0.5972689691310202",
-                    "Ultra": "0.40273103086897977"
+                    "Legendary": "0.00000018318955026651785",
+                    "Mythic": "0.9497666405129861",
+                    "Ultra": "0.0502331762974636"
                 }
             }
         },
@@ -4341,14 +4390,14 @@
             },
             "Unique": {
                 "Leaf": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000425605238284794",
-                    "Mythic": "0.5972689691310202",
-                    "Ultra": "0.40273103086897977"
+                    "Legendary": "0.00000018318955026651785",
+                    "Mythic": "0.9497666405129861",
+                    "Ultra": "0.0502331762974636"
                 },
                 "Peas": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000425605238284794",
-                    "Mythic": "0.5972689691310202",
-                    "Ultra": "0.40273103086897977"
+                    "Legendary": "0.00000018318955026651785",
+                    "Mythic": "0.9497666405129861",
+                    "Ultra": "0.0502331762974636"
                 }
             }
         },
@@ -4456,14 +4505,14 @@
             },
             "Unique": {
                 "Iris": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000425605238284794",
-                    "Mythic": "0.5972689691310202",
-                    "Ultra": "0.40273103086897977"
+                    "Legendary": "0.00000018318955026651785",
+                    "Mythic": "0.9497666405129861",
+                    "Ultra": "0.0502331762974636"
                 },
                 "Grapes": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000425605238284794",
-                    "Mythic": "0.5972689691310202",
-                    "Ultra": "0.40273103086897977"
+                    "Legendary": "0.00000018318955026651785",
+                    "Mythic": "0.9497666405129861",
+                    "Ultra": "0.0502331762974636"
                 }
             }
         },
@@ -4571,14 +4620,14 @@
             },
             "Unique": {
                 "Iris": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000425605238284794",
-                    "Mythic": "0.5972689691310202",
-                    "Ultra": "0.40273103086897977"
+                    "Legendary": "0.00000018318955026651785",
+                    "Mythic": "0.9497666405129861",
+                    "Ultra": "0.0502331762974636"
                 },
                 "Grapes": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000425605238284794",
-                    "Mythic": "0.5972689691310202",
-                    "Ultra": "0.40273103086897977"
+                    "Legendary": "0.00000018318955026651785",
+                    "Mythic": "0.9497666405129861",
+                    "Ultra": "0.0502331762974636"
                 }
             }
         },
@@ -4671,14 +4720,14 @@
             },
             "Unique": {
                 "Salt": {
-                    "Legendary": "0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007709146951002738",
-                    "Mythic": "0.21307098821608217",
-                    "Ultra": "0.7869290117839178"
+                    "Legendary": "0.000000000000000000006147529655265397",
+                    "Mythic": "0.8567466836545221",
+                    "Ultra": "0.1432533163454779"
                 },
                 "Mysterious Powder": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000425605238284794",
-                    "Mythic": "0.5972689691310202",
-                    "Ultra": "0.40273103086897977"
+                    "Legendary": "0.00000018318955026651785",
+                    "Mythic": "0.9497666405129861",
+                    "Ultra": "0.0502331762974636"
                 }
             }
         },
@@ -4771,14 +4820,14 @@
             },
             "Unique": {
                 "Salt": {
-                    "Legendary": "0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007709146951002738",
-                    "Mythic": "0.21307098821608217",
-                    "Ultra": "0.7869290117839178"
+                    "Legendary": "0.000000000000000000006147529655265397",
+                    "Mythic": "0.8567466836545221",
+                    "Ultra": "0.1432533163454779"
                 },
                 "Mysterious Powder": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000425605238284794",
-                    "Mythic": "0.5972689691310202",
-                    "Ultra": "0.40273103086897977"
+                    "Legendary": "0.00000018318955026651785",
+                    "Mythic": "0.9497666405129861",
+                    "Ultra": "0.0502331762974636"
                 }
             }
         },
@@ -4907,13 +4956,14 @@
             },
             "Unique": {
                 "Dahlia": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 },
                 "Yin Yang": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018113980432531178",
-                    "Mythic": "0.356742103187549",
-                    "Ultra": "0.6432578968124509"
+                    "Legendary": "0.00000000000003355841105766001",
+                    "Mythic": "0.9020600238643122",
+                    "Ultra": "0.0979399761356543"
                 }
             }
         },
@@ -5037,16 +5087,19 @@
             },
             "Unique": {
                 "Rose": {
-                    "Mythic": "0.000033382184567154054",
-                    "Ultra": "0.9999666178154328"
+                    "Legendary": "0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001811371295354739",
+                    "Mythic": "0.3567397268099979",
+                    "Ultra": "0.6432602731900021"
                 },
                 "Dahlia": {
-                    "Mythic": "0.000033382184567154054",
-                    "Ultra": "0.9999666178154328"
+                    "Legendary": "0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001811371295354739",
+                    "Mythic": "0.3567397268099979",
+                    "Ultra": "0.6432602731900021"
                 },
                 "Yggdrasil": {
-                    "Mythic": "0.005777731784196079",
-                    "Ultra": "0.994222268215804"
+                    "Legendary": "0.00000000000000000000000000000000000000000000000000000000000000000004256022495650595",
+                    "Mythic": "0.5972769264027837",
+                    "Ultra": "0.40272307359721626"
                 }
             }
         },
@@ -5165,16 +5218,18 @@
             },
             "Unique": {
                 "Faster": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 },
                 "Web": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 },
                 "Third Eye": {
-                    "Mythic": "0.902051010519214",
-                    "Ultra": "0.09794898948075248"
+                    "Mythic": "0.9448099755669742",
+                    "Ultra": "0.010255471112803227"
                 }
             }
         },
@@ -5273,12 +5328,14 @@
             },
             "Unique": {
                 "Iris": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 },
                 "Pincer": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 }
             }
         },
@@ -5377,12 +5434,14 @@
             },
             "Unique": {
                 "Yucca": {
-                    "Mythic": "0.04539924601901607",
-                    "Ultra": "0.954600753980984"
+                    "Legendary": "0.00000000000000000000000000000000000000003779211813401899",
+                    "Mythic": "0.7340148799524369",
+                    "Ultra": "0.26598512004756314"
                 },
                 "Privet Berry": {
-                    "Mythic": "0.04539924601901607",
-                    "Ultra": "0.954600753980984"
+                    "Legendary": "0.00000000000000000000000000000000000000003779211813401899",
+                    "Mythic": "0.7340148799524369",
+                    "Ultra": "0.26598512004756314"
                 }
             }
         },
@@ -5478,12 +5537,14 @@
             },
             "Unique": {
                 "Magnet": {
-                    "Mythic": "0.005777731784196079",
-                    "Ultra": "0.994222268215804"
+                    "Legendary": "0.00000000000000000000000000000000000000000000000000000000000000000004256022495650595",
+                    "Mythic": "0.5972769264027837",
+                    "Ultra": "0.40272307359721626"
                 },
                 "Disc": {
-                    "Mythic": "0.04539924601901607",
-                    "Ultra": "0.954600753980984"
+                    "Legendary": "0.00000000000000000000000000000000000000003779211813401899",
+                    "Mythic": "0.7340148799524369",
+                    "Ultra": "0.26598512004756314"
                 }
             }
         },
@@ -5616,19 +5677,19 @@
             },
             "Unique": {
                 "Sand": {
-                    "Legendary": "0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007709146951002738",
-                    "Mythic": "0.21307098821608217",
-                    "Ultra": "0.7869290117839178"
+                    "Legendary": "0.000000000000000000006147529655265397",
+                    "Mythic": "0.8567466836545221",
+                    "Ultra": "0.1432533163454779"
                 },
                 "Glass": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018113980432531178",
-                    "Mythic": "0.356742103187549",
-                    "Ultra": "0.6432578968124509"
+                    "Legendary": "0.00000000000003355841105766001",
+                    "Mythic": "0.9020600238643122",
+                    "Ultra": "0.0979399761356543"
                 },
                 "Mysterious Stick": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000425605238284794",
-                    "Mythic": "0.5972689691310202",
-                    "Ultra": "0.40273103086897977"
+                    "Legendary": "0.00000018318955026651785",
+                    "Mythic": "0.9497666405129861",
+                    "Ultra": "0.0502331762974636"
                 }
             }
         },
@@ -5735,12 +5796,14 @@
             },
             "Unique": {
                 "Air": {
-                    "Mythic": "0.000033382184567154054",
-                    "Ultra": "0.9999666178154328"
+                    "Legendary": "0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001811371295354739",
+                    "Mythic": "0.3567397268099979",
+                    "Ultra": "0.6432602731900021"
                 },
                 "Bubble": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 }
             }
         },
@@ -5832,13 +5895,14 @@
             },
             "Unique": {
                 "Honey": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000032810525354841867",
-                    "Mythic": "0.12726492818622517",
-                    "Ultra": "0.8727350718137749"
+                    "Legendary": "0.0000000000000000000000000011261631656975666",
+                    "Mythic": "0.8137122866538559",
+                    "Ultra": "0.18628771334614413"
                 },
                 "Pollen": {
-                    "Mythic": "0.00015667165599667394",
-                    "Ultra": "0.9998433283440034"
+                    "Legendary": "0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000029464745008228375",
+                    "Mythic": "0.4163888038526238",
+                    "Ultra": "0.5836111961473762"
                 }
             }
         },
@@ -5973,18 +6037,19 @@
             },
             "Unique": {
                 "Magnet": {
-                    "Legendary": "0.000000000000033558635086871746",
-                    "Mythic": "0.902051010519214",
-                    "Ultra": "0.09794898948075248"
+                    "Legendary": "0.044934553320222545",
+                    "Mythic": "0.9448099755669742",
+                    "Ultra": "0.010255471112803227"
                 },
                 "Shell": {
-                    "Legendary": "0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007709146951002738",
-                    "Mythic": "0.21307098821608217",
-                    "Ultra": "0.7869290117839178"
+                    "Legendary": "0.000000000000000000006147529655265397",
+                    "Mythic": "0.8567466836545221",
+                    "Ultra": "0.1432533163454779"
                 },
                 "Pearl": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 }
             }
         },
@@ -6130,18 +6195,19 @@
             },
             "Unique": {
                 "Sand": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000425605238284794",
-                    "Mythic": "0.5972689691310202",
-                    "Ultra": "0.40273103086897977"
+                    "Legendary": "0.00000018318955026651785",
+                    "Mythic": "0.9497666405129861",
+                    "Ultra": "0.0502331762974636"
                 },
                 "Salt": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000425605238284794",
-                    "Mythic": "0.5972689691310202",
-                    "Ultra": "0.40273103086897977"
+                    "Legendary": "0.00000018318955026651785",
+                    "Mythic": "0.9497666405129861",
+                    "Ultra": "0.0502331762974636"
                 },
                 "Starfish": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 }
             }
         },
@@ -6251,13 +6317,14 @@
             },
             "Unique": {
                 "Sand": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000425605238284794",
-                    "Mythic": "0.5972689691310202",
-                    "Ultra": "0.40273103086897977"
+                    "Legendary": "0.00000018318955026651785",
+                    "Mythic": "0.9497666405129861",
+                    "Ultra": "0.0502331762974636"
                 },
                 "Claw": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 }
             }
         },
@@ -6360,13 +6427,14 @@
             },
             "Unique": {
                 "Lightning": {
-                    "Legendary": "0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007709146951002738",
-                    "Mythic": "0.21307098821608217",
-                    "Ultra": "0.7869290117839178"
+                    "Legendary": "0.000000000000000000006147529655265397",
+                    "Mythic": "0.8567466836545221",
+                    "Ultra": "0.1432533163454779"
                 },
                 "Jelly": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 }
             }
         },
@@ -6462,14 +6530,14 @@
             },
             "Unique": {
                 "Cutter": {
-                    "Legendary": "0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007709146951002738",
-                    "Mythic": "0.21307098821608217",
-                    "Ultra": "0.7869290117839178"
+                    "Legendary": "0.000000000000000000006147529655265397",
+                    "Mythic": "0.8567466836545221",
+                    "Ultra": "0.1432533163454779"
                 },
                 "Uranium": {
-                    "Legendary": "0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007709146951002738",
-                    "Mythic": "0.21307098821608217",
-                    "Ultra": "0.7869290117839178"
+                    "Legendary": "0.000000000000000000006147529655265397",
+                    "Mythic": "0.8567466836545221",
+                    "Ultra": "0.1432533163454779"
                 }
             }
         },
@@ -6572,13 +6640,14 @@
             },
             "Unique": {
                 "Sponge": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 },
                 "Coral": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018113980432531178",
-                    "Mythic": "0.356742103187549",
-                    "Ultra": "0.6432578968124509"
+                    "Legendary": "0.00000000000003355841105766001",
+                    "Mythic": "0.9020600238643122",
+                    "Ultra": "0.0979399761356543"
                 }
             }
         },
@@ -6681,12 +6750,14 @@
             },
             "Unique": {
                 "Fangs": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 },
                 "Faster": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 }
             }
         },
@@ -6758,8 +6829,9 @@
             },
             "Unique": {
                 "Dandelion": {
-                    "Mythic": "0.04539924601901607",
-                    "Ultra": "0.954600753980984"
+                    "Legendary": "0.00000000000000000000000000000000000000003779211813401899",
+                    "Mythic": "0.7340148799524369",
+                    "Ultra": "0.26598512004756314"
                 }
             }
         },
@@ -6862,13 +6934,14 @@
             },
             "Unique": {
                 "Light": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 },
                 "Yucca": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018113980432531178",
-                    "Mythic": "0.356742103187549",
-                    "Ultra": "0.6432578968124509"
+                    "Legendary": "0.00000000000003355841105766001",
+                    "Mythic": "0.9020600238643122",
+                    "Ultra": "0.0979399761356543"
                 }
             }
         },
@@ -6971,14 +7044,14 @@
             },
             "Unique": {
                 "Yucca": {
-                    "Legendary": "0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007709146951002738",
-                    "Mythic": "0.21307098821608217",
-                    "Ultra": "0.7869290117839178"
+                    "Legendary": "0.000000000000000000006147529655265397",
+                    "Mythic": "0.8567466836545221",
+                    "Ultra": "0.1432533163454779"
                 },
                 "Corn": {
-                    "Legendary": "0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007709146951002738",
-                    "Mythic": "0.21307098821608217",
-                    "Ultra": "0.7869290117839178"
+                    "Legendary": "0.000000000000000000006147529655265397",
+                    "Mythic": "0.8567466836545221",
+                    "Ultra": "0.1432533163454779"
                 }
             }
         },
@@ -7059,12 +7132,13 @@
             },
             "Unique": {
                 "Basil": {
-                    "Mythic": "0.04539924601901607",
-                    "Ultra": "0.954600753980984"
+                    "Mythic": "0.7340148799524369",
+                    "Ultra": "0.26598512004756314"
                 },
                 "Ant Egg": {
-                    "Mythic": "0.005777731784196079",
-                    "Ultra": "0.994222268215804"
+                    "Legendary": "0.00000000000000000000000000000000000000000000000000000000000000000004256022495650595",
+                    "Mythic": "0.5972769264027837",
+                    "Ultra": "0.40272307359721626"
                 }
             }
         },
@@ -7129,8 +7203,9 @@
             },
             "Unique": {
                 "Ant Egg": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 }
             }
         },
@@ -7195,8 +7270,9 @@
             },
             "Unique": {
                 "Ant Egg": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 }
             }
         },
@@ -7341,17 +7417,19 @@
             },
             "Unique": {
                 "Poo": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 },
                 "Wing": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 },
                 "Talisman of Evasion": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018113980432531178",
-                    "Mythic": "0.356742103187549",
-                    "Ultra": "0.6432578968124509"
+                    "Legendary": "0.00000000000003355841105766001",
+                    "Mythic": "0.9020600238643122",
+                    "Ultra": "0.0979399761356543"
                 }
             }
         },
@@ -7454,12 +7532,14 @@
             },
             "Unique": {
                 "Leaf": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 },
                 "Root": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 }
             }
         },
@@ -7566,12 +7646,14 @@
             },
             "Unique": {
                 "Peas": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 },
                 "Bur": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 }
             }
         },
@@ -7676,13 +7758,14 @@
             },
             "Unique": {
                 "Mysterious Relic": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000425605238284794",
-                    "Mythic": "0.5972689691310202",
-                    "Ultra": "0.40273103086897977"
+                    "Legendary": "0.00000018318955026651785",
+                    "Mythic": "0.9497666405129861",
+                    "Ultra": "0.0502331762974636"
                 },
                 "Carrot": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 }
             }
         },
@@ -7787,14 +7870,14 @@
             },
             "Unique": {
                 "Mysterious Relic": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000425605238284794",
-                    "Mythic": "0.5972689691310202",
-                    "Ultra": "0.40273103086897977"
+                    "Legendary": "0.00000018318955026651785",
+                    "Mythic": "0.9497666405129861",
+                    "Ultra": "0.0502331762974636"
                 },
                 "Plank": {
-                    "Legendary": "0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007709146951002738",
-                    "Mythic": "0.21307098821608217",
-                    "Ultra": "0.7869290117839178"
+                    "Legendary": "0.000000000000000000006147529655265397",
+                    "Mythic": "0.8567466836545221",
+                    "Ultra": "0.1432533163454779"
                 }
             }
         },
@@ -7899,14 +7982,14 @@
             },
             "Unique": {
                 "Mysterious Relic": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000425605238284794",
-                    "Mythic": "0.5972689691310202",
-                    "Ultra": "0.40273103086897977"
+                    "Legendary": "0.00000018318955026651785",
+                    "Mythic": "0.9497666405129861",
+                    "Ultra": "0.0502331762974636"
                 },
                 "Bone": {
-                    "Legendary": "0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007709146951002738",
-                    "Mythic": "0.21307098821608217",
-                    "Ultra": "0.7869290117839178"
+                    "Legendary": "0.000000000000000000006147529655265397",
+                    "Mythic": "0.8567466836545221",
+                    "Ultra": "0.1432533163454779"
                 }
             }
         },
@@ -8021,16 +8104,17 @@
             },
             "Unique": {
                 "Tomato": {
-                    "Legendary": "0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007709146951002738",
-                    "Mythic": "0.21307098821608217",
-                    "Ultra": "0.7869290117839178"
+                    "Legendary": "0.000000000000000000006147529655265397",
+                    "Mythic": "0.8567466836545221",
+                    "Ultra": "0.1432533163454779"
                 },
                 "Mysterious Relic": {
-                    "Mythic": "0.005777731784196079",
-                    "Ultra": "0.994222268215804"
+                    "Legendary": "0.00000000000000000000000000000000000000000000000000000000000000000004256022495650595",
+                    "Mythic": "0.5972769264027837",
+                    "Ultra": "0.40272307359721626"
                 },
                 "Compass": {
-                    "Ultra": "0.9999666178154328"
+                    "Ultra": "0.6432602731900021"
                 }
             }
         },
@@ -8175,18 +8259,19 @@
             },
             "Unique": {
                 "Mysterious Relic": {
-                    "Legendary": "0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007709146951002738",
-                    "Mythic": "0.21307098821608217",
-                    "Ultra": "0.7869290117839178"
+                    "Legendary": "0.000000000000000000006147529655265397",
+                    "Mythic": "0.8567466836545221",
+                    "Ultra": "0.1432533163454779"
                 },
                 "Soil": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 },
                 "Rubber": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000032810525354841867",
-                    "Mythic": "0.12726492818622517",
-                    "Ultra": "0.8727350718137749"
+                    "Legendary": "0.0000000000000000000000000011261631656975666",
+                    "Mythic": "0.8137122866538559",
+                    "Ultra": "0.18628771334614413"
                 }
             }
         },
@@ -8296,13 +8381,14 @@
             },
             "Unique": {
                 "Ant Egg": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 },
                 "Amulet": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000425605238284794",
-                    "Mythic": "0.5972689691310202",
-                    "Ultra": "0.40273103086897977"
+                    "Legendary": "0.00000018318955026651785",
+                    "Mythic": "0.9497666405129861",
+                    "Ultra": "0.0502331762974636"
                 }
             }
         },
@@ -8367,8 +8453,9 @@
             },
             "Unique": {
                 "Cotton": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 }
             }
         },
@@ -8467,13 +8554,14 @@
             },
             "Unique": {
                 "Antennae": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 },
                 "Lotus": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000425605238284794",
-                    "Mythic": "0.5972689691310202",
-                    "Ultra": "0.40273103086897977"
+                    "Legendary": "0.00000018318955026651785",
+                    "Mythic": "0.9497666405129861",
+                    "Ultra": "0.0502331762974636"
                 }
             }
         },
@@ -8580,12 +8668,14 @@
             },
             "Unique": {
                 "Wing": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 },
                 "Light Bulb": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 }
             }
         },
@@ -8737,17 +8827,19 @@
             },
             "Unique": {
                 "Wing": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 },
                 "Light Bulb": {
-                    "Mythic": "0.07601139246405084",
-                    "Ultra": "0.9239886075359491"
+                    "Legendary": "0.0000000000000000000000000000000002063013172314641",
+                    "Mythic": "0.7728369339026867",
+                    "Ultra": "0.2271630660973133"
                 },
                 "Battery": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000425605238284794",
-                    "Mythic": "0.5972689691310202",
-                    "Ultra": "0.40273103086897977"
+                    "Legendary": "0.00000018318955026651785",
+                    "Mythic": "0.9497666405129861",
+                    "Ultra": "0.0502331762974636"
                 }
             }
         },
@@ -8902,19 +8994,19 @@
             },
             "Unique": {
                 "Dark Mark": {
-                    "Legendary": "0.000000000000033558635086871746",
-                    "Mythic": "0.902051010519214",
-                    "Ultra": "0.09794898948075248"
+                    "Legendary": "0.044934553320222545",
+                    "Mythic": "0.9448099755669742",
+                    "Ultra": "0.010255471112803227"
                 },
                 "Beetle Egg": {
-                    "Legendary": "0.00000000000000000000000000112618198528035",
-                    "Mythic": "0.8137231275519821",
-                    "Ultra": "0.18627687244801794"
+                    "Legendary": "0.0020191140814400698",
+                    "Mythic": "0.977578381090344",
+                    "Ultra": "0.020402504828215928"
                 },
                 "Dice": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018113980432531178",
-                    "Mythic": "0.356742103187549",
-                    "Ultra": "0.6432578968124509"
+                    "Legendary": "0.00000000000003355841105766001",
+                    "Mythic": "0.9020600238643122",
+                    "Ultra": "0.0979399761356543"
                 }
             }
         },
@@ -9048,18 +9140,19 @@
             },
             "Unique": {
                 "Missile": {
-                    "Mythic": "0.00043917343818110734",
-                    "Ultra": "0.9995608265618189"
+                    "Legendary": "0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008780226948660548",
+                    "Mythic": "0.46159766848990463",
+                    "Ultra": "0.5384023315100954"
                 },
                 "Antennae": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000032810525354841867",
-                    "Mythic": "0.12726492818622517",
-                    "Ultra": "0.8727350718137749"
+                    "Legendary": "0.0000000000000000000000000011261631656975666",
+                    "Mythic": "0.8137122866538559",
+                    "Ultra": "0.18628771334614413"
                 },
                 "Blood Stinger": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018113980432531178",
-                    "Mythic": "0.356742103187549",
-                    "Ultra": "0.6432578968124509"
+                    "Legendary": "0.00000000000003355841105766001",
+                    "Mythic": "0.9020600238643122",
+                    "Ultra": "0.0979399761356543"
                 }
             }
         },
@@ -9185,18 +9278,18 @@
             },
             "Unique": {
                 "Dark Mark": {
-                    "Legendary": "0.000000000000033558635086871746",
-                    "Mythic": "0.902051010519214",
-                    "Ultra": "0.09794898948075248"
+                    "Legendary": "0.044934553320222545",
+                    "Mythic": "0.9448099755669742",
+                    "Ultra": "0.010255471112803227"
                 },
                 "Third Eye": {
-                    "Mythic": "0.902051010519214",
-                    "Ultra": "0.09794898948075248"
+                    "Mythic": "0.9448099755669742",
+                    "Ultra": "0.010255471112803227"
                 },
                 "Card": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018113980432531178",
-                    "Mythic": "0.356742103187549",
-                    "Ultra": "0.6432578968124509"
+                    "Legendary": "0.00000000000003355841105766001",
+                    "Mythic": "0.9020600238643122",
+                    "Ultra": "0.0979399761356543"
                 }
             }
         },
@@ -9312,14 +9405,15 @@
             },
             "Unique": {
                 "Dark Mark": {
-                    "Legendary": "0.04493440366483262",
-                    "Mythic": "0.9448266079170784",
-                    "Ultra": "0.010238988418089012"
+                    "Epic": "0.0000000000000000000000000000000000000000000012603024864557663",
+                    "Legendary": "0.7332598375110647",
+                    "Mythic": "0.2657115151658547",
+                    "Ultra": "0.0010286473230806115"
                 },
                 "Poker Chip": {
-                    "Legendary": "0.000000000000033558635086871746",
-                    "Mythic": "0.902051010519214",
-                    "Ultra": "0.09794898948075248"
+                    "Legendary": "0.044934553320222545",
+                    "Mythic": "0.9448099755669742",
+                    "Ultra": "0.010255471112803227"
                 }
             }
         },
@@ -9435,14 +9529,15 @@
             },
             "Unique": {
                 "Dark Mark": {
-                    "Legendary": "0.04493440366483262",
-                    "Mythic": "0.9448266079170784",
-                    "Ultra": "0.010238988418089012"
+                    "Epic": "0.0000000000000000000000000000000000000000000012603024864557663",
+                    "Legendary": "0.7332598375110647",
+                    "Mythic": "0.2657115151658547",
+                    "Ultra": "0.0010286473230806115"
                 },
                 "Poker Chip": {
-                    "Legendary": "0.000000000000033558635086871746",
-                    "Mythic": "0.902051010519214",
-                    "Ultra": "0.09794898948075248"
+                    "Legendary": "0.044934553320222545",
+                    "Mythic": "0.9448099755669742",
+                    "Ultra": "0.010255471112803227"
                 }
             }
         },
@@ -9590,18 +9685,19 @@
             },
             "Unique": {
                 "Dark Mark": {
-                    "Legendary": "0.000000000000033558635086871746",
-                    "Mythic": "0.902051010519214",
-                    "Ultra": "0.09794898948075248"
+                    "Legendary": "0.044934553320222545",
+                    "Mythic": "0.9448099755669742",
+                    "Ultra": "0.010255471112803227"
                 },
                 "Missile": {
-                    "Mythic": "0.00043917343818110734",
-                    "Ultra": "0.9995608265618189"
+                    "Legendary": "0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008780226948660548",
+                    "Mythic": "0.46159766848990463",
+                    "Ultra": "0.5384023315100954"
                 },
                 "Poker Chip": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018113980432531178",
-                    "Mythic": "0.356742103187549",
-                    "Ultra": "0.6432578968124509"
+                    "Legendary": "0.00000000000003355841105766001",
+                    "Mythic": "0.9020600238643122",
+                    "Ultra": "0.0979399761356543"
                 }
             }
         },
@@ -9762,19 +9858,22 @@
             },
             "Unique": {
                 "Poker Chip": {
-                    "Mythic": "0.000033382184567154054",
-                    "Ultra": "0.9999666178154328"
+                    "Legendary": "0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001811371295354739",
+                    "Mythic": "0.3567397268099979",
+                    "Ultra": "0.6432602731900021"
                 },
                 "Card": {
-                    "Mythic": "0.000033382184567154054",
-                    "Ultra": "0.9999666178154328"
+                    "Legendary": "0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001811371295354739",
+                    "Mythic": "0.3567397268099979",
+                    "Ultra": "0.6432602731900021"
                 },
                 "Dice": {
-                    "Mythic": "0.000033382184567154054",
-                    "Ultra": "0.9999666178154328"
+                    "Legendary": "0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001811371295354739",
+                    "Mythic": "0.3567397268099979",
+                    "Ultra": "0.6432602731900021"
                 },
                 "Corruption": {
-                    "Ultra": "0.9999666178154328"
+                    "Ultra": "0.6432602731900021"
                 }
             }
         },
@@ -9892,12 +9991,14 @@
             },
             "Unique": {
                 "Mana Orb": {
-                    "Mythic": "0.05579386477501163",
-                    "Ultra": "0.9442061352249884"
+                    "Legendary": "0.000000000000000000000000000000000000018717240909622916",
+                    "Mythic": "0.7493050240890985",
+                    "Ultra": "0.2506949759109015"
                 },
                 "Battery": {
-                    "Mythic": "0.000033382184567154054",
-                    "Ultra": "0.9999666178154328"
+                    "Legendary": "0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001811371295354739",
+                    "Mythic": "0.3567397268099979",
+                    "Ultra": "0.6432602731900021"
                 }
             }
         },
@@ -10045,16 +10146,17 @@
             },
             "Unique": {
                 "Beetle Egg": {
-                    "Mythic": "0.000033382184567154054",
-                    "Ultra": "0.9999666178154328"
+                    "Legendary": "0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001811371295354739",
+                    "Mythic": "0.3567397268099979",
+                    "Ultra": "0.6432602731900021"
                 },
                 "Ankh": {
-                    "Legendary": "0.000000000000000000000000000000000000000000000000000001268243605991248",
-                    "Mythic": "0.6621232748104778",
-                    "Ultra": "0.33787672518952216"
+                    "Legendary": "0.000004076808090115973",
+                    "Mythic": "0.9596039795965305",
+                    "Ultra": "0.04039194359537934"
                 },
                 "Nazar Amulet": {
-                    "Ultra": "0.09794898948075248"
+                    "Ultra": "0.010255471112803227"
                 }
             }
         },
@@ -10161,14 +10263,14 @@
             },
             "Unique": {
                 "Shovel": {
-                    "Legendary": "0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007709146951002738",
-                    "Mythic": "0.21307098821608217",
-                    "Ultra": "0.7869290117839178"
+                    "Legendary": "0.000000000000000000006147529655265397",
+                    "Mythic": "0.8567466836545221",
+                    "Ultra": "0.1432533163454779"
                 },
                 "Soil": {
-                    "Legendary": "0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018113980432531178",
-                    "Mythic": "0.356742103187549",
-                    "Ultra": "0.6432578968124509"
+                    "Legendary": "0.00000000000003355841105766001",
+                    "Mythic": "0.9020600238643122",
+                    "Ultra": "0.0979399761356543"
                 }
             }
         },
@@ -10182,6 +10284,41 @@
             "Ultra": {},
             "Super": {},
             "Unique": {}
+        },
+        "mecha_flower": {
+            "Common": {
+                "Mimic": {}
+            },
+            "Unusual": {
+                "Mimic": {}
+            },
+            "Rare": {
+                "Mimic": {}
+            },
+            "Epic": {
+                "Mimic": {}
+            },
+            "Legendary": {
+                "Mimic": {}
+            },
+            "Mythic": {
+                "Mimic": {}
+            },
+            "Ultra": {
+                "Mimic": {
+                    "Ultra": "0.000002058351369238487"
+                }
+            },
+            "Super": {
+                "Mimic": {
+                    "Ultra": "0.0010286473230806115"
+                }
+            },
+            "Unique": {
+                "Mimic": {
+                    "Ultra": "0.0010286473230806115"
+                }
+            }
         }
     }
 }
