@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         florr.io | Petal farming progress counter
-// @namespace    Furaken
+// @namespace    https://github.com/Furaken
 // @version      1.2.7
 // @description  Track and count the number of desired petals.
 // @author       Furaken
