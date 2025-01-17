@@ -1,187 +1,78 @@
-// @license agpl
-// @require https://unpkg.com/string-similarity@4.0.4/umd/string-similarity.min.js
+// ==UserScript==
+// @name         florr.io | Petal farming progress counter
+// @namespace    Furaken
+// @version      1.2.7
+// @description  Track and count the number of desired petals.
+// @author       Furaken
+// @match        https://florr.io/*
+// @grant        unsafeWindow
+// @license      AGPL3
+// @require      https://unpkg.com/string-similarity@4.0.4/umd/string-similarity.min.js
+// ==/UserScript==
 
-var obj =
-    {
-        rarity: 0,
-        id: 1,
-        aim: 5,
-        basicId: 605463,
-        find: {
-            petal: "Basic",
-            value: [5, 0, 0, 0, 0, 0, 0, 0]
-        },
-        config: {
-            top: false,
-            left: false,
-            x: "-20px",
-            y: "-20px",
-            scale: 1,
-            key: "Equal"
-        },
-        version: "1.2",
-        versionHash: versionHash,
-        autoFind: true,
-        multipleCounting: {
-            enable: false,
-            petal: {
-                "Common Basic": 5,
-                "Common Light": 5
-            },
-            key: "Minus"
+function syntaxHighlight(json) { // https://stackoverflow.com/questions/4810841/pretty-print-json-using-javascript
+    if (typeof json != 'string') {
+        json = JSON.stringify(json, undefined, 2);
+    }
+    json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+        var c = color.json.number
+        if (/^"/.test(match)) {
+            if (/:$/.test(match)) {
+                c = color.json.key
+            } else {
+                c = color.json.string
+            }
+        } else if (/true|false/.test(match)) {
+            c = color.json.boolean
+        } else if (/null/.test(match)) {
+            c = color.json.null
         }
-    },
-    petal = "Common Basic",
-    rarityArr = [
-        "Common",
-        "Unusual",
-        "Rare",
-        "Epic",
-        "Legendary",
-        "Mythic",
-        "Ultra",
-        "Super",
-        "Unique"
-    ],
-    rarityColors = [
-        "#7EEF6D",
-        "#FFE65D",
-        "#4D52E3",
-        "#861FDE",
-        "#DE1F1F",
-        "#1FDBDE",
-        "#FF2B75",
-        "#2BFFA3",
-        "#444444"
-    ],
-    petalArr = [
-        "Basic",
-        "Light",
-        "Rock",
-        "Square",
-        "Rose",
-        "Stinger",
-        "Iris",
-        "Wing",
-        "Missile",
-        "Grapes",
-        "Cactus",
-        "Faster",
-        "Bubble",
-        "Pollen",
-        "Dandelion",
-        "Beetle Egg",
-        "Antennae",
-        "Heavy",
-        "Yin Yang",
-        "Web",
-        "Honey",
-        "Leaf",
-        "Salt",
-        "Rice",
-        "Corn",
-        "Sand",
-        "Pincer",
-        "Yucca",
-        "Magnet",
-        "Yggdrasil",
-        "Starfish",
-        "Pearl",
-        "Lightning",
-        "Jelly",
-        "Claw",
-        "Shell",
-        "Cutter",
-        "Dahlia",
-        "Uranium",
-        "Sponge",
-        "Soil",
-        "Fangs",
-        "Third Eye",
-        "Peas",
-        "Stick",
-        "Clover",
-        "Powder",
-        "Air",
-        "Basil",
-        "Orange",
-        "Ant Egg",
-        "Poo",
-        "Relic",
-        "Lotus",
-        "Bulb",
-        "Cotton",
-        "Carrot",
-        "Bone",
-        "Plank",
-        "Tomato",
-        "Mark",
-        "Rubber",
-        "Blood Stinger",
-        "Bur",
-        "Root",
-        "Ankh",
-        "Dice",
-        "Talisman",
-        "Battery",
-        "Amulet",
-        "Compass",
-        "Disc",
-        "Shovel",
-        "Coin",
-        "Chip",
-        "Card",
-        "Moon",
-        "Privet",
-        "Glass",
-        "Corruption",
-        "Mana Orb",
-        "Blueberries",
-        "Magic Cotton",
-        "Magic Stinger",
-        "Magic Leaf",
-        "Magic Cactus",
-        "Magic Eye",
-        "Magic Missile",
-        "Magic Stick"
-    ]
-
-function getNewPetal(petalName) {
-    var tempObj = {
-        id : 1,
-        rarity: 0,
-        petal: ""
-    }
-    if (petalName.split(" ").length <= 0) return
-    if (petalName.split(" ").length == 1) {
-        if (petalName.startsWith("un") || petalName.startsWith("n")) tempObj.rarity = "Unusual"
-        else if (petalName.startsWith("r")) tempObj.rarity = "Rare"
-        else if (petalName.startsWith("e")) tempObj.rarity = "Epic"
-        else if (petalName.startsWith("l")) tempObj.rarity = "Legendary"
-        else if (petalName.startsWith("m")) tempObj.rarity = "Mythic"
-        else if (petalName.startsWith("u")) tempObj.rarity = "Ultra"
-        else if (petalName.startsWith("s")) tempObj.rarity = "Super"
-        else if (petalName.startsWith("q")) tempObj.rarity = "Unique"
-        else tempObj.rarity = "Common"
-        tempObj.id = stringSimilarity.findBestMatch(petalName.slice(1), petalArr)
-        petalName = tempObj.rarity + " " + tempObj.id.bestMatch.target
-        tempObj.rarity = rarityArr.indexOf(tempObj.rarity)
-    } else {
-        tempObj.rarity = stringSimilarity.findBestMatch(petalName.split(" ").shift(), rarityArr)
-        tempObj.id = stringSimilarity.findBestMatch(petalName.split(" ").splice(1).join(" "), petalArr)
-        petalName = tempObj.rarity.bestMatch.target + " " + tempObj.id.bestMatch.target
-        tempObj.rarity = tempObj.rarity.bestMatchIndex
-    }
-    tempObj.id = tempObj.id.bestMatchIndex + 1
-    tempObj.petal = petalName
-    return tempObj
+        return `<font style='font-weight: normal; color: ${c}'>${match}</font>`;
+    });
 }
-var thisNewPetal = getNewPetal(petal)
-obj.id = thisNewPetal.id
-obj.rarity = thisNewPetal.rarity
-petal = thisNewPetal.petal
 
-function findSequence(seq, mem) {
+function abbNum(value) {
+    if (lcs_.exactNumber) return value
+    else {
+        return Math.abs(Number(value)) >= 1.0e+9
+            ? (Math.abs(Number(value)) / 1.0e+9).toFixed(2) + "b"
+            : Math.abs(Number(value)) >= 1.0e+6
+                ? (Math.abs(Number(value)) / 1.0e+6).toFixed(2) + "m"
+                : Math.abs(Number(value)) >= 1.0e+3
+                    ? (Math.abs(Number(value)) / 1.0e+3).toFixed(2) + "k"
+                    : Math.abs(Number(value))
+    }
+}
+
+class ElementCreate {
+    constructor(tag) { this.element = document.createElement(tag) }
+    attr(attributes) {
+        for (const [key, value] of Object.entries(attributes)) this.element.setAttribute(key, value)
+        return this
+    }
+    style(styles) {
+        for (const [property, value] of Object.entries(styles)) this.element.style[property] = value
+        return this
+    }
+    content(content) {
+        if (typeof content == 'string') this.element.innerHTML = content
+        else if (content instanceof HTMLElement) this.element.appendChild(content)
+        return this
+    }
+    append(parent) {
+        const parentElement = typeof parent == 'string' ? document.querySelector(parent) : parent
+        parentElement.appendChild(this.element)
+        return this
+    }
+    get() { return this.element }
+}
+
+function syncLcs() {
+    localStorage.__petalCounter = JSON.stringify(lcs_)
+}
+
+function findSequence(seq, mem) { // findSequence() by Max Nest
     let match = 0
     for (let addr = 0; addr < mem.length; addr++) {
         if (mem[addr] === seq[match]) match++
@@ -191,629 +82,563 @@ function findSequence(seq, mem) {
     }
 }
 
-// https://stackoverflow.com/questions/47011055/smooth-vertical-scrolling-on-mouse-wheel-in-vanilla-javascript
-function SmoothScroll(target, speed, smooth) {
-    if (target === document) target = (document.scrollingElement || document.documentElement || document.body.parentNode || document.body)
-    var moving = false
-    var pos = target.scrollTop
-    var frame = target === document.body && document.documentElement ? document.documentElement : target
-    target.addEventListener('mousewheel', scrolled, { passive: false })
-    target.addEventListener('DOMMouseScroll', scrolled, { passive: false })
-    function scrolled(e) {
-        e.preventDefault()
-        var delta = normalizeWheelDelta(e)
-        pos += -delta * speed
-        pos = Math.max(0, Math.min(pos, target.scrollHeight - frame.clientHeight))
-        if (!moving) update()
-    }
-    function normalizeWheelDelta(e) {
-        if(e.detail) {
-            if(e.wheelDelta) return e.wheelDelta/e.detail/40 * (e.detail>0 ? 1 : -1)
-            else return -e.detail / 3
-        } else return e.wheelDelta / 120
-    }
-    function update() {
-        moving = true
-        var delta = (pos - target.scrollTop) / smooth
-        target.scrollTop += delta
-        if (Math.abs(delta) > 0.5) requestFrame(update)
-        else moving = false
-    }
-    var requestFrame = function() {
-        return (window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(func) {window.setTimeout(func, 1000 / 50)})
-    }();
+function getPetalAddr(id, thisRarity, addr) {
+    return addr + ((id + 1) * rarity.length) - (rarity.length - thisRarity)
 }
 
-if (localStorage.getItem('petalFarmingCounter') == null) {
-    localStorage.setItem('petalFarmingCounter', JSON.stringify(obj))
-    setTimeout(() => {
-        toggleCon()
-        conCon.scrollTo(0, 110)
-    }, 5000)
-}
-else {
-    var thisObj = JSON.parse(localStorage.getItem('petalFarmingCounter'))
-    if (thisObj.version != obj.version) {
-        thisObj.version = obj.version
-        setTimeout(() => {
-            toggleCon()
-            conCon.scrollTo(0, 110)
-        }, 5000)
+let rarity = [
+    {
+        name: 'Common',
+        id: 'c',
+        color: 8318829
+    },
+    {
+        name: 'Unusual',
+        id: 'n',
+        color: 16770653
+    },
+    {
+        name: 'Rare',
+        id: 'r',
+        color: 5067491
+    },
+    {
+        name: 'Epic',
+        id: 'e',
+        color: 8789982
+    },
+    {
+        name: 'Legendary',
+        id: 'l',
+        color: 14556959,
+    },
+    {
+        name: 'Mythic',
+        id: 'm',
+        color: 2087902
+    },
+    {
+        name: 'Ultra',
+        id: 'u',
+        color: 16722805
+    },
+    {
+        name: 'Super',
+        id: 's',
+        color: 2883491
+    },
+    {
+        name: 'Unique',
+        id: 'q',
+        color: 5592405
     }
-    if (thisObj.versionHash != versionHash) {
-        thisObj.versionHash = versionHash
-        if (thisObj.autoFind) {
-            setInterval(() => {
-                thisObj.basicId = findSequence(thisObj.find.value, unsafeWindow.Module.HEAPU32) - ((stringSimilarity.findBestMatch(thisObj.find.petal, petalArr).bestMatchIndex + 1) * 8) + 8
-                document.getElementById("Capply").innerHTML = `Basic ID: ${coloringValue(thisObj.basicId)}`
-                var thisObj_ = JSON.parse(localStorage.getItem('petalFarmingCounter'))
-                thisObj_.basicId = thisObj.basicId
-                localStorage.setItem('petalFarmingCounter', JSON.stringify(thisObj_))
-            }, 10000)
-        }
-    }
-    if (Object.keys(thisObj.multipleCounting.petal).length < 2) thisObj.multipleCounting.petal = obj.multipleCounting.petal
-    Object.keys(obj).forEach(k => {
-        if (!Object.keys(thisObj).includes(k)) thisObj[k] = obj[k]
-    })
-    obj = thisObj
-    localStorage.setItem('petalFarmingCounter', JSON.stringify(thisObj))
-}
+]
 
-var thisPetalObj = {}
-for (const [index, [key, value]] of Object.entries(Object.entries(obj.multipleCounting.petal))) {
-    thisPetalObj[index] = {
-        id: getNewPetal(key).id,
-        rarity: getNewPetal(key).rarity,
-        aim: value,
+const color = {
+    background: '#202020',
+    darker: '#1d1d1d',
+    primary: '#bb86fc',
+    secondary: '#03dac5',
+    tertiary: '#ff0266',
+    gray: '#666666',
+    json: {
+        string: '#ff0266',
+        number: '#03dac5',
+        boolean: '#bb86fc',
+        null: '#bb86fc',
+        key: '#9cdcfe'
     }
 }
 
-var container = document.createElement("div")
-container.id = "container"
-container.style = `
-    padding: 5px;
-    height: 24px;
-    width: 350px;
-    position: absolute;
-    transform: translate(${obj.config.x}, ${obj.config.y}) scale(${obj.config.scale});
-    background: #333333;
-    border-radius: 24px;
-    transition: all 1s ease-in-out;
-    opacity: 1;
-    box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
-    pointer-events: all;
-    cursor: pointer;
-    overflow: hidden;
-`
-container.onclick = function() {
-    toggleCon()
-}
-
-function toggleCon() {
-    if (conCon.style.overflow == "hidden") {
-        container.style.height = "300px"
-        container.style.width = "400px"
-        conCon.style.overflow = "hidden scroll"
-        container.style.borderRadius = "5px"
-        barProgress.style.maxHeight = "300px"
-        barProgress.style.maxWidth = "400px"
-        barProgress.style.height = "300px"
-        barProgress.style.width = "400px"
-        barProgress.style.borderRadius = "0px"
-        barProgress.style.opacity = 0
-        barProgress.style.background = "#1FDBDE"
-        barProgress.style.pointerEvents = "none"
-        barText.style.opacity = 0
-        settings.style.pointerEvents = "all"
-        settings.style.opacity = 1
-        changelog.style.pointerEvents = "all"
-        changelog.style.opacity = 1
-    } else {
-        container.style.height = "24px"
-        container.style.width = "350px"
-        conCon.style.overflow = "hidden"
-        container.style.borderRadius = "24px"
-        barProgress.style.maxHeight = "24px"
-        barProgress.style.maxWidth = "350px"
-        barProgress.style.height = "24px"
-        barProgress.style.width = "350px"
-        barProgress.style.borderRadius = "24px"
-        barProgress.style.opacity = 1
-        barProgress.style.background = "#F5FF65"
-        barProgress.style.pointerEvents = "all"
-        barText.style.opacity = 1
-        settings.style.pointerEvents = "none"
-        settings.style.opacity = 0
-        changelog.style.pointerEvents = "none"
-        changelog.style.opacity = 0
-        updateProgress()
-        updateMultiProgress()
+const defaultLCS = {
+    address: '?',
+    addressFinder: {
+        autoFind: true,
+        set: ['Basic', 5, 0, 0, 0, 0, 0, 0, 0, 0]
+    },
+    toggleKey: {
+        Ctrl: false,
+        Shift: false,
+        Alt: false,
+        Meta: false,
+        key: ['=', 0],
+        code: 'Equal'
+    },
+    exactNumber: false,
+    count: {
+        petal: {}
     }
 }
-document.querySelector('body').appendChild(container)
 
-var conCon = document.createElement("div")
-conCon.style = `
-    overflow: hidden;
-    height: 300px;
-`
-container.appendChild(conCon)
-
-new SmoothScroll(conCon, 90, 7)
-
-containerPos()
-
-petal = rarityArr[obj.rarity] + " " + petalArr[obj.id - 1]
-thisNewPetal = getNewPetal(petal)
-obj.id = thisNewPetal.id
-obj.rarity = thisNewPetal.rarity
-petal = thisNewPetal.petal
-function convertNumber(value) {
-    return Math.abs(Number(value)) >= 1.0e+9
-        ? (Math.abs(Number(value)) / 1.0e+9).toFixed(2) + "B"
-    : Math.abs(Number(value)) >= 1.0e+6
-        ? (Math.abs(Number(value)) / 1.0e+6).toFixed(2) + "M"
-    : Math.abs(Number(value)) >= 1.0e+3
-        ? (Math.abs(Number(value)) / 1.0e+3).toFixed(2) + "K"
-    : Math.abs(Number(value))
+let lcs_ = localStorage.__petalCounter || defaultLCS
+if (typeof lcs_ == 'string') lcs_ = JSON.parse(lcs_)
+for (const [key, value] of Object.entries(defaultLCS)) {
+    if (lcs_[key] == null) lcs_[key] = value
 }
+localStorage.__petalCounter = JSON.stringify(lcs_)
 
-function containerPos() {
-    if (obj.config.top) {
-        container.style.top = "0"
-        container.style.bottom = "unset"
-    } else {
-        container.style.top = "unset"
-        container.style.bottom = "0"
-    }
-
-    if (obj.config.left) {
-        container.style.left = "0"
-        container.style.right = "unset"
-    } else {
-        container.style.left = "unset"
-        container.style.right = "0"
-    }
-
-    container.style.transform = `translate(${obj.config.x}, ${obj.config.y}) scale(${obj.config.scale})`
+var isKeyPressed = {
+    toggleKey: true
 }
-
-function coloringBool(bool) {
-    if (bool) return `<a style="color: #2BFFA3">${bool}</a>`
-    else return `<a style="color: #DB5A5A">${bool}</a>`
-}
-
-function coloringValue(value) {
-    return `<a style="color: #DBD74B">${value}</a>`
-}
-
-function coloringFunction(value) {
-    return `<a style="color: #1FDBDE">${value}</a>`
-}
-
-obj.aim = Math.abs(Math.floor(obj.aim))
-obj.aim = obj.aim == 0 ? 1 : obj.aim
-
-function updateMultiProgress() {
-    var multiProgressInnerHTML = "",
-        thisMultiProgressValue
-    if (obj.multipleCounting.enable) {
-        for (const [index, [key, value]] of Object.entries(Object.entries(obj.multipleCounting.petal))) {
-            thisMultiProgressValue = unsafeWindow.Module.HEAPU32[obj.basicId + (getNewPetal(key).id * 8) - (8 - getNewPetal(key).rarity)]
-            multiProgressInnerHTML += `
-        <br>
-        <div style="margin-top: 5px">
-            <div style="text-align: left; float: left; position: relative; top: -15px;">${key}</div>
-            <div style="text-align: right; float: right; position: relative; top: -15px;">${convertNumber(thisMultiProgressValue)}/${convertNumber(value)}</div>
-        </div>
-        <div style="width: 99%;height: 7px;background: #222;border-radius: 5px;padding: 3px;margin: 2px 0 5px 0;">
-            <div style="width: ${thisMultiProgressValue / value * 100}%;max-width:100%;background: ${rarityColors[getNewPetal(key).rarity]};height: 100%;border-radius: 3px; transition: all 1s ease-in-out;"></div>
-        </div>
-    `
-        }
-        multiProgress.innerHTML = multiProgressInnerHTML
-    }
-}
-var multiProgress = document.createElement("div")
-multiProgress.style = `
-    top: 20px;
-    right: -290px;
-    width: 250px;
-    height: auto;
-    max-height: 200px;
-    background: #333333;
-    position: absolute;
-    border-radius: 5px;
-    padding: 15px;
-    box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
-    overflow: hidden scroll;
-    color: white;
-    font-family: 'Ubuntu';
-    transition: all 1s ease-in-out;
-    font-size: 12px;
-    text-shadow: rgb(0 0 0) 2px 0px 0px, rgb(0 0 0) 1.75517px 0.958851px 0px, rgb(0 0 0) 1.0806px 1.68294px 0px, rgb(0 0 0) 0.141474px 1.99499px 0px, rgb(0 0 0) -0.832294px 1.81859px 0px, rgb(0 0 0) -1.60229px 1.19694px 0px, rgb(0 0 0) -1.97998px 0.28224px 0px, rgb(0 0 0) -1.87291px -0.701566px 0px, rgb(0 0 0) -1.30729px -1.5136px 0px, rgb(0 0 0) -0.421592px -1.95506px 0px, rgb(0 0 0) 0.567324px -1.91785px 0px, rgb(0 0 0) 1.41734px -1.41108px 0px, rgb(0 0 0) 1.92034px -0.558831px 0px;
-`
-document.querySelector("body").appendChild(multiProgress)
-new SmoothScroll(multiProgress, 90, 7)
-
-function multiProgressToggle() {
-    multiProgress.style.right = multiProgress.style.right == "20px" ? "-290px" : "20px"
-}
-var settings = document.createElement("div")
-settings.style = `
-    padding: 10px;
-    color: white;
-    font-family: 'Ubuntu';
-    z-index: 1;
-    font-size: 12px;
-    line-height: 15px;
-    opacity: 0;
-    transition: all 1s ease-in-out;
-    pointer-events: none;
-    text-shadow: rgb(0 0 0) 2px 0px 0px, rgb(0 0 0) 1.75517px 0.958851px 0px, rgb(0 0 0) 1.0806px 1.68294px 0px, rgb(0 0 0) 0.141474px 1.99499px 0px, rgb(0 0 0) -0.832294px 1.81859px 0px, rgb(0 0 0) -1.60229px 1.19694px 0px, rgb(0 0 0) -1.97998px 0.28224px 0px, rgb(0 0 0) -1.87291px -0.701566px 0px, rgb(0 0 0) -1.30729px -1.5136px 0px, rgb(0 0 0) -0.421592px -1.95506px 0px, rgb(0 0 0) 0.567324px -1.91785px 0px, rgb(0 0 0) 1.41734px -1.41108px 0px, rgb(0 0 0) 1.92034px -0.558831px 0px;
-`
-conCon.appendChild(settings)
-
-var settings_transform = document.createElement("div")
-settings_transform.innerHTML = `
-    <div style="font-size: 18px; margin-bottom: 10px; text-align: center;">Settings</div>
-    <div id="sProgress" style="font-size: 15px; margin-top: 5px; margin-bottom: 5px;">Progress Counter</div>
-    <div id="kProgress" style="margin-left: 10px; height: 0px; opacity: 0; pointer-events: none;">
-        <div id="Cpetal">Petal: ${coloringValue(petal)}</div>
-        <div id="Caim">Aim: ${coloringValue(obj.aim)}</div>
-        <br>
-        <div id="CMultiple_Toggle">Multiple counting: ${coloringBool(obj.multipleCounting.enable)}</div>
-        <div id="CMultiple_petal">Petals: ${coloringValue(JSON.stringify(obj.multipleCounting.petal, null, "\u2001").replaceAll("\n", "<br>"))}</div>
-        <div id="CMultiple_key">Key: ${coloringValue(obj.multipleCounting.key)}</div>
-        <div id="CMultiple_view">${coloringFunction("View Progresses")}</div>
-    </div>
-    <div id="sTransform" style="font-size: 15px; margin-top: 5px; margin-bottom: 5px;">Position & Scale</div>
-    <div id="kTransform" style="margin-left: 10px; height: 0px; opacity: 0; pointer-events: none;">
-        <div id="Ctop">top: ${coloringBool(obj.config.top)}</div>
-        <div id="Cleft">left: ${coloringBool(obj.config.left)}</div>
-        <div id="CposX">x: ${coloringValue(obj.config.x)}</div>
-        <div id="CposY">y: ${coloringValue(obj.config.y)}</div>
-        <div id="Cscale">scale: ${coloringValue(obj.config.scale)}</div>
-        <div id="CkeyToggle">Key: ${coloringValue(obj.config.key)}</div>
-    </div>
-    <div id="sFindId" style="font-size: 15px; margin-top: 5px; margin-bottom: 5px;">Find & Apply Basic ID</div>
-    <div id="kFindId" style="margin-left: 10px; height: 0px; opacity: 0; pointer-events: none;">
-        <div id="Cfind">${coloringFunction("Find & Apply")}</div>
-        <div id="Capply">Basic ID: ${coloringValue(obj.basicId)}</div>
-        <div id="CautoFind">Auto Update: ${coloringBool(obj.autoFind)}</div>
-        <div id="Cinstruction">${coloringFunction("How to use?")}</div>
-    </div>
-`
-settings.appendChild(settings_transform);
-
-["sProgress", "sTransform", "sFindId"].forEach(x => {
-    document.getElementById(x).onclick = function(e) {
-        e.stopPropagation()
-        var kTransform = document.getElementById("k"+ this.id.slice(1))
-        if (kTransform.style.opacity != 1) {
-            kTransform.style.opacity = 1
-            kTransform.style.height = "auto"
-            kTransform.style.pointerEvents = "all"
-        } else {
-            kTransform.style.opacity = 0
-            kTransform.style.height = "0px"
-            kTransform.style.pointerEvents = "none"
-        }
-    };
-});
-
-["Cpetal", "Caim", "CMultiple_Toggle", "CMultiple_petal", "CMultiple_key", "CMultiple_view", "Ctop", "Cleft", "CposX", "CposY", "Cscale", "CkeyToggle", "Cfind", "Capply", "CautoFind", "Cinstruction"].forEach(x => {
-    document.getElementById(x).onclick = function(e) {
-        e.stopPropagation()
-        var value = "",
-            value2 = [],
-            endTime = 0,
-            keysPressed = []
-        if (["Cpetal", "Caim", "CMultiple_Toggle", "CMultiple_petal", "CMultiple_aim", "CMultiple_key", "CMultiple_view"].includes(this.id)) {
-            if (["Cpetal"].includes(this.id)) {
-                value = prompt('Petal name?', petal)
-                if (petal == null) return
-                petal = value
-                var thisNewPetal = getNewPetal(petal)
-                obj.id = thisNewPetal.id
-                obj.rarity = thisNewPetal.rarity
-                petal = thisNewPetal.petal
-                this.innerHTML = `Petal: ${coloringValue(petal)}`
-                barText.innerHTML = `${petal}: ${convertNumber(thisPetal)} / ${convertNumber(obj.aim)} (${(thisPetal * 100 / obj.aim).toFixed(2)}%)`
-            } else if (["Caim"].includes(this.id)) {
-                value = prompt('Aim?', obj.aim)
-                if (value == null) return
-                if (isNaN(value)) return alert(`Invalid input: [Aim] must be a number!`)
-                obj.aim = Number(value)
-                obj.aim = Math.abs(Math.floor(obj.aim))
-                obj.aim = obj.aim == 0 ? 1 : obj.aim
-                this.innerHTML = `Aim: ${coloringValue(obj.aim)}`
-            } else if (["CMultiple_Toggle"].includes(this.id)) {
-                value = !obj.multipleCounting.enable
-                this.innerHTML = `Multiple counting: ${coloringBool(value)}`
-                obj.multipleCounting.enable = value
-            } else if (["CMultiple_petal"].includes(this.id)) {
-                var count = 0,
-                    petalObj = {},
-                    thisPetalId, thisPetalRarity,
-                    thisPetalObj = {}
-                while (true) {
-                    value = prompt(`${count + 1}. Petal name: Aim\nClick Cancel to Save & Exit`, `${Object.keys(obj.multipleCounting.petal)[count]}: ${Object.values(obj.multipleCounting.petal)[count]}`)
-                    if (value == null) {
-                        if (Object.keys(petalObj).length < 2) petalObj = obj.multipleCounting.petal
-                        obj.multipleCounting.petal = petalObj
-                        for (const [index, [key, value]] of Object.entries(Object.entries(obj.multipleCounting.petal))) {
-                            thisPetalObj[index] = {
-                                id: getNewPetal(key).id,
-                                rarity: getNewPetal(key).rarity,
-                                aim: value,
-                            }
-                        }
-                        this.innerHTML = `Petals: ${coloringValue(JSON.stringify(obj.multipleCounting.petal, null, "\u2001").replaceAll("\n", "<br>"))}`
-                        localStorage.setItem('petalFarmingCounter', JSON.stringify(obj))
-                        return
-                    }
-                    value = value.split(":").map(x => x.trim())
-                    if (isNaN(value[1])) {
-                        alert(`Invalid input: [Aim] must be a number!`)
-                        continue
-                    }
-                    petalObj[getNewPetal(value[0]).petal] = Number(value[1])
-                    count++
-                }
-            } else if (["CMultiple_key"].includes(this.id)) {
-                endTime = Date.now() + 5 * 1000
-                this.innerHTML = `Key: <a class="blink">Press a key!</a>`
-                var keyInterval_ = setInterval(() => {
-                    keysPressed.unshift(lastKey)
-                    if (keysPressed.length > 2) keysPressed.splice(2)
-                    if (keysPressed[keysPressed.length - 1] != keysPressed[0]) {
-                        obj.multipleCounting.key = keysPressed[0]
-                        this.innerHTML = `Key: ${coloringValue(keysPressed[0])}`
-                        clearInterval(keyInterval_)
-                        localStorage.setItem('petalFarmingCounter', JSON.stringify(obj))
-                        return
-                    }
-                    if (Date.now() > endTime) {
-                        this.innerHTML = `Key: ${coloringValue(obj.multipleCounting.key)}`
-                        clearInterval(keyInterval_)
-                        return
-                    }
-                });
-            } else if (["CMultiple_view"].includes(this.id)) multiProgressToggle()
-        } else if (["Ctop", "Cleft", "CposX", "CposY", "Cscale", "CkeyToggle"].includes(this.id)) {
-            if (["Ctop", "Cleft"].includes(this.id)) {
-                value = !obj.config[x.slice(1)]
-                this.innerHTML = `${x.slice(1)}: ${coloringBool(value)}`
-                obj.config[x.slice(1)] = value
-            } else if (["CposX", "CposY"].includes(this.id)) {
-                value = prompt(x.slice(1), obj.config[x[x.length - 1].toLowerCase()].slice(0, -2))
-                if (value == null) return
-                if (isNaN(value)) return alert(`Invalid input: [${x.slice(1)}] must be a number!`)
-                value = Number(value)
-                this.innerHTML = `${x[x.length - 1].toLowerCase()}: ${coloringValue(value + "px")}`
-                obj.config[x[x.length - 1].toLowerCase()] = value + "px"
-            } else if (["Cscale"].includes(this.id)) {
-                value = prompt(x.slice(1), obj.config[x.slice(1)])
-                if (value == null) return
-                if (isNaN(value)) return alert(`Invalid input: [${x.slice(1)}] must be a number!`)
-                value = Number(value)
-                if (value == 0) return
-                this.innerHTML = `${x.slice(1)}: ${coloringValue(value)}`
-                obj.config[x.slice(1)] = value
-            } else if (["CkeyToggle"].includes(this.id)) {
-                endTime = Date.now() + 5 * 1000
-                this.innerHTML = `Key: <a class="blink">Press a key!</a>`
-                var keyInterval = setInterval(() => {
-                    keysPressed.unshift(lastKey)
-                    if (keysPressed.length > 2) keysPressed.splice(2)
-                    if (keysPressed[keysPressed.length - 1] != keysPressed[0]) {
-                        obj.config.key = keysPressed[0]
-                        this.innerHTML = `Key: ${coloringValue(keysPressed[0])}`
-                        clearInterval(keyInterval)
-                        localStorage.setItem('petalFarmingCounter', JSON.stringify(obj))
-                        return
-                    }
-                    if (Date.now() > endTime) {
-                        this.innerHTML = `Key: ${coloringValue(obj.config.key)}`
-                        clearInterval(keyInterval)
-                        return
-                    }
-                });
-            }
-            containerPos()
-        } else if (["Cfind", "Capply", "CautoFind", "Cinstruction"].includes(this.id)) {
-            if (["Cfind"].includes(this.id)) {
-                var thisPetalName = ""
-                value = prompt("Petal?", obj.find.petal)
-                value = stringSimilarity.findBestMatch(value, petalArr)
-                thisPetalName = value.bestMatch.target
-                value = value.bestMatchIndex + 1
-                rarityArr.forEach((x, i) => {
-                    var temporaryValue = prompt(`Amount of ${x} ${thisPetalName}`, obj.find.value[i])
-                    if (temporaryValue == null) temporaryValue = 0
-                    if (isNaN(temporaryValue)) temporaryValue = 0
-                    value2.push(Number(temporaryValue))
-                })
-                obj.find.petal = thisPetalName
-                obj.find.value = value2
-                obj.basicId = findSequence(value2, unsafeWindow.Module.HEAPU32) - (value * 8) + 8
-                document.getElementById("Capply").innerHTML = `Basic ID: ${coloringValue(obj.basicId)}`
-            } else if (["Capply"].includes(this.id)) {
-                value = prompt('Basic ID?', obj.basicId)
-                if (value == null) return
-                if (isNaN(value)) return
-                obj.basicId = Number(value)
-                this.innerHTML = `Basic ID: ${coloringValue(obj.basicId)}`
-            } else if (["CautoFind"].includes(this.id)) {
-                value = !obj.autoFind
-                this.innerHTML = `Auto Update: ${coloringBool(value)}`
-                obj.autoFind = value
-            } else if (["Cinstruction"].includes(this.id)) window.open("https://youtu.be/W2K6mWIzmHA?si=JWHOLJ67LSntThGW");
-        }
-        localStorage.setItem('petalFarmingCounter', JSON.stringify(obj))
-    }
-})
-
-var changelog = document.createElement("div")
-changelog.style = `
-    padding: 10px;
-    color: white;
-    font-family: 'Ubuntu';
-    z-index: 1;
-    font-size: 12px;
-    line-height: 15px;
-    opacity: 0;
-    transition: all 1s ease-in-out;
-    pointer-events: none;
-    text-shadow: rgb(0 0 0) 2px 0px 0px, rgb(0 0 0) 1.75517px 0.958851px 0px, rgb(0 0 0) 1.0806px 1.68294px 0px, rgb(0 0 0) 0.141474px 1.99499px 0px, rgb(0 0 0) -0.832294px 1.81859px 0px, rgb(0 0 0) -1.60229px 1.19694px 0px, rgb(0 0 0) -1.97998px 0.28224px 0px, rgb(0 0 0) -1.87291px -0.701566px 0px, rgb(0 0 0) -1.30729px -1.5136px 0px, rgb(0 0 0) -0.421592px -1.95506px 0px, rgb(0 0 0) 0.567324px -1.91785px 0px, rgb(0 0 0) 1.41734px -1.41108px 0px, rgb(0 0 0) 1.92034px -0.558831px 0px;
-`
-changelog.innerHTML = `
-    <div style="font-size: 18px; margin-bottom: 10px; text-align: center;">Changelog</div>
-    <div style="color: #1FDBDE; font-size: 15px; margin-top: 5px; margin-bottom: 5px">January 04th 2024 - v1.2</div>
-    <div style="margin-left: 10px">
-        - The container now has smooth scrolling effect (Credit to Manuel Otto).<br>
-        - Added multiple petals counter.<br>
-        - Added ${coloringValue("Auto update ID")} (this requires you to use ${coloringValue("Find & Apply")} at least one times).
-    </div>
-    <div style="color: #1FDBDE; font-size: 15px; margin-top: 5px; margin-bottom: 5px">December 24th 2023 - v1.1</div>
-    <div style="margin-left: 10px">
-        - Added 3 new petals.<br>
-        - Added a manual way to find Basic ID: ${coloringValue("Find & Apply")} (Credit to Max Nest).<br>
-        - The container is now moveable and scalable.<br>
-        - Press ${coloringValue("=")} key to show/hide the container, this is also available in earlier versions. You can custom it in settings now.
-    </div>
-`
-conCon.appendChild(changelog)
-
-var barText = document.createElement("div")
-barText.style = `
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    width: 100%;
-    color: white;
-    font-family: 'Ubuntu';
-    text-align: center;
-    transition: all 1s ease-in-out;
-    text-wrap: nowrap;
-    z-index: 1;
-    pointer-events: none;
-    font-size: 14px;
-    text-shadow: rgb(0 0 0) 2px 0px 0px, rgb(0 0 0) 1.75517px 0.958851px 0px, rgb(0 0 0) 1.0806px 1.68294px 0px, rgb(0 0 0) 0.141474px 1.99499px 0px, rgb(0 0 0) -0.832294px 1.81859px 0px, rgb(0 0 0) -1.60229px 1.19694px 0px, rgb(0 0 0) -1.97998px 0.28224px 0px, rgb(0 0 0) -1.87291px -0.701566px 0px, rgb(0 0 0) -1.30729px -1.5136px 0px, rgb(0 0 0) -0.421592px -1.95506px 0px, rgb(0 0 0) 0.567324px -1.91785px 0px, rgb(0 0 0) 1.41734px -1.41108px 0px, rgb(0 0 0) 1.92034px -0.558831px 0px;
-`
-container.appendChild(barText)
-
-var barProgress = document.createElement("div")
-barProgress.style = `
-    background: #F5FF65;
-    border-radius: 24px;
-    width: 0px;
-    max-width: 350px;
-    max-height: 24px;
-    transition: all 1s ease-in-out;
-    opacity: 0;
-    height: 0px;
-    top: 50%;
-    position: absolute;
-    transform: translate(0px, -50%);
-`
-container.appendChild(barProgress)
-barText.innerHTML = `${petal}: 0 / ${convertNumber(obj.aim)} (0.00%)`
-
-var thisPetal, thisWidth, thisAim, thisPetalObj_
-function updateProgress() {
-    if (!obj.multipleCounting.enable) {
-        thisPetal = unsafeWindow.Module.HEAPU32[obj.basicId + (obj.id * 8) - (8 - obj.rarity)]
-        thisAim = obj.aim
-    } else {
-        thisPetal = 0
-        thisAim = 0
-        thisPetalObj_ = {}
-        for (const [index, [key, value]] of Object.entries(Object.entries(obj.multipleCounting.petal))) {
-            thisPetalObj_[index] = {
-                id: getNewPetal(key).id,
-                rarity: getNewPetal(key).rarity,
-                aim: value,
-            }
-        }
-        for (const [index, [key, value]] of Object.entries(Object.entries(thisPetalObj_))) {
-            thisPetal += Number(unsafeWindow.Module.HEAPU32[obj.basicId + (value.id * 8) - (8 - value.rarity)])
-            thisAim += Number(value.aim)
-        }
-    }
-    thisWidth = container.style.width.slice(0, -2) * thisPetal / thisAim
-    barProgress.style.height = thisWidth + "px"
-    barProgress.style.width = thisWidth + "px"
-    barProgress.style.opacity = thisPetal / (thisAim * 0.08)
-    if (!obj.multipleCounting.enable) barText.innerHTML = `${petal}: ${convertNumber(thisPetal)} / ${convertNumber(thisAim)} (${(thisPetal * 100 /thisAim).toFixed(2)}%)`
-    else barText.innerHTML = `${Object.keys(obj.multipleCounting.petal).length} petals: ${convertNumber(thisPetal)} / ${convertNumber(thisAim)} (${(thisPetal * 100 / thisAim).toFixed(2)}%)`
-}
+var autocorrect = stringSimilarity
+var module
+var petal
+var mob
+var loaded = false
 
 setInterval(() => {
-    if (conCon.style.overflow != "hidden") return
+    if (!petal) {
+        petal = unsafeWindow.florrio.utils.getPetals().map(x => x.i18n.fullName)
+        mob = unsafeWindow.florrio.utils.getMobs()
+        let thisRarity
+        thisRarity = new Array(unsafeWindow.florrio.utils.getPetals().find(x => x.allowedDropRarities != null).allowedDropRarities.length).fill({ name: '?', id: '?', color: 0 })
+        thisRarity.forEach((x, i) => {
+            if (rarity[i]) thisRarity[i] = rarity[i]
+        })
+        rarity = thisRarity
+    }
+    module = Module.HEAPU32
     updateProgress()
-    updateMultiProgress()
-}, 10000)
+}, 5 * 1000)
 
-var lastKey
-document.documentElement.addEventListener("keydown", function (e) {
-    lastKey = e.code
-    if (event.code == obj.config.key) {
-        if (container.style.opacity == "0") {
-            container.style.opacity = 1
-            container.style.pointerEvents = "all"
-            settings.style.pointerEvents = "all"
-            changelog.style.pointerEvents = "all"
-        } else {
-            container.style.opacity = 0
-            container.style.pointerEvents = "none"
-            settings.style.pointerEvents = "none"
-            changelog.style.pointerEvents = "none"
+function updateProgress() {
+    countEachRarity()
+    countProgressOfEachPetal()
+    if (!loaded) {
+        loaded = true
+        newPetal()
+    }
+    document.getElementById('petalCounter_json').innerHTML = syntaxHighlight(JSON.stringify(lcs_, null, 4))
+}
+
+function getToggleKey() {
+    let t = ''
+    for (const [key, value] of Object.entries(lcs_.toggleKey)) {
+        if (value == true) t += ' ' + key
+        if (key == 'key' && value[1] == 0) t += ` ${value[0].toUpperCase()} (${lcs_.toggleKey.code})`
+    }
+    return t
+}
+
+const container = document.getElementById('__skContainer') || new ElementCreate('div')
+    .attr({ id: '__skContainer' })
+    .style({
+        margin: 0,
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%) scale(1)',
+        width: '80%',
+        height: '80%',
+        zIndex: '999',
+        transition: 'all 0.4s ease-in-out',
+        fontFamily: 'Consolas, "Courier New", monospace',
+        color: 'white',
+        cursor: 'default',
+        wordWrap: 'break-word'
+    })
+    .append(document.body)
+    .get()
+
+const container_petalCounter = new ElementCreate('div')
+    .style({
+        backgroundColor: color.background,
+        borderRadius: '10px',
+        boxShadow: '5px 5px rgba(0, 0, 0, 0.3)',
+        display: 'flex',
+        width: '100%',
+        height: '100%',
+    })
+    .append(container)
+    .get();
+
+new ElementCreate('div')
+    .style({
+        width: '70%',
+        padding: '30px',
+        fontSize: '14px',
+        lineHeight: '14px',
+        overflow: 'hidden auto',
+        whiteSpace: 'nowrap'
+    })
+    .content(`
+    <h1>Config</h1>
+    <div style='display: flex;' class='hover'>
+        <p style='width: 30%; cursor: pointer;' id='petalCounter_assignAddress'>Address: <font color='${color.primary}'>${lcs_.address}</font></p>
+        <p style='width: 60%; cursor: pointer;' id='petalCounter_findAddress'><font color='${color.primary}'>${lcs_.addressFinder.set}</font></p>
+    </div>
+    <div style='display: flex;' class='hover'>
+        <p style='width: 30%;'>Auto find:</p>
+        <p style='width: 60%; cursor: pointer;' id='petalCounter_autoFind'></p>
+    </div>
+    <div style='display: flex;' class='hover'>
+        <p style='width: 30%;'>Toggle key:</p>
+        <p style='width: 60%; cursor: pointer;' id='petalCounter_toggleKey'><font color='${color.primary}'>${getToggleKey()}</font></p>
+    </div>
+    <div style='display: flex;' class='hover'>
+        <p style='width: 30%;'>Exact number:</p>
+        <p style='width: 60%; cursor: pointer;' id='petalCounter_exactNumber'></p>
+    </div>
+
+    <h1>Counter</h1>
+    <div id='petalCounter_countAll' style='margin-bottom: 15px;'></div>
+
+    <h1>Progress</h1>
+    <div style='display: flex; flex-direction: column;'>
+        <div id='petalCounter_newPetal_container' style='border-radius: 5px; background: ${color.darker}; width: 100%; height: fit-content; transition: all 0.4s ease-in-out;'>
+            <h3 style='margin: 20px 0 5px 30px; padding: 0'>Add new petal</h3>
+            <div id='petalCounter_newPetal_container_rarity' style='padding: 0 20px 0 20px;'></div>
+            <div id='petalCounter_newPetal_container_petal' style='padding: 0 20px 20px 20px;'></div>
+        </div>
+        <div id='petalCounter_newPetal' class='button' style='margin-block: 15px; height: fit-content;'>Add</div>
+    </div>
+    <div id='petalCounter_progress'></div>
+
+    <h1>JSON</h1>
+    <pre id='petalCounter_json' style='border-radius: 10px; padding: 20px; background-color: ${color.darker}'>${syntaxHighlight(JSON.stringify(lcs_, null, 4))}</pre>
+    `)
+    .append(container_petalCounter)
+    .get();
+
+document.getElementById('petalCounter_assignAddress').onclick = function () {
+    let a = prompt('Assign new address:', lcs_.address)
+    if (!a) return
+    if (a.length > 10) return
+    a = parseInt(a)
+    if (!isNaN(a)) {
+        document.querySelector(`#${this.id} > font`).innerHTML = a
+        lcs_.address = a
+        syncLcs()
+        updateProgress()
+    }
+}
+
+document.querySelector('#petalCounter_findAddress').onclick = function () {
+    let a = prompt('petal_name,common,unusual,rare,epic,legendary,mythic,ultra,super,unique', lcs_.addressFinder.set)
+    if (!a) return
+    a = a.split(',').map(x => x.trim())
+    let seqArr = new Array(10).fill(0)
+    for (let i = 0; i <= rarity.length; i++) {
+        if (!a[i]) continue
+        if (i != 0) a[i] = parseInt(a[i])
+        seqArr[i] = a[i]
+    }
+
+    let petalMatch = autocorrect.findBestMatch(seqArr[0], petal)
+    let petalName = petalMatch.bestMatch.target
+    let petalId = petalMatch.bestMatchIndex + 1
+    seqArr[0] = petalName
+
+    let foundAddress = findSequence(seqArr.slice(1), module) - (petalId * rarity.length) + rarity.length
+
+    if (!isNaN(foundAddress)) {
+        lcs_.address = foundAddress
+        document.querySelector('#petalCounter_assignAddress > font').innerHTML = lcs_.address
+    }
+    document.querySelector(`#${this.id} > font`).innerHTML = seqArr
+
+    lcs_.addressFinder.set = seqArr
+    syncLcs()
+    updateProgress()
+}
+
+function buttonToggle(element, condition) {
+    condition = condition == true ? false : true
+    element.innerHTML = `<font color='${condition == true ? color.secondary : color.tertiary}'>${condition}</font>`
+    return condition
+}
+
+if (lcs_.addressFinder.autoFind) document.getElementById(`petalCounter_autoFind`).innerHTML = lcs_.addressFinder.autoFind.toString().fontcolor(color.secondary)
+else document.getElementById(`petalCounter_autoFind`).innerHTML = lcs_.addressFinder.autoFind.toString().fontcolor(color.tertiary)
+
+if (lcs_.exactNumber) document.getElementById(`petalCounter_exactNumber`).innerHTML = lcs_.exactNumber.toString().fontcolor(color.secondary)
+else document.getElementById(`petalCounter_exactNumber`).innerHTML = lcs_.exactNumber.toString().fontcolor(color.tertiary)
+
+document.getElementById('petalCounter_autoFind').onclick = function () {
+    lcs_.addressFinder.autoFind = buttonToggle(this, lcs_.addressFinder.autoFind)
+    syncLcs()
+}
+
+document.getElementById('petalCounter_exactNumber').onclick = function () {
+    lcs_.exactNumber = buttonToggle(this, lcs_.exactNumber)
+    syncLcs()
+    updateProgress()
+}
+
+document.getElementById('petalCounter_toggleKey').onclick = function () {
+    if (isKeyPressed.toggleKey) {
+        isKeyPressed.toggleKey = false
+        this.innerHTML = 'Press a key'.toString().fontcolor(color.tertiary)
+    } else {
+        isKeyPressed.toggleKey = true
+        this.innerHTML = getToggleKey().toString().fontcolor(color.primary)
+    }
+}
+
+function countEachRarity() {
+    let a = '',
+        b = new Array(rarity.length).fill(0),
+        c = lcs_.address
+
+    for (let i = c; i < c + petal?.length * rarity.length; i += rarity.length) {
+        for (let j = 0; j < rarity.length; j++) {
+            b[j] += module[i + j]
         }
     }
-    if (event.code == obj.multipleCounting.key) multiProgressToggle()
+    a += `<div style='display:flex; overflow-y: auto'>`
+    b.forEach((x, i) => {
+        a += `
+        <div style='display: flex; flex-direction: column; margin: 3px; padding: 10px' class='hover'>
+            <img style='width: 50px; height: 50px;' src='${unsafeWindow.florrio.utils.generateMobImage(512, mob.find(x => x.sid == 'titan').id, i, 1)}'>
+            <font style='text-align: center; margin-top: 5px;' color='${color.primary}'>${abbNum(x)}</font>
+        </div>`
+    })
+    a += `</div>`
+    document.getElementById('petalCounter_countAll').innerHTML = a
+}
+
+function countProgressOfEachPetal() {
+    let a = ''
+    for (const p in lcs_.count.petal) {
+        if (lcs_.count.petal[p].every(item => item == 0)) {
+            delete lcs_.count.petal[p]
+            syncLcs()
+        }
+        a += `
+        <div style='display: flex; flex-direction: row; margin-bottom: 20px;'>
+            <img id='petalCounter_progress_petal_${p.replaceAll(' ', '-')}' style='cursor: pointer' height='64px' src='${unsafeWindow.florrio.utils.generatePetalImage(512, petal.indexOf(p) + 1, rarity.length - 1, 1)}'>
+            <div style='width: 100%'>
+        `
+        for (const r in lcs_.count.petal[p]) {
+            if (lcs_.count.petal[p][r] <= 0) continue
+            let amount = module[getPetalAddr(petal.indexOf(p), r, lcs_.address)]
+            let aim = lcs_.count.petal[p][r]
+            let percent = `${amount / aim * 100}%`
+            a += `
+                <div id='petalCounter_progress_rarity_${rarity[r].name}_${p.replaceAll(' ', '-')}' class='hover' style='cursor: pointer; padding: 0 5px; margin: 0 10px 0 30px; display: flex; flex-direction: row; height: 20px;'>
+                    <div style='width: 80px; margin-top: 3px;'>${rarity[r].name}</div>
+                    <div style='width: 200px; height: 7px; background-color: ${color.darker}; border-radius: 10px; margin: 7px 10px 0 0;'>
+                        <div style='width: ${percent}; height: 100%; max-width: 100%; background-color: #${rarity[r].color.toString(16)}; border-radius: 10px;'></div>
+                    </div>
+                    <div style='margin: 3px 0 0 10px; width: 150px;'>${abbNum(amount)}/${abbNum(aim)}</div>
+                    <div style='margin: 3px 0 0 10px; width: 150px;'>${percent} ${amount / aim >= 1 ? `(${~~(amount / aim)})` : ''}</div>
+                </div>
+            `
+        }
+        a += `</div></div>`
+    }
+    document.getElementById('petalCounter_progress').innerHTML = a
+    document.querySelectorAll('#petalCounter_progress > div > img').forEach(x => {
+        x.onclick = function () {
+            if (x.id.startsWith('petalCounter_progress_petal_')) {
+                let a = x.id.replace('petalCounter_progress_petal_', '').split('_')
+                let p = a[0].replaceAll('-', ' ')
+                let b = new Array(rarity.length).fill(0)
+                let aim = prompt(`Aim (${p})\n(Set to 0 to remove)\n${rarity.map(x => x.name)}`, lcs_.count.petal[p].toString())
+                aim.split(',').forEach((rarityAim, i) => {
+                    b[i] = isNaN(parseInt(rarityAim)) == true ? 0 : parseInt(rarityAim)
+                })
+                lcs_.count.petal[p] = b
+                syncLcs()
+                updateProgress()
+            }
+        }
+    })
+    document.querySelectorAll('#petalCounter_progress > div > div > div').forEach(x => {
+        x.onclick = function () {
+            if (x.id.startsWith('petalCounter_progress_rarity_')) {
+                let a = x.id.replace('petalCounter_progress_rarity_', '').split('_')
+                let r = a[0]
+                let p = a[1].replaceAll('-', ' ')
+                let aim = parseInt(prompt(`Aim (${r} ${p})\n(Set to 0 to remove)`, lcs_.count.petal[p][rarity.map(x => x.name).indexOf(r)]))
+                if (!isNaN(aim) && aim >= 0) {
+                    lcs_.count.petal[p][rarity.map(x => x.name).indexOf(r)] = aim
+                    syncLcs()
+                    updateProgress()
+                }
+            }
+        }
+    })
+}
+
+
+function newPetal() {
+    let thisRarity = '',
+        thisPetal = ''
+    thisRarity += `<div style='display:flex; width: 100%; overflow-y: auto'>`
+    rarity.forEach((x, i) => {
+        thisRarity += `
+        <div id='petalCounter_newPetal_container_rarity_${x.name}' class='hover selectable' style='margin: 2px; padding: 5px;'>
+            <img style='width: 50px; height: 50px; margin: 2px;' src='${unsafeWindow.florrio.utils.generateMobImage(512, mob.find(x => x.sid == 'titan').id, i, 1)}'>
+        </div>
+        `
+    })
+    thisRarity += `</div>`
+
+    thisPetal += `<div style='display:flex; width: 100%; overflow-y: auto'>`
+
+    let a = unsafeWindow.florrio.utils.getPetals().map(x => [x.i18n.name, x.i18n.fullName])
+    a.sort(function (a, b) {
+        if (a[0] > b[0]) return 1
+        else return -1
+    })
+    a.forEach((x, i) => {
+        thisPetal += `
+        <div id='petalCounter_newPetal_container_petal_${x[1].replaceAll(' ', '-')}' class='hover selectable' style='margin: 2px; padding: 5px;'>
+            <img style='width: 50px; height: 50px; margin: 2px;' src='${unsafeWindow.florrio.utils.generatePetalImage(512, petal.indexOf(x[1]) + 1, rarity.length - 1, 1)}'>
+        </div>
+        `
+    })
+    thisPetal += `</div>`
+
+    document.getElementById('petalCounter_newPetal_container_rarity').innerHTML = thisRarity
+    document.getElementById('petalCounter_newPetal_container_petal').innerHTML = thisPetal
+
+    document.querySelectorAll('.selectable').forEach(x => {
+        x.onclick = function () {
+            this.classList.toggle('selected')
+            addNewPetalIntoObj()
+        }
+    })
+}
+
+function addNewPetalIntoObj() {
+    document.getElementById('petalCounter_newPetal').onclick = function () {
+        let selected = Array.from(document.querySelectorAll('.selected')).map(x => x.id)
+        selected = selected.map(x => x.split('_')[x.split('_').length - 1].replaceAll('-', ' '))
+        let raritySelected = selected.filter(x => rarity.map(x => x.name).includes(x))
+        let petalSelected = selected.filter(x => !rarity.map(x => x.name).includes(x))
+
+        for (let i = 0; i < petalSelected.length; i++) {
+            if (raritySelected.length == 0) break
+            if (!lcs_.count.petal[petalSelected[i].replaceAll('-', ' ')]) lcs_.count.petal[petalSelected[i].replaceAll('-', ' ')] = new Array(rarity.length).fill(0)
+            for (let j = 0; j < raritySelected.length; j++) {
+                lcs_.count.petal[petalSelected[i].replaceAll('-', ' ')][rarity.map(x => x.name).indexOf(raritySelected[j])] = 1
+            }
+        }
+        syncLcs()
+        updateProgress()
+    }
+}
+
+new ElementCreate('div')
+    .style({
+        width: '30%',
+        padding: '30px',
+        fontSize: '14px',
+        lineHeight: '14px',
+        overflowY: 'auto',
+        borderRadius: '0 10px 10px 0',
+        backgroundColor: color.darker,
+    }).content(`
+        <h1>Welcome back!</h1>
+        <p style='margin-block: 10px' class='hover'>I have reworked this script's UI but some functions stayed the same.</p>
+        <p style='margin-block: 10px' class='hover'>This version is still unfinished and some old features are missing. I will try to finish this by next week (Jan 25).</p>
+        <p style='margin-block: 10px' class='hover'>Thanks for using my script.</p>
+        <p style='margin-block: 10px' class='hover'>Script is created by Furaken (discord: <font color='${color.secondary}'>samerkizi</font>).</p>
+        <p style='margin-block: 10px; cursor: pointer;' class='hover' onclick='window.open("https://github.com/Furaken")'>Github: <font color='${color.secondary}'>https://github.com/Furaken</font>.</p>
+
+        <br>
+        <br>
+
+        <h1>How to get Address?</h1>
+        <p style='margin-block: 10px' class='hover'><font color='${color.tertiary}'>1.</font> Choose any <font color='${color.secondary}'>petal type</font> (Basic or Ankh or Stinger or ...) that has <font color='${color.secondary}'>at least 4 rarities</font> with number greater than 0.<br><br>For large number that is shown as abbreviation (> 1000), move your cursor over the petal, the number of it will be shown next to its name.</p>
+        <p style='margin-block: 10px' class='hover'><font color='${color.tertiary}'>2.</font> Click on <font color='${color.primary}'>${lcs_.addressFinder.set}</font> next to Address button in <font color='${color.secondary}'>Config</font> category.</p>
+        <p style='margin-block: 10px' class='hover'><font color='${color.tertiary}'>3.</font> There will be a prompt pops up with following format:<br>
+        <font color='${color.primary}'>petal_name,common,unusual,rare,epic,legendary,mythic,ultra,super,unique</font></p>
+            <p class='hover' style='margin-block: 10px; margin-left: 20px'>For example, you have these in inventory:</p>
+            <p class='hover' style='margin-block: 10px; margin-left: 40px'>
+                3 common Ankh<br>
+                2 unusual Ankh<br>
+                0 rare Ankh<br>
+                225 epic Ankh<br>
+                609 legendary Ankh<br>
+                5 mythic Ankh<br>
+                2 ultra Ankh<br>
+                0 super Ankh<br>
+                0 unique Ankh<br>
+            </p>
+            <p class='hover' style='margin-block: 10px; margin-left: 20px'>
+                You should input in the prompt with the following text:<br>
+                <font color='${color.primary}'>Ankh,3,2,0,225,609,5,2,0,0</font>
+            </p>
+        <p style='margin-block: 10px' class='hover'><font color='${color.tertiary}'>4.</font> If you have done them right, the script will work as expected.</p>
+        <p style='margin-block: 10px' class='hover'><font color='${color.tertiary}'>NOTE:</font> <font color='${color.secondary}'>Auto find</font> only works if you have found the right address for at least once.</p>
+
+        <br>
+        <br>
+
+        <h1>How to add and count a petal's progress?</h1>
+        <p style='margin-block: 10px' class='hover'><font color='${color.tertiary}'>1.</font> In the <font color='${color.secondary}'>Progress</font> category, <font color='${color.secondary}'>choose at least 1</font> for each rarity and petal.<br><br>After that, click <font color='${color.secondary}'>Add</font> button to add the petals you chose into script.</p>
+        <p style='margin-block: 10px' class='hover'><font color='${color.tertiary}'>2.</font> Click on the line of that <font color='${color.secondary}'>petal's rarity</font> to modify its <font color='${color.secondary}'>Aim number</font> (set to 0 to remove it from script).<br><br>Or you can click on that <font color='${color.secondary}'>petal's image</font> to modify all rarities' aims at once.</p>
+        `)
+    .append(container_petalCounter)
+    .get()
+
+document.documentElement.addEventListener('keydown', function (e) {
+    if (!isKeyPressed.toggleKey) {
+        lcs_.toggleKey = {
+            Ctrl: e.ctrlKey,
+            Shift: e.shiftKey,
+            Alt: e.altKey,
+            Meta: e.metaKey,
+            key: [e.key, e.location],
+            code: e.code,
+        }
+    }
+    else if (e.key == lcs_.toggleKey.key[0] && e.ctrlKey == lcs_.toggleKey.Ctrl && e.shiftKey == lcs_.toggleKey.Shift && e.altKey == lcs_.toggleKey.Alt && e.metaKey == lcs_.toggleKey.Meta && !e.repeat) {
+        container.style.transform = container.style.transform == 'translate(-50%, -50%) scale(1)' ? 'translate(-50%, -50%) scale(0)' : 'translate(-50%, -50%) scale(1)'
+    }
 })
 
-document.querySelector('canvas').onclick = function () {
-    container.style.height = "24px"
-    container.style.width = "350px"
-    conCon.style.overflow = "hidden"
-    container.style.borderRadius = "24px"
-    barProgress.style.maxHeight = "24px"
-    barProgress.style.maxWidth = "350px"
-    barProgress.style.height = "24px"
-    barProgress.style.width = "350px"
-    barProgress.style.borderRadius = "24px"
-    barProgress.style.opacity = 1
-    barProgress.style.background = "#F5FF65"
-    barProgress.style.pointerEvents = "all"
-    barText.style.opacity = 1
-    settings.style.pointerEvents = "none"
-    settings.style.opacity = 0
-    changelog.style.pointerEvents = "none"
-    changelog.style.opacity = 0
-    updateProgress()
-    updateMultiProgress()
+document.documentElement.addEventListener('keyup', function (e) {
+    if (!isKeyPressed.toggleKey) {
+        isKeyPressed.toggleKey = true
+        document.getElementById('petalCounter_toggleKey').innerHTML = getToggleKey().toString().fontcolor(color.primary)
+        syncLcs()
+    }
+})
+
+new ElementCreate('style').content(`
+p {
+    margin: 3px;
 }
 
-GM_addStyle(`
-@keyframes blink {
-    0% {color: #DBD74B}
-    50% {color: #1FDBDE}
-    100% {color: #DBD74B}
+h1 {
+    line-height: 22px;
 }
 
-.blink {
-    animation-name: blink;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
+font {
+    font-weight: bold;
+}
+
+.hover {
+    transition: all 0.2s ease-in-out;
+}
+
+.hover:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.button {
+    background-color: ${color.secondary}99;
+    width: fit-content;
+    border-radius: 5px;
+    padding: 7px 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.selected {
+    background-color: ${color.secondary}33!important;
+    border-radius: 5px;
 }
 
 ::-webkit-scrollbar {
     width: 5px;
+    height: 5px;
 }
 ::-webkit-scrollbar-track {
     background: #00000000;
@@ -825,4 +650,4 @@ GM_addStyle(`
 ::-webkit-scrollbar-thumb:hover {
     background: #444;
 }
-`)
+`).append('head')
