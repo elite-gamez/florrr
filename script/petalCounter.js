@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         florr.io | Petal farming progress counter
 // @namespace    Furaken
-// @version      1.3.0
+// @version      1.3.1
 // @description  Track and count the number of desired petals.
 // @author       Furaken
 // @match        https://florr.io/*
@@ -413,7 +413,7 @@ function countProgressOfEachPetal() {
             if (lcs_.count.petal[p][r] <= 0) continue
             let amount = module[getPetalAddr(petal.indexOf(p), r, lcs_.address)]
             let aim = lcs_.count.petal[p][r]
-            let percent = `${amount / aim * 100}%`
+            let percent = `${(amount / aim * 100).toFixed(2)}%`
             a += `
                 <div id='petalCounter_progress_rarity_${rarity[r].name}_${p.replaceAll(' ', '-')}' class='hover' style='cursor: pointer; padding: 0 5px; margin: 0 10px 0 30px; display: flex; flex-direction: row; height: 20px;'>
                     <div style='width: 80px; margin-top: 3px;'>${rarity[r].name}</div>
@@ -537,6 +537,8 @@ new ElementCreate('div')
         <p style='margin-block: 10px' class='hover'>Thanks for using my script.</p>
         <p style='margin-block: 10px' class='hover'>Script is created by Furaken (discord: <font color='${color.secondary}'>samerkizi</font>).</p>
         <p style='margin-block: 10px; cursor: pointer;' class='hover' onclick='window.open("https://github.com/Furaken")'>Github: <font color='${color.secondary}'>https://github.com/Furaken</font>.</p>
+        <br>
+        <p style='margin-block: 10px;' class='hover'>If you have broken something, enter this in console to reset all: <font color='${color.tertiary}'>localStorage.removeItem("__petalCounter")</font> then refresh page.</p>
 
         <br>
         <br>
