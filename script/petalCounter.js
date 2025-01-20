@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         florr.io | Petal farming progress counter
 // @namespace    Furaken
-// @version      1.3.1
+// @version      1.3.2
 // @description  Track and count the number of desired petals.
 // @author       Furaken
 // @match        https://florr.io/*
@@ -185,13 +185,15 @@ var module
 var petal
 var mob
 var loaded = false
+var florrioUtils
 
 setInterval(() => {
-    if (!petal) {
-        petal = unsafeWindow.florrio.utils.getPetals().map(x => x.i18n.fullName)
-        mob = unsafeWindow.florrio.utils.getMobs()
+    if (!florrioUtils) {
+        florrioUtils = unsafeWindow.florrio.utils
+        petal = florrioUtils.getPetals().map(x => x.i18n.fullName)
+        mob = florrioUtils.getMobs()
         let thisRarity
-        thisRarity = new Array(unsafeWindow.florrio.utils.getPetals().find(x => x.allowedDropRarities != null).allowedDropRarities.length).fill({ name: '?', id: '?', color: 0 })
+        thisRarity = new Array(florrioUtils.getPetals().find(x => x.allowedDropRarities != null).allowedDropRarities.length).fill({ name: '?', id: '?', color: 0 })
         thisRarity.forEach((x, i) => {
             if (rarity[i]) thisRarity[i] = rarity[i]
         })
@@ -199,7 +201,7 @@ setInterval(() => {
     }
     module = Module.HEAPU32
     updateProgress()
-}, 5 * 1000)
+}, 10 * 1000)
 
 function updateProgress() {
     countEachRarity()
@@ -389,7 +391,7 @@ function countEachRarity() {
     b.forEach((x, i) => {
         a += `
         <div style='display: flex; flex-direction: column; margin: 3px; padding: 10px' class='hover'>
-            <img style='width: 50px; height: 50px;' src='${unsafeWindow.florrio.utils.generateMobImage(512, mob.find(x => x.sid == 'titan').id, i, 1)}'>
+            <img style='width: 50px; height: 50px;' src='${florrioUtils.generateMobImage(512, mob.find(x => x.sid == 'titan').id, i, 1)}'>
             <font style='text-align: center; margin-top: 5px;' color='${color.primary}'>${abbNum(x)}</font>
         </div>`
     })
@@ -406,7 +408,7 @@ function countProgressOfEachPetal() {
         }
         a += `
         <div style='display: flex; flex-direction: row; margin-bottom: 20px;'>
-            <img id='petalCounter_progress_petal_${p.replaceAll(' ', '-')}' style='cursor: pointer' height='64px' src='${unsafeWindow.florrio.utils.generatePetalImage(512, petal.indexOf(p) + 1, rarity.length - 1, 1)}'>
+            <img id='petalCounter_progress_petal_${p.replaceAll(' ', '-')}' style='cursor: pointer' height='64px' src='${florrioUtils.generatePetalImage(512, petal.indexOf(p) + 1, rarity.length - 1, 1)}'>
             <div style='width: 100%'>
         `
         for (const r in lcs_.count.petal[p]) {
@@ -469,7 +471,7 @@ function newPetal() {
     rarity.forEach((x, i) => {
         thisRarity += `
         <div id='petalCounter_newPetal_container_rarity_${x.name}' class='hover selectable' style='margin: 2px; padding: 5px;'>
-            <img style='width: 50px; height: 50px; margin: 2px;' src='${unsafeWindow.florrio.utils.generateMobImage(512, mob.find(x => x.sid == 'titan').id, i, 1)}'>
+            <img style='width: 50px; height: 50px; margin: 2px;' src='${florrioUtils.generateMobImage(512, mob.find(x => x.sid == 'titan').id, i, 1)}'>
         </div>
         `
     })
@@ -477,7 +479,7 @@ function newPetal() {
 
     thisPetal += `<div style='display:flex; width: 100%; overflow-y: auto'>`
 
-    let a = unsafeWindow.florrio.utils.getPetals().map(x => [x.i18n.name, x.i18n.fullName])
+    let a = florrioUtils.getPetals().map(x => [x.i18n.name, x.i18n.fullName])
     a.sort(function (a, b) {
         if (a[0] > b[0]) return 1
         else return -1
@@ -485,7 +487,7 @@ function newPetal() {
     a.forEach((x, i) => {
         thisPetal += `
         <div id='petalCounter_newPetal_container_petal_${x[1].replaceAll(' ', '-')}' class='hover selectable' style='margin: 2px; padding: 5px;'>
-            <img style='width: 50px; height: 50px; margin: 2px;' src='${unsafeWindow.florrio.utils.generatePetalImage(512, petal.indexOf(x[1]) + 1, rarity.length - 1, 1)}'>
+            <img style='width: 50px; height: 50px; margin: 2px;' src='${florrioUtils.generatePetalImage(512, petal.indexOf(x[1]) + 1, rarity.length - 1, 1)}'>
         </div>
         `
     })
@@ -538,6 +540,7 @@ new ElementCreate('div')
         <p style='margin-block: 10px' class='hover'>Script is created by Furaken (discord: <font color='${color.secondary}'>samerkizi</font>).</p>
         <p style='margin-block: 10px; cursor: pointer;' class='hover' onclick='window.open("https://github.com/Furaken")'>Github: <font color='${color.secondary}'>https://github.com/Furaken</font>.</p>
         <br>
+        <p style='margin-block: 10px;' class='hover'>As default, press <font color='${color.tertiary}'>=</font> to open/close this menu.</p>
         <p style='margin-block: 10px;' class='hover'>If you have broken something, enter this in console to reset all: <font color='${color.tertiary}'>localStorage.removeItem("__petalCounter")</font> then refresh page.</p>
 
         <br>
