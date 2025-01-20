@@ -2834,6 +2834,53 @@
                 true,
                 true
             ]
+        },
+        {
+            "id": 94,
+            "isStackable": true,
+            "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Hammer",
+                "fullName": "Thor's Hammer",
+                "description": "Only the most powerful hammer in the universe."
+            },
+            "premiumPrice": 3,
+            "allowedDropRarities": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true
+            ]
+        },
+        {
+            "id": 95,
+            "isStackable": true,
+            "magicPetal": false,
+            "isPassive": false,
+            "i18n": {
+                "name": "Missile",
+                "fullName": "Mecha Missile",
+                "description": "Locked on."
+            },
+            "premiumPrice": 2,
+            "magicVersion": 88,
+            "allowedDropRarities": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+            ]
         }
     ],
     "rarity": [
