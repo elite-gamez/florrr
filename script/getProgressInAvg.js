@@ -21,9 +21,11 @@ function getAvg(chance) {
     return (2.5 * chance + 2.5) / chance
 }
 
-function getPercent(basicPetalNumber, endRarity, petals, ignoreRarities) {
+function getPercent(basicPetalNumber, petals, ignoreRarities) {
     addr = findSequences(basicPetalNumber, Module.HEAPU32)[0]
     petals.forEach(petalName => {
+        let endRarity = petalName.slice(0, petalName.indexOf(' '))
+        petalName = petalName.slice(petalName.indexOf(' ') + 1)
         let id = window.florrio.utils.getPetals().find(x => x.i18n.fullName == petalName).id
         let percent = 0
         for (let i = 0; i < rarity.indexOf(endRarity); i++) {
@@ -47,9 +49,14 @@ getPercent(
         0, // super basic
         0, // unique basic
     ],
-    "Ultra", // desired craft rarity
     [
-        "Mysterious Stick"
+        "Super Bone", // input petal's fullName
+        "Ultra Mysterious Relic",
+        "Ultra Compass",
+        "Ultra Tomato",
+        "Ultra Plank",
+        "Ultra Carrot",
+        "Ultra Mysterious Stick"
     ],
     [
         // ignore rarities
