@@ -23,9 +23,9 @@ function getAvg(chance) {
 
 function getPercent(basicPetalNumber, petals, ignoreRarities) {
     addr = findSequences(basicPetalNumber, Module.HEAPU32)[0]
-    petals.forEach(petalName => {
-        let endRarity = petalName.slice(0, petalName.indexOf(' '))
-        petalName = petalName.slice(petalName.indexOf(' ') + 1)
+    petals.forEach(petal => {
+        let endRarity = petal.slice(0, petal.indexOf(' '))
+        let petalName = petal.slice(petal.indexOf(' ') + 1)
         let id = window.florrio.utils.getPetals().find(x => x.i18n.fullName == petalName).id
         let percent = 0
         for (let i = 0; i < rarity.indexOf(endRarity); i++) {
@@ -33,7 +33,7 @@ function getPercent(basicPetalNumber, petals, ignoreRarities) {
             let rarityAddr = getPetalAddr(id, i)
             percent = (ignoreRarities.includes(rarity[i]) == true ? 0 : Module.HEAPU32[rarityAddr] + percent) / getAvg(chances[i])
         }
-        console.log(petalName, percent * 100)
+        console.log(petal, percent * 100)
     })
 }
 
