@@ -33,7 +33,7 @@ function getPercent(basicPetalNumber, petals, ignoreRarities) {
             let rarityAddr = getPetalAddr(id, i)
             percent = (ignoreRarities.includes(rarity[i]) == true ? 0 : Module.HEAPU32[rarityAddr] + percent) / getAvg(chances[i])
         }
-        console.log(petal, percent * 100)
+        console.log(petal, percent * 100, '%')
     })
 }
 
