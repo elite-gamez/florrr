@@ -1,7 +1,7 @@
 (async function () {
     'use strict';
 
-    const inventoryBaseAddress = await new Promise((resolve, reject) => {
+    const inventoryBaseAddress = await new Promise((resolve, reject) => { // by Max Nest
         function readVarUint32(arr) {
             let idx = 0, res = 0;
             do res |= (arr[idx] & 0b01111111) << idx * 7;
@@ -99,16 +99,6 @@
         localStorage.__petalCounter = JSON.stringify(lcs_)
     }
 
-    function findSequence(seq, mem) { // findSequence() by Max Nest
-        let match = 0
-        for (let addr = 0; addr < mem.length; addr++) {
-            if (mem[addr] === seq[match]) match++
-            else if (mem[addr] === seq[0]) match = 1
-            else match = 0
-            if (match === seq.length) return addr - match + 1
-        }
-    }
-
     function getPetalAddr(id, thisRarity, inventoryBaseAddress) {
         return inventoryBaseAddress + ((id + 1) * kRarity.length) - (kRarity.length - thisRarity)
     }
@@ -192,7 +182,7 @@
             thisRarity.forEach((x, i) => { if (kRarity[i]) thisRarity[i] = kRarity[i] })
             kRarity = thisRarity
 
-            for (let r = 0; r < kRarity.length; r++) image.blank[r] = florrioUtils.generateMobImage(128, florrioUtils.getMobs().find(x => x.sid == 'titan').id, r, 1)
+            for (let r = 0; r < kRarity.length; r++) image.blank[r] = florrioUtils.generatePetalImage(128, florrioUtils.getPetals().find(x => x.sid == 'air').id, r, 3)
             for (let p = 0; p < kPetals.sid.length; p++) image.petal[p] = florrioUtils.generatePetalImage(128, p + 1, kRarity.length - 1, 1)
             module = Module.HEAPU32
             updateProgress()
