@@ -439,8 +439,7 @@
         document.querySelectorAll('#petalCounter_progress > div > img').forEach(x => {
             x.onclick = function () {
                 if (x.id.startsWith('petalCounter_progress_petal_')) {
-                    let a = x.id.replace('petalCounter_progress_petal_', '')
-                    let p = a[0]
+                    let p = x.id.replace('petalCounter_progress_petal_', '')
                     let b = new Array(kRarity.length).fill(0)
                     let aim = prompt(`Aim (${p})\n(Set to 0 to remove)\n${kRarity.map(x => x.name)}`, lcs_.count.petal[p].toString())
                     aim.split(',').forEach((rarityAim, i) => {
