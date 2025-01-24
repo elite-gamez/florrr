@@ -4,47 +4,47 @@ let data = {
     rarity: [
         {
             index: 0,
-            name: "Common",
+            name: "common",
             color: 0x7EEF6D
         },
         {
             index: 1,
-            name: "Unusual",
+            name: "unusual",
             color: 0xFFE65D
         },
         {
             index: 2,
-            name: "Rare",
+            name: "rare",
             color: 0x4D52E3
         },
         {
             index: 3,
-            name: "Epic",
+            name: "epic",
             color: 0x861FDE
         },
         {
             index: 4,
-            name: "Legendary",
+            name: "legendary",
             color: 0xDE1F1F
         },
         {
             index: 5,
-            name: "Mythic",
+            name: "mythic",
             color: 0x1FDBDE
         },
         {
             index: 6,
-            name: "Ultra",
+            name: "ultra",
             color: 0xFF2B75
         },
         {
             index: 7,
-            name: "Super",
+            name: "super",
             color: 0x2BFFA3
         },
         {
             index: 8,
-            name: "Unique",
+            name: "unique",
             color: 0x555555
         }
     ]
