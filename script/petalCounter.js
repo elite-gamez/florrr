@@ -302,7 +302,7 @@
                 
                 <h1>Changelog</h1>
         
-                <h2>January 24th 2024 - v1.3.6</h2>
+                <h2>January 24th 2025 - v1.3.6</h2>
                     <p style='margin-block: 10px' class='hover'>Removed smooth scrolling effect.</p>
                     <p style='margin-block: 10px' class='hover'>Reworked menu UI.</p>
                     <p style='margin-block: 10px' class='hover'>Some features were removed.</p>
