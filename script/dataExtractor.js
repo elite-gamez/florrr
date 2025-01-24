@@ -3,49 +3,49 @@ let data = {
     petal: window.florrio.utils.getPetals(),
     rarity: [
         {
-            "index": 0,
-            "name": "Common",
-            "color": 8318829
+            index: 0,
+            name: "Common",
+            color: 0x7EEF6D
         },
         {
-            "index": 1,
-            "name": "Unusual",
-            "color": 16770653
+            index: 1,
+            name: "Unusual",
+            color: 0xFFE65D
         },
         {
-            "index": 2,
-            "name": "Rare",
-            "color": 5067491
+            index: 2,
+            name: "Rare",
+            color: 0x4D52E3
         },
         {
-            "index": 3,
-            "name": "Epic",
-            "color": 8789982
+            index: 3,
+            name: "Epic",
+            color: 0x861FDE
         },
         {
-            "index": 4,
-            "name": "Legendary",
-            "color": 14556959
+            index: 4,
+            name: "Legendary",
+            color: 0xDE1F1F
         },
         {
-            "index": 5,
-            "name": "Mythic",
-            "color": 2087902
+            index: 5,
+            name: "Mythic",
+            color: 0x1FDBDE
         },
         {
-            "index": 6,
-            "name": "Ultra",
-            "color": 16722805
+            index: 6,
+            name: "Ultra",
+            color: 0xFF2B75
         },
         {
-            "index": 7,
-            "name": "Super",
-            "color": 2883491
+            index: 7,
+            name: "Super",
+            color: 0x2BFFA3
         },
         {
-            "index": 8,
-            "name": "Unique",
-            "color": 5592405
+            index: 8,
+            name: "Unique",
+            color: 0x555555
         }
     ]
 }
@@ -78,11 +78,11 @@ function getMobDropChance(sid, isIgnoreNonDroppable) {
     rarities.forEach((mobRarity, mobRarity_Idx) => {
         output[sid][mobRarity] = {}
         t.drops.forEach(k => {
-            output[sid][mobRarity][data.petal.find(x => x.id == k.type).i18n.fullName] = {}
+            output[sid][mobRarity][data.petal.find(x => x.id == k.type).sid] = {}
             rarities.forEach((petalRarity, petalRarity_Idx) => {
                 let chance = window.florrio.utils.calculateDropChance(k.baseChance, mobRarity_Idx, petalRarity_Idx)
                 if ((chance == 0 || data.petal.find(x => x.id == k.type).allowedDropRarities?.[petalRarity_Idx] == false) && isIgnoreNonDroppable) delete chance
-                else output[sid][mobRarity][data.petal.find(x => x.id == k.type).i18n.fullName][petalRarity] = chance.noExponents()
+                else output[sid][mobRarity][data.petal.find(x => x.id == k.type).sid][petalRarity] = chance.noExponents()
             })
         })
     })

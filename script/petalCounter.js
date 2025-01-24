@@ -1,14 +1,40 @@
-// ==UserScript==
-// @name         florr.io | Petal farming progress counter
-// @namespace    Furaken
-// @version      1.3.2
-// @description  Track and count the number of desired petals.
-// @author       Furaken
-// @match        https://florr.io/*
-// @grant        unsafeWindow
-// @license      AGPL3
-// @require      https://unpkg.com/string-similarity@4.0.4/umd/string-similarity.min.js
-// ==/UserScript==
+var inventoryBaseAddress
+
+let interval0 = setInterval(() => {
+    if (!inventoryBaseAddress) {
+        function readVarUint32(arr) {
+            let idx = 0, res = 0;
+            do res |= (arr[idx] & 0b01111111) << idx * 7;
+            while (arr[idx++] & 0b10000000);
+            return [idx, res];
+        }
+
+        WebAssembly.instantiateStreaming =
+            (src, imports) => src.arrayBuffer().then(buf => WebAssembly.instantiate(buf, imports));
+        const _instantiate = WebAssembly.instantiate;
+        WebAssembly.instantiate = (buf, imports) => {
+            const arr = new Uint8Array(buf);
+            for (let i = 0; i < arr.length; i++) {
+                let j = i;
+                if (arr[j++] !== 0x41) continue; // i32.const
+                if (arr[j++] !== 1) continue;    // 1
+                if (arr[j++] !== 0x3a) continue; // i32.store8
+                if (arr[j++] !== 0) continue;    // align=0
+                if (arr[j++] !== 0) continue;    // offset=0
+                if (arr[j++] !== 0x41) continue; // i32.const
+                const [offset, addr] = readVarUint32(arr.subarray(j));
+                j += offset;
+                if (arr[j++] !== 0x41) continue; // i32.const
+                if (arr[j++] !== 5) continue;    // 5
+                if (arr[j++] !== 0x36) continue; // i32.store
+                if (arr[j++] !== 2) continue;    // align=2
+                if (arr[j++] !== 0) continue;    // offset=0
+                inventoryBaseAddress = addr >> 2;
+            }
+            return _instantiate(buf, imports);
+        };
+    } else clearInterval(interval0)
+})
 
 function syntaxHighlight(json) { // https://stackoverflow.com/questions/4810841/pretty-print-json-using-javascript
     if (typeof json != 'string') {
@@ -82,56 +108,20 @@ function findSequence(seq, mem) { // findSequence() by Max Nest
     }
 }
 
-function getPetalAddr(id, thisRarity, addr) {
-    return addr + ((id + 1) * rarity.length) - (rarity.length - thisRarity)
+function getPetalAddr(id, thisRarity, inventoryBaseAddress) {
+    return inventoryBaseAddress + ((id + 1) * kRarity.length) - (kRarity.length - thisRarity)
 }
 
-let rarity = [
-    {
-        name: 'Common',
-        id: 'c',
-        color: 8318829
-    },
-    {
-        name: 'Unusual',
-        id: 'n',
-        color: 16770653
-    },
-    {
-        name: 'Rare',
-        id: 'r',
-        color: 5067491
-    },
-    {
-        name: 'Epic',
-        id: 'e',
-        color: 8789982
-    },
-    {
-        name: 'Legendary',
-        id: 'l',
-        color: 14556959,
-    },
-    {
-        name: 'Mythic',
-        id: 'm',
-        color: 2087902
-    },
-    {
-        name: 'Ultra',
-        id: 'u',
-        color: 16722805
-    },
-    {
-        name: 'Super',
-        id: 's',
-        color: 2883491
-    },
-    {
-        name: 'Unique',
-        id: 'q',
-        color: 5592405
-    }
+let kRarity = [
+    { name: 'Common', color: 0x7EEF6D },
+    { name: 'Unusual', color: 0xFFE65D },
+    { name: 'Rare', color: 0x4D52E3 },
+    { name: 'Epic', color: 0x861FDE },
+    { name: 'Legendary', color: 0xDE1F1F },
+    { name: 'Mythic', color: 0x1FDBDE },
+    { name: 'Ultra', color: 0xFF2B75 },
+    { name: 'Super', color: 0x2BFFA3 },
+    { name: 'Unique', color: 0x555555 }
 ]
 
 const color = {
@@ -151,11 +141,6 @@ const color = {
 }
 
 const defaultLCS = {
-    address: '?',
-    addressFinder: {
-        autoFind: true,
-        set: ['Basic', 5, 0, 0, 0, 0, 0, 0, 0, 0]
-    },
     toggleKey: {
         Ctrl: false,
         Shift: false,
@@ -177,28 +162,44 @@ for (const [key, value] of Object.entries(defaultLCS)) {
 }
 localStorage.__petalCounter = JSON.stringify(lcs_)
 
-var isKeyPressed = {
-    toggleKey: true
-}
-var autocorrect = stringSimilarity
-var module
-var petal
-var mob
-var loaded = false
-var florrioUtils
+var isKeyPressed = { toggleKey: true },
+    autocorrect = stringSimilarity,
+    module,
+    kPetals,
+    kMobs,
+    florrioUtils,
+    image = {
+        petal: [],
+        blank: []
+    }
+
+let interval1 = setInterval(() => {
+    if (!florrioUtils) {
+        florrioUtils = unsafeWindow?.florrio?.utils
+        if (!florrioUtils) return
+        kPetals = {
+            0: florrioUtils.getPetals().map(x => [x.i18n.name, x.i18n.fullName]).sort(function (a, b) {
+                if (a[0] > b[0]) return 1
+                else return -1
+            }),
+            fullName: florrioUtils.getPetals().map(x => x.i18n.fullName)
+        }
+
+        kMobs = florrioUtils.getMobs()
+        let thisRarity = new Array(florrioUtils.getPetals().find(x => x.allowedDropRarities != null).allowedDropRarities.length).fill({ name: '?', id: '?', color: 0 })
+        thisRarity.forEach((x, i) => { if (kRarity[i]) thisRarity[i] = kRarity[i] })
+        kRarity = thisRarity
+
+        for (let r = 0; r < kRarity.length; r++) image.blank[r] = florrioUtils.generateMobImage(128, kMobs.find(x => x.sid == 'titan').id, r, 1)
+        for (let p = 0; p < kPetals.fullName.length; p++) image.petal[p] = florrioUtils.generatePetalImage(128, p + 1, kRarity.length - 1, 1)
+        module = Module.HEAPU32
+        updateProgress()
+        newPetal()
+        clearInterval(interval1)
+    }
+})
 
 setInterval(() => {
-    if (!florrioUtils) {
-        florrioUtils = unsafeWindow.florrio.utils
-        petal = florrioUtils.getPetals().map(x => x.i18n.fullName)
-        mob = florrioUtils.getMobs()
-        let thisRarity
-        thisRarity = new Array(florrioUtils.getPetals().find(x => x.allowedDropRarities != null).allowedDropRarities.length).fill({ name: '?', id: '?', color: 0 })
-        thisRarity.forEach((x, i) => {
-            if (rarity[i]) thisRarity[i] = rarity[i]
-        })
-        rarity = thisRarity
-    }
     module = Module.HEAPU32
     updateProgress()
 }, 10 * 1000)
@@ -206,10 +207,6 @@ setInterval(() => {
 function updateProgress() {
     countEachRarity()
     countProgressOfEachPetal()
-    if (!loaded) {
-        loaded = true
-        newPetal()
-    }
     document.getElementById('petalCounter_json').innerHTML = syntaxHighlight(JSON.stringify(lcs_, null, 4))
 }
 
@@ -266,14 +263,6 @@ new ElementCreate('div')
     .content(`
     <h1>Config</h1>
     <div style='display: flex;' class='hover'>
-        <p style='width: 30%; cursor: pointer;' id='petalCounter_assignAddress'>Address: <font color='${color.primary}'>${lcs_.address}</font></p>
-        <p style='width: 60%; cursor: pointer;' id='petalCounter_findAddress'><font color='${color.primary}'>${lcs_.addressFinder.set}</font></p>
-    </div>
-    <div style='display: flex;' class='hover'>
-        <p style='width: 30%;'>Auto find:</p>
-        <p style='width: 60%; cursor: pointer;' id='petalCounter_autoFind'></p>
-    </div>
-    <div style='display: flex;' class='hover'>
         <p style='width: 30%;'>Toggle key:</p>
         <p style='width: 60%; cursor: pointer;' id='petalCounter_toggleKey'><font color='${color.primary}'>${getToggleKey()}</font></p>
     </div>
@@ -302,64 +291,14 @@ new ElementCreate('div')
     .append(container_petalCounter)
     .get();
 
-document.getElementById('petalCounter_assignAddress').onclick = function () {
-    let a = prompt('Assign new address:', lcs_.address)
-    if (!a) return
-    if (a.length > 10) return
-    a = parseInt(a)
-    if (!isNaN(a)) {
-        document.querySelector(`#${this.id} > font`).innerHTML = a
-        lcs_.address = a
-        syncLcs()
-        updateProgress()
-    }
-}
-
-document.querySelector('#petalCounter_findAddress').onclick = function () {
-    let a = prompt('petal_name,common,unusual,rare,epic,legendary,mythic,ultra,super,unique', lcs_.addressFinder.set)
-    if (!a) return
-    a = a.split(',').map(x => x.trim())
-    let seqArr = new Array(10).fill(0)
-    for (let i = 0; i <= rarity.length; i++) {
-        if (!a[i]) continue
-        if (i != 0) a[i] = parseInt(a[i])
-        seqArr[i] = a[i]
-    }
-
-    let petalMatch = autocorrect.findBestMatch(seqArr[0], petal)
-    let petalName = petalMatch.bestMatch.target
-    let petalId = petalMatch.bestMatchIndex + 1
-    seqArr[0] = petalName
-
-    let foundAddress = findSequence(seqArr.slice(1), module) - (petalId * rarity.length) + rarity.length
-
-    if (!isNaN(foundAddress)) {
-        lcs_.address = foundAddress
-        document.querySelector('#petalCounter_assignAddress > font').innerHTML = lcs_.address
-    }
-    document.querySelector(`#${this.id} > font`).innerHTML = seqArr
-
-    lcs_.addressFinder.set = seqArr
-    syncLcs()
-    updateProgress()
-}
-
 function buttonToggle(element, condition) {
     condition = condition == true ? false : true
     element.innerHTML = `<font color='${condition == true ? color.secondary : color.tertiary}'>${condition}</font>`
     return condition
 }
 
-if (lcs_.addressFinder.autoFind) document.getElementById(`petalCounter_autoFind`).innerHTML = lcs_.addressFinder.autoFind.toString().fontcolor(color.secondary)
-else document.getElementById(`petalCounter_autoFind`).innerHTML = lcs_.addressFinder.autoFind.toString().fontcolor(color.tertiary)
-
 if (lcs_.exactNumber) document.getElementById(`petalCounter_exactNumber`).innerHTML = lcs_.exactNumber.toString().fontcolor(color.secondary)
 else document.getElementById(`petalCounter_exactNumber`).innerHTML = lcs_.exactNumber.toString().fontcolor(color.tertiary)
-
-document.getElementById('petalCounter_autoFind').onclick = function () {
-    lcs_.addressFinder.autoFind = buttonToggle(this, lcs_.addressFinder.autoFind)
-    syncLcs()
-}
 
 document.getElementById('petalCounter_exactNumber').onclick = function () {
     lcs_.exactNumber = buttonToggle(this, lcs_.exactNumber)
@@ -379,11 +318,10 @@ document.getElementById('petalCounter_toggleKey').onclick = function () {
 
 function countEachRarity() {
     let a = '',
-        b = new Array(rarity.length).fill(0),
-        c = lcs_.address
+        b = new Array(kRarity.length).fill(0)
 
-    for (let i = c; i < c + petal?.length * rarity.length; i += rarity.length) {
-        for (let j = 0; j < rarity.length; j++) {
+    for (let i = inventoryBaseAddress; i < inventoryBaseAddress + kPetals?.fullName?.length * kRarity.length; i += kRarity.length) {
+        for (let j = 0; j < kRarity.length; j++) {
             b[j] += module[i + j]
         }
     }
@@ -391,7 +329,7 @@ function countEachRarity() {
     b.forEach((x, i) => {
         a += `
         <div style='display: flex; flex-direction: column; margin: 3px; padding: 10px' class='hover'>
-            <img style='width: 50px; height: 50px;' src='${florrioUtils.generateMobImage(512, mob.find(x => x.sid == 'titan').id, i, 1)}'>
+            <img style='width: 50px; height: 50px;' src='${image.blank[i]}'>
             <font style='text-align: center; margin-top: 5px;' color='${color.primary}'>${abbNum(x)}</font>
         </div>`
     })
@@ -408,19 +346,19 @@ function countProgressOfEachPetal() {
         }
         a += `
         <div style='display: flex; flex-direction: row; margin-bottom: 20px;'>
-            <img id='petalCounter_progress_petal_${p.replaceAll(' ', '-')}' style='cursor: pointer' height='64px' src='${florrioUtils.generatePetalImage(512, petal.indexOf(p) + 1, rarity.length - 1, 1)}'>
+            <img id='petalCounter_progress_petal_${p.replaceAll(' ', '-')}' style='cursor: pointer' height='64px' src='${image.petal[kPetals?.fullName.indexOf(p)]}'>
             <div style='width: 100%'>
         `
         for (const r in lcs_.count.petal[p]) {
             if (lcs_.count.petal[p][r] <= 0) continue
-            let amount = module[getPetalAddr(petal.indexOf(p), r, lcs_.address)]
+            let amount = module[getPetalAddr(kPetals?.fullName.indexOf(p), r, inventoryBaseAddress)]
             let aim = lcs_.count.petal[p][r]
             let percent = `${(amount / aim * 100).toFixed(2)}%`
             a += `
-                <div id='petalCounter_progress_rarity_${rarity[r].name}_${p.replaceAll(' ', '-')}' class='hover' style='cursor: pointer; padding: 0 5px; margin: 0 10px 0 30px; display: flex; flex-direction: row; height: 20px;'>
-                    <div style='width: 80px; margin-top: 3px;'>${rarity[r].name}</div>
+                <div id='petalCounter_progress_rarity_${kRarity[r].name}_${p.replaceAll(' ', '-')}' class='hover' style='cursor: pointer; padding: 0 5px; margin: 0 10px 0 30px; display: flex; flex-direction: row; height: 20px;'>
+                    <div style='width: 80px; margin-top: 3px;'>${kRarity[r].name}</div>
                     <div style='width: 200px; height: 7px; background-color: ${color.darker}; border-radius: 10px; margin: 7px 10px 0 0;'>
-                        <div style='width: ${percent}; height: 100%; max-width: 100%; background-color: #${rarity[r].color.toString(16)}; border-radius: 10px;'></div>
+                        <div style='width: ${percent}; height: 100%; max-width: 100%; background-color: #${kRarity[r].color.toString(16)}; border-radius: 10px;'></div>
                     </div>
                     <div style='margin: 3px 0 0 10px; width: 150px;'>${abbNum(amount)}/${abbNum(aim)}</div>
                     <div style='margin: 3px 0 0 10px; width: 150px;'>${percent} ${amount / aim >= 1 ? `(${~~(amount / aim)})` : ''}</div>
@@ -435,8 +373,8 @@ function countProgressOfEachPetal() {
             if (x.id.startsWith('petalCounter_progress_petal_')) {
                 let a = x.id.replace('petalCounter_progress_petal_', '').split('_')
                 let p = a[0].replaceAll('-', ' ')
-                let b = new Array(rarity.length).fill(0)
-                let aim = prompt(`Aim (${p})\n(Set to 0 to remove)\n${rarity.map(x => x.name)}`, lcs_.count.petal[p].toString())
+                let b = new Array(kRarity.length).fill(0)
+                let aim = prompt(`Aim (${p})\n(Set to 0 to remove)\n${kRarity.map(x => x.name)}`, lcs_.count.petal[p].toString())
                 aim.split(',').forEach((rarityAim, i) => {
                     b[i] = isNaN(parseInt(rarityAim)) == true ? 0 : parseInt(rarityAim)
                 })
@@ -452,9 +390,9 @@ function countProgressOfEachPetal() {
                 let a = x.id.replace('petalCounter_progress_rarity_', '').split('_')
                 let r = a[0]
                 let p = a[1].replaceAll('-', ' ')
-                let aim = parseInt(prompt(`Aim (${r} ${p})\n(Set to 0 to remove)`, lcs_.count.petal[p][rarity.map(x => x.name).indexOf(r)]))
+                let aim = parseInt(prompt(`Aim (${r} ${p})\n(Set to 0 to remove)`, lcs_.count.petal[p][kRarity.map(x => x.name).indexOf(r)]))
                 if (!isNaN(aim) && aim >= 0) {
-                    lcs_.count.petal[p][rarity.map(x => x.name).indexOf(r)] = aim
+                    lcs_.count.petal[p][kRarity.map(x => x.name).indexOf(r)] = aim
                     syncLcs()
                     updateProgress()
                 }
@@ -468,10 +406,10 @@ function newPetal() {
     let thisRarity = '',
         thisPetal = ''
     thisRarity += `<div style='display:flex; width: 100%; overflow-y: auto'>`
-    rarity.forEach((x, i) => {
+    kRarity.forEach((x, i) => {
         thisRarity += `
         <div id='petalCounter_newPetal_container_rarity_${x.name}' class='hover selectable' style='margin: 2px; padding: 5px;'>
-            <img style='width: 50px; height: 50px; margin: 2px;' src='${florrioUtils.generateMobImage(512, mob.find(x => x.sid == 'titan').id, i, 1)}'>
+            <img style='width: 50px; height: 50px; margin: 2px;' src='${image.blank[i]}'>
         </div>
         `
     })
@@ -479,15 +417,10 @@ function newPetal() {
 
     thisPetal += `<div style='display:flex; width: 100%; overflow-y: auto'>`
 
-    let a = florrioUtils.getPetals().map(x => [x.i18n.name, x.i18n.fullName])
-    a.sort(function (a, b) {
-        if (a[0] > b[0]) return 1
-        else return -1
-    })
-    a.forEach((x, i) => {
+    kPetals[0].forEach((x, i) => {
         thisPetal += `
         <div id='petalCounter_newPetal_container_petal_${x[1].replaceAll(' ', '-')}' class='hover selectable' style='margin: 2px; padding: 5px;'>
-            <img style='width: 50px; height: 50px; margin: 2px;' src='${florrioUtils.generatePetalImage(512, petal.indexOf(x[1]) + 1, rarity.length - 1, 1)}'>
+            <img style='width: 50px; height: 50px; margin: 2px;' src='${image.petal[kPetals?.fullName.indexOf(x[1])]}'>
         </div>
         `
     })
@@ -508,14 +441,14 @@ function addNewPetalIntoObj() {
     document.getElementById('petalCounter_newPetal').onclick = function () {
         let selected = Array.from(document.querySelectorAll('.selected')).map(x => x.id)
         selected = selected.map(x => x.split('_')[x.split('_').length - 1].replaceAll('-', ' '))
-        let raritySelected = selected.filter(x => rarity.map(x => x.name).includes(x))
-        let petalSelected = selected.filter(x => !rarity.map(x => x.name).includes(x))
+        let raritySelected = selected.filter(x => kRarity.map(x => x.name).includes(x))
+        let petalSelected = selected.filter(x => !kRarity.map(x => x.name).includes(x))
 
         for (let i = 0; i < petalSelected.length; i++) {
             if (raritySelected.length == 0) break
-            if (!lcs_.count.petal[petalSelected[i].replaceAll('-', ' ')]) lcs_.count.petal[petalSelected[i].replaceAll('-', ' ')] = new Array(rarity.length).fill(0)
+            if (!lcs_.count.petal[petalSelected[i].replaceAll('-', ' ')]) lcs_.count.petal[petalSelected[i].replaceAll('-', ' ')] = new Array(kRarity.length).fill(0)
             for (let j = 0; j < raritySelected.length; j++) {
-                lcs_.count.petal[petalSelected[i].replaceAll('-', ' ')][rarity.map(x => x.name).indexOf(raritySelected[j])] = 1
+                lcs_.count.petal[petalSelected[i].replaceAll('-', ' ')][kRarity.map(x => x.name).indexOf(raritySelected[j])] = 1
             }
         }
         syncLcs()
@@ -533,49 +466,39 @@ new ElementCreate('div')
         borderRadius: '0 10px 10px 0',
         backgroundColor: color.darker,
     }).content(`
-        <h1>Welcome back!</h1>
-        <p style='margin-block: 10px' class='hover'>I have reworked this script's UI but some functions stayed the same.</p>
-        <p style='margin-block: 10px' class='hover'>This version is still unfinished and some old features are missing. I will try to finish this by next week (Jan 25).</p>
-        <p style='margin-block: 10px' class='hover'>Thanks for using my script.</p>
-        <p style='margin-block: 10px' class='hover'>Script is created by Furaken (discord: <font color='${color.secondary}'>samerkizi</font>).</p>
-        <p style='margin-block: 10px; cursor: pointer;' class='hover' onclick='window.open("https://github.com/Furaken")'>Github: <font color='${color.secondary}'>https://github.com/Furaken</font>.</p>
-        <br>
-        <p style='margin-block: 10px;' class='hover'>As default, press <font color='${color.tertiary}'>=</font> to open/close this menu.</p>
-        <p style='margin-block: 10px;' class='hover'>If you have broken something, enter this in console to reset all: <font color='${color.tertiary}'>localStorage.removeItem("__petalCounter")</font> then refresh page.</p>
-
-        <br>
-        <br>
-
-        <h1>How to get Address?</h1>
-        <p style='margin-block: 10px' class='hover'><font color='${color.tertiary}'>1.</font> Choose any <font color='${color.secondary}'>petal type</font> (Basic or Ankh or Stinger or ...) that has <font color='${color.secondary}'>at least 4 rarities</font> with number greater than 0.<br><br>For large number that is shown as abbreviation (> 1000), move your cursor over the petal, the number of it will be shown next to its name.</p>
-        <p style='margin-block: 10px' class='hover'><font color='${color.tertiary}'>2.</font> Click on <font color='${color.primary}'>${lcs_.addressFinder.set}</font> next to Address button in <font color='${color.secondary}'>Config</font> category.</p>
-        <p style='margin-block: 10px' class='hover'><font color='${color.tertiary}'>3.</font> There will be a prompt pops up with following format:<br>
-        <font color='${color.primary}'>petal_name,common,unusual,rare,epic,legendary,mythic,ultra,super,unique</font></p>
-            <p class='hover' style='margin-block: 10px; margin-left: 20px'>For example, you have these in inventory:</p>
-            <p class='hover' style='margin-block: 10px; margin-left: 40px'>
-                3 common Ankh<br>
-                2 unusual Ankh<br>
-                0 rare Ankh<br>
-                225 epic Ankh<br>
-                609 legendary Ankh<br>
-                5 mythic Ankh<br>
-                2 ultra Ankh<br>
-                0 super Ankh<br>
-                0 unique Ankh<br>
-            </p>
-            <p class='hover' style='margin-block: 10px; margin-left: 20px'>
-                You should input in the prompt with the following text:<br>
-                <font color='${color.primary}'>Ankh,3,2,0,225,609,5,2,0,0</font>
-            </p>
-        <p style='margin-block: 10px' class='hover'><font color='${color.tertiary}'>4.</font> If you have done them right, the script will work as expected.</p>
-        <p style='margin-block: 10px' class='hover'><font color='${color.tertiary}'>NOTE:</font> <font color='${color.secondary}'>Auto find</font> only works if you have found the right address for at least once.</p>
-
-        <br>
+        <p id='petalCounter_message' style='margin-block: 10px;' class='hover'>Press <font color='${color.primary}'>${document.querySelector('#petalCounter_toggleKey > font').innerHTML}</font> to open/close this menu.</p>
         <br>
 
         <h1>How to add and count a petal's progress?</h1>
         <p style='margin-block: 10px' class='hover'><font color='${color.tertiary}'>1.</font> In the <font color='${color.secondary}'>Progress</font> category, <font color='${color.secondary}'>choose at least 1</font> for each rarity and petal.<br><br>After that, click <font color='${color.secondary}'>Add</font> button to add the petals you chose into script.</p>
         <p style='margin-block: 10px' class='hover'><font color='${color.tertiary}'>2.</font> Click on the line of that <font color='${color.secondary}'>petal's rarity</font> to modify its <font color='${color.secondary}'>Aim number</font> (set to 0 to remove it from script).<br><br>Or you can click on that <font color='${color.secondary}'>petal's image</font> to modify all rarities' aims at once.</p>
+        <br>
+
+        <h1>Credit</h1>
+            <p style='margin-block: 10px' class='hover'>Script is created by Furaken (discord: <font color='${color.secondary}'>samerkizi</font>).</p>
+            <p style='margin-block: 10px; cursor: pointer;' class='hover' onclick='window.open("https://github.com/Furaken")'>Github: <font color='${color.primary}'>https://github.com/Furaken</font>.</p>
+            <p style='margin-block: 10px; cursor: pointer;' class='hover' onclick='window.open("https://discord.gg/tmWUfg4FR9")'>Discord: <font color='${color.primary}'>https://discord.gg/tmWUfg4FR9</font>.</p>
+            <p style='margin-block: 10px' class='hover'>Special thanks to <font color='${color.secondary}'>Max Nest</font> for auto <font color='${color.tertiary}'>inventoryBaseAddress finder</font>.</p>
+            <p style='margin-block: 10px' class='hover'>Images by <font color='${color.secondary}'>M28</font>.</p>
+        <br>
+        
+        <h1>Changelog</h1>
+
+        <h2>January 24th 2024 - v1.3.3</h2>
+            <p style='margin-block: 10px' class='hover'>Reworked menu UI.</p>
+            <p style='margin-block: 10px' class='hover'>Some features were removed.</p>
+            <p style='margin-block: 10px' class='hover'>Script can find <font color='${color.primary}'>inventoryBaseAddress finder</font> automatically (Credit to <font color='${color.secondary}'>Max Nest</font>).</p>
+        <br>
+        <h2>January 04th 2024 - v1.2</h2>
+            <p style='margin-block: 10px' class='hover'>The container now has smooth scrolling effect (Credit to <font color='${color.secondary}'>Manuel Otto</font>).</p>
+            <p style='margin-block: 10px' class='hover'>Added multiple petals counter.</p>
+            <p style='margin-block: 10px' class='hover'>Added <font color='${color.primary}'>Auto update ID</font> (this requires you to use <font color='${color.primary}'>Find & Apply</font> at least one times).</p>
+        <br>
+        <h2>December 24th 2023 - v1.1</h2>
+            <p style='margin-block: 10px' class='hover'>Added 3 new petals.</p>
+            <p style='margin-block: 10px' class='hover'>Added a manual way to find Basic ID: <font color='${color.primary}'>Find & Apply</font> (Credit to <font color='${color.secondary}'>Max Nest</font>).</p>
+            <p style='margin-block: 10px' class='hover'>The container is now moveable and scalable.</p>
+            <p style='margin-block: 10px' class='hover'>Press <font color='${color.primary}'>=</font> key to show/hide the container, this is also available in earlier versions. You can custom it in settings now.</p>
         `)
     .append(container_petalCounter)
     .get()
@@ -600,6 +523,7 @@ document.documentElement.addEventListener('keyup', function (e) {
     if (!isKeyPressed.toggleKey) {
         isKeyPressed.toggleKey = true
         document.getElementById('petalCounter_toggleKey').innerHTML = getToggleKey().toString().fontcolor(color.primary)
+        document.querySelector('#petalCounter_message > font').innerHTML = document.getElementById('petalCounter_toggleKey').innerHTML
         syncLcs()
     }
 })
