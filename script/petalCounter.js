@@ -1,3 +1,5 @@
+// @license agpl
+
 (async function () {
     'use strict';
 
