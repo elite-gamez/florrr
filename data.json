@@ -1396,7 +1396,7 @@
             "magicPetal": false,
             "sid": "magnet",
             "isPassive": false,
-            "premiumPrice": 3,
+            "premiumPrice": 2,
             "allowedDropRarities": [
                 false,
                 false,
@@ -2023,7 +2023,7 @@
         },
         {
             "id": 80,
-            "isStackable": true,
+            "isStackable": false,
             "magicPetal": false,
             "sid": "corruption",
             "isPassive": true,
