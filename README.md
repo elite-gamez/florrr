@@ -7,7 +7,7 @@ If there is any issue, please go to [Issues](https://github.com/Furaken/florr.io
 If you have any question, please send me direct messages in discord: `@samerkizi`.
 
 ## Credit
-Everything here are created by Furaken, Opfer and k2r_n2iq.
+Everything here are created by Furaken, Opfer, k2r_n2iq and teddybear.
 Smaller contributors are already given credits in specific scripts.
 
 ## Game Utils
