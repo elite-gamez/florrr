@@ -1685,7 +1685,7 @@
             "magicPetal": false,
             "sid": "sand",
             "isPassive": false,
-            "premiumPrice": 4,
+            "premiumPrice": 2,
             "allowedDropRarities": [
                 true,
                 true,
@@ -2937,7 +2937,7 @@
             "magicPetal": false,
             "sid": "glass",
             "isPassive": false,
-            "premiumPrice": 1,
+            "premiumPrice": 2,
             "allowedDropRarities": [
                 true,
                 true,
