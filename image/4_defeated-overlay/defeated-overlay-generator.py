@@ -28,6 +28,7 @@ for rarityDirectory in os.listdir(normalBasePath):
         if mobFile.startswith("."):
             continue
 
+        print(f"Processing base image: {normalBasePath}/{rarityDirectory}/{mobFile}")
         baseImage = Image.open(f"{normalBasePath}/{rarityDirectory}/{mobFile}")
         defeatedImage = CreateDefeatedMobImage(baseImage)
         defeatedImage.save(f"{defeatedBasePath}/{rarityDirectory}/{mobFile}")
