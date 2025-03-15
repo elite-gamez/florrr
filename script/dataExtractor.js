@@ -81,9 +81,13 @@ function getMobDropChance(sid, isIgnoreNonDroppable) {
         output[sid][mobRarity] = {}
         t.drops.forEach(k => {
             output[sid][mobRarity][data.petal.find(x => x.id == k.type).sid] = {}
+            let thisPetalAllowDrop = data.petal.find(x => x.id == k.type).rarities.map(x => x.droppable).map((x, i) => {
+                if (x == null && i != 0) a[i] = a[i - 1]
+                return a[i]
+            })
             rarities.forEach((petalRarity, petalRarity_Idx) => {
                 let chance = florrio.utils.calculateDropChance(k.baseChance, mobRarity_Idx, petalRarity_Idx)
-                if ((chance == 0 || data.petal.find(x => x.id == k.type).allowedDropRarities?.[petalRarity_Idx] == false) && isIgnoreNonDroppable) delete chance
+                if ((chance == 0 || thisPetalAllowDrop[petalRarity_Idx] == false) && isIgnoreNonDroppable) delete chance
                 else output[sid][mobRarity][data.petal.find(x => x.id == k.type).sid][petalRarity] = chance.noExponents()
             })
         })
