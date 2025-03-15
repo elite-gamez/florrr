@@ -1,6 +1,8 @@
 let data = {
-    mob: window.florrio.utils.getMobs(),
-    petal: window.florrio.utils.getPetals(),
+    versionHash: versionHash,
+    mob: florrio.utils.getMobs(),
+    petal: florrio.utils.getPetals(),
+    talent: florrio.utils.getTalents(),
     rarity: [
         {
             index: 0,
@@ -80,7 +82,7 @@ function getMobDropChance(sid, isIgnoreNonDroppable) {
         t.drops.forEach(k => {
             output[sid][mobRarity][data.petal.find(x => x.id == k.type).sid] = {}
             rarities.forEach((petalRarity, petalRarity_Idx) => {
-                let chance = window.florrio.utils.calculateDropChance(k.baseChance, mobRarity_Idx, petalRarity_Idx)
+                let chance = florrio.utils.calculateDropChance(k.baseChance, mobRarity_Idx, petalRarity_Idx)
                 if ((chance == 0 || data.petal.find(x => x.id == k.type).allowedDropRarities?.[petalRarity_Idx] == false) && isIgnoreNonDroppable) delete chance
                 else output[sid][mobRarity][data.petal.find(x => x.id == k.type).sid][petalRarity] = chance.noExponents()
             })
