@@ -81,7 +81,7 @@ function getMobDropChance(sid, isIgnoreNonDroppable) {
         output[sid][mobRarity] = {}
         t.drops.forEach(k => {
             output[sid][mobRarity][data.petal.find(x => x.id == k.type).sid] = {}
-            let thisPetalAllowDrop = data.petal.find(x => x.id == k.type).rarities.map(x => x.droppable).map((x, i) => {
+            let thisPetalAllowDrop = data.petal.find(x => x.id == k.type).rarities.map(x => x.droppable).map((x, i, a) => {
                 if (x == null && i != 0) a[i] = a[i - 1]
                 return a[i]
             })
