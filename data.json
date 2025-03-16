@@ -1,5 +1,5 @@
 {
-    "versionHash": "48c81c4c2464f6eb799b8c60e322266d61191343",
+    "versionHash": "a7296eb229800553a8a0a7f96ff819be34416b1e",
     "mob": [
         {
             "id": 1,
@@ -12094,6 +12094,213 @@
                         [
                             "Mob/Attribute/PoisonPerSecond",
                             32805
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 77,
+            "drops": [
+                {
+                    "baseChance": 0.25,
+                    "type": 66
+                },
+                {
+                    "baseChance": 0.15,
+                    "type": 103
+                },
+                {
+                    "baseChance": 0.05,
+                    "type": 16
+                }
+            ],
+            "sid": "beetle_mummy",
+            "rarities": [
+                {
+                    "tooltip": [
+                        [
+                            "Mob/Attribute/Health",
+                            100
+                        ],
+                        [
+                            "Mob/Attribute/Damage",
+                            30
+                        ],
+                        [
+                            "Mob/Attribute/Armor",
+                            1
+                        ],
+                        [
+                            "Mob/Attribute/UndeadDuration",
+                            7
+                        ]
+                    ],
+                    "exp": 1
+                },
+                {
+                    "tooltip": [
+                        [
+                            "Mob/Attribute/Health",
+                            375
+                        ],
+                        [
+                            "Mob/Attribute/Damage",
+                            90
+                        ],
+                        [
+                            "Mob/Attribute/Armor",
+                            2
+                        ],
+                        [
+                            "Mob/Attribute/UndeadDuration",
+                            7
+                        ]
+                    ]
+                },
+                {
+                    "tooltip": [
+                        [
+                            "Mob/Attribute/Health",
+                            1350
+                        ],
+                        [
+                            "Mob/Attribute/Damage",
+                            270
+                        ],
+                        [
+                            "Mob/Attribute/Armor",
+                            7
+                        ],
+                        [
+                            "Mob/Attribute/UndeadDuration",
+                            7
+                        ]
+                    ],
+                    "exp": 4
+                },
+                {
+                    "tooltip": [
+                        [
+                            "Mob/Attribute/Health",
+                            5400
+                        ],
+                        [
+                            "Mob/Attribute/Damage",
+                            810
+                        ],
+                        [
+                            "Mob/Attribute/Armor",
+                            22
+                        ],
+                        [
+                            "Mob/Attribute/UndeadDuration",
+                            7
+                        ]
+                    ],
+                    "exp": 28
+                },
+                {
+                    "tooltip": [
+                        [
+                            "Mob/Attribute/Health",
+                            32400
+                        ],
+                        [
+                            "Mob/Attribute/Damage",
+                            2430
+                        ],
+                        [
+                            "Mob/Attribute/Armor",
+                            65
+                        ],
+                        [
+                            "Mob/Attribute/UndeadDuration",
+                            7
+                        ]
+                    ],
+                    "exp": 256
+                },
+                {
+                    "tooltip": [
+                        [
+                            "Mob/Attribute/Health",
+                            243000
+                        ],
+                        [
+                            "Mob/Attribute/Damage",
+                            7290
+                        ],
+                        [
+                            "Mob/Attribute/Armor",
+                            194
+                        ],
+                        [
+                            "Mob/Attribute/UndeadDuration",
+                            7
+                        ]
+                    ],
+                    "exp": 4098
+                },
+                {
+                    "tooltip": [
+                        [
+                            "Mob/Attribute/Health",
+                            2916000
+                        ],
+                        [
+                            "Mob/Attribute/Damage",
+                            21870
+                        ],
+                        [
+                            "Mob/Attribute/Armor",
+                            583
+                        ],
+                        [
+                            "Mob/Attribute/UndeadDuration",
+                            7
+                        ]
+                    ],
+                    "exp": 39155
+                },
+                {
+                    "tooltip": [
+                        [
+                            "Mob/Attribute/Health",
+                            131220000
+                        ],
+                        [
+                            "Mob/Attribute/Damage",
+                            65610
+                        ],
+                        [
+                            "Mob/Attribute/Armor",
+                            583
+                        ],
+                        [
+                            "Mob/Attribute/UndeadDuration",
+                            7
+                        ]
+                    ],
+                    "exp": 4468190
+                },
+                {
+                    "tooltip": [
+                        [
+                            "Mob/Attribute/Health",
+                            1968300032
+                        ],
+                        [
+                            "Mob/Attribute/Damage",
+                            196830
+                        ],
+                        [
+                            "Mob/Attribute/Armor",
+                            583
+                        ],
+                        [
+                            "Mob/Attribute/UndeadDuration",
+                            7
                         ]
                     ]
                 }
@@ -25399,6 +25606,129 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": 103,
+            "isStackable": false,
+            "sid": "bandage",
+            "isPassive": true,
+            "premiumPrice": 4,
+            "rarities": [
+                {
+                    "droppable": false,
+                    "shoppable": false,
+                    "tooltip": [
+                        [
+                            "Petal/Attribute/UndeadDuration",
+                            1
+                        ],
+                        [
+                            "Petal/Attribute/UnrevivableDuration",
+                            30
+                        ]
+                    ]
+                },
+                {
+                    "tooltip": [
+                        [
+                            "Petal/Attribute/UndeadDuration",
+                            1.399999976158142
+                        ],
+                        [
+                            "Petal/Attribute/UnrevivableDuration",
+                            30
+                        ]
+                    ]
+                },
+                {
+                    "tooltip": [
+                        [
+                            "Petal/Attribute/UndeadDuration",
+                            1.9600000381469727
+                        ],
+                        [
+                            "Petal/Attribute/UnrevivableDuration",
+                            30
+                        ]
+                    ]
+                },
+                {
+                    "tooltip": [
+                        [
+                            "Petal/Attribute/UndeadDuration",
+                            2.74399995803833
+                        ],
+                        [
+                            "Petal/Attribute/UnrevivableDuration",
+                            30
+                        ]
+                    ]
+                },
+                {
+                    "tooltip": [
+                        [
+                            "Petal/Attribute/UndeadDuration",
+                            3.841600179672241
+                        ],
+                        [
+                            "Petal/Attribute/UnrevivableDuration",
+                            30
+                        ]
+                    ]
+                },
+                {
+                    "droppable": true,
+                    "shoppable": true,
+                    "tooltip": [
+                        [
+                            "Petal/Attribute/UndeadDuration",
+                            5.37824010848999
+                        ],
+                        [
+                            "Petal/Attribute/UnrevivableDuration",
+                            30
+                        ]
+                    ]
+                },
+                {
+                    "tooltip": [
+                        [
+                            "Petal/Attribute/UndeadDuration",
+                            7.529536247253418
+                        ],
+                        [
+                            "Petal/Attribute/UnrevivableDuration",
+                            30
+                        ]
+                    ]
+                },
+                {
+                    "droppable": false,
+                    "tooltip": [
+                        [
+                            "Petal/Attribute/UndeadDuration",
+                            10.541350364685059
+                        ],
+                        [
+                            "Petal/Attribute/UnrevivableDuration",
+                            30
+                        ]
+                    ]
+                },
+                {
+                    "shoppable": false,
+                    "tooltip": [
+                        [
+                            "Petal/Attribute/UndeadDuration",
+                            14.757890701293945
+                        ],
+                        [
+                            "Petal/Attribute/UnrevivableDuration",
+                            30
+                        ]
+                    ]
+                }
+            ]
         }
     ],
     "talent": [
@@ -26107,8 +26437,8 @@
                 "body_damage6"
             ],
             "tooltip": [
-                3,
-                5
+                0.6,
+                1
             ],
             "sid": "body_toxicity",
             "cost": 10,
@@ -33961,6 +34291,143 @@
                     "legendary": "0.000000000000000000000000000000000000000000000006920630907799494",
                     "mythic": "0.6968922553024698",
                     "ultra": "0.30274809712624995"
+                }
+            }
+        },
+        "beetle_mummy": {
+            "common": {
+                "ankh": {
+                    "common": "0.5983929353219923",
+                    "unusual": "0.16430237717800766"
+                },
+                "bandage": {},
+                "beetle_egg": {
+                    "common": "0.19145189833041287",
+                    "unusual": "0.03476716416958736"
+                }
+            },
+            "unusual": {
+                "ankh": {
+                    "common": "0.48457810200372875",
+                    "unusual": "0.5122506860573373"
+                },
+                "bandage": {},
+                "beetle_egg": {
+                    "common": "0.5095313161977693",
+                    "unusual": "0.1319827613936888"
+                }
+            },
+            "rare": {
+                "ankh": {
+                    "common": "0.0007620205298677726",
+                    "unusual": "0.8339782865075123",
+                    "rare": "0.16525969296262"
+                },
+                "bandage": {},
+                "beetle_egg": {
+                    "common": "0.24278441486201474",
+                    "unusual": "0.7217109855120912",
+                    "rare": "0.035469546959645215"
+                }
+            },
+            "epic": {
+                "ankh": {
+                    "common": "0.000000000000000000000000000000000000000000000016962899135716447",
+                    "unusual": "0.06656880659411657",
+                    "rare": "0.8102710555920337",
+                    "epic": "0.12316013781384971"
+                },
+                "bandage": {},
+                "beetle_egg": {
+                    "common": "0.0000000006015234135377646",
+                    "unusual": "0.5817537100982916",
+                    "rare": "0.3923030321657389",
+                    "epic": "0.025943257134446118"
+                }
+            },
+            "legendary": {
+                "ankh": {
+                    "unusual": "0.0000000000000000000000029202190179141008",
+                    "rare": "0.07217814272612773",
+                    "epic": "0.8774426789585238",
+                    "legendary": "0.05037917831534844"
+                },
+                "bandage": {},
+                "beetle_egg": {
+                    "common": "0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000038463670655273034",
+                    "unusual": "0.000019714385384378992",
+                    "rare": "0.5911131999631881",
+                    "epic": "0.3985818459598386",
+                    "legendary": "0.010285239691588899"
+                }
+            },
+            "mythic": {
+                "ankh": {
+                    "rare": "0.000000000000000000000000000000000000000000000000000000000832310041621745",
+                    "epic": "0.07542432399439424",
+                    "legendary": "0.9168492810392478",
+                    "mythic": "0.007726394966357963"
+                },
+                "bandage": {
+                    "mythic": "0.0046430266552626165"
+                },
+                "beetle_egg": {
+                    "unusual": "0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000054848165055641455",
+                    "rare": "0.000000000003839344471925894",
+                    "epic": "0.5963515639335963",
+                    "legendary": "0.4020983589033793",
+                    "mythic": "0.0015500771591849816"
+                }
+            },
+            "ultra": {
+                "ankh": {
+                    "epic": "0.00000000000000000000003550001432191847",
+                    "legendary": "0.8563055941761243",
+                    "mythic": "0.1431786515380109",
+                    "ultra": "0.0005157542858648112"
+                },
+                "bandage": {
+                    "mythic": "0.0885669670131074",
+                    "ultra": "0.00030949115877798583"
+                },
+                "beetle_egg": {
+                    "rare": "0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004843302432825384",
+                    "epic": "0.000032362886539662224",
+                    "legendary": "0.9694183963588703",
+                    "mythic": "0.03044606861063126",
+                    "ultra": "0.00010317214395882957"
+                }
+            },
+            "super": {
+                "ankh": {
+                    "legendary": "0.0000000000000000000000000000000002062484156661006",
+                    "mythic": "0.7726387563824579",
+                    "ultra": "0.22710148517284812"
+                },
+                "bandage": {
+                    "mythic": "0.8566125777862391",
+                    "ultra": "0.14323089301926162"
+                },
+                "beetle_egg": {
+                    "legendary": "0.00000018317978822631244",
+                    "mythic": "0.9497191913232332",
+                    "ultra": "0.05022733621172093"
+                }
+            },
+            "unique": {
+                "ankh": {
+                    "legendary": "0.0000000000000000000000000000000002062484156661006",
+                    "mythic": "0.7726387563824579",
+                    "ultra": "0.22710148517284812"
+                },
+                "bandage": {
+                    "mythic": "0.8566125777862391",
+                    "ultra": "0.14323089301926162"
+                },
+                "beetle_egg": {
+                    "legendary": "0.00000018317978822631244",
+                    "mythic": "0.9497191913232332",
+                    "ultra": "0.05022733621172093"
                 }
             }
         }
