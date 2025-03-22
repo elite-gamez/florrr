@@ -1,5 +1,5 @@
 {
-    "versionHash": "05df9e7ed058f5a22d13c38a78fb7fe5c0fe44c7",
+    "versionHash": "bc1e005dc74ec1d27e7c243250b796da3bf04103",
     "mob": [
         {
             "id": 1,
@@ -26166,7 +26166,7 @@
                         ],
                         [
                             "Petal/Attribute/HealPerSecond",
-                            2
+                            1
                         ]
                     ],
                     "reloadTime": 2500
@@ -26189,7 +26189,7 @@
                         ],
                         [
                             "Petal/Attribute/HealPerSecond",
-                            6
+                            3
                         ]
                     ]
                 },
@@ -26209,7 +26209,7 @@
                         ],
                         [
                             "Petal/Attribute/HealPerSecond",
-                            18
+                            9
                         ]
                     ]
                 },
@@ -26229,7 +26229,7 @@
                         ],
                         [
                             "Petal/Attribute/HealPerSecond",
-                            54
+                            27
                         ]
                     ]
                 },
@@ -26249,7 +26249,7 @@
                         ],
                         [
                             "Petal/Attribute/HealPerSecond",
-                            162
+                            81
                         ]
                     ]
                 },
@@ -26269,7 +26269,7 @@
                         ],
                         [
                             "Petal/Attribute/HealPerSecond",
-                            486
+                            243
                         ]
                     ]
                 },
@@ -26289,7 +26289,7 @@
                         ],
                         [
                             "Petal/Attribute/HealPerSecond",
-                            841.7766723632812
+                            420.8883361816406
                         ]
                     ]
                 },
@@ -26310,7 +26310,7 @@
                         ],
                         [
                             "Petal/Attribute/HealPerSecond",
-                            1458
+                            729
                         ]
                     ]
                 },
@@ -26331,7 +26331,7 @@
                         ],
                         [
                             "Petal/Attribute/HealPerSecond",
-                            2525.330078125
+                            1262.6650390625
                         ]
                     ]
                 }
