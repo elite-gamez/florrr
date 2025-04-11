@@ -9,7 +9,7 @@ from PIL import Image, ImageDraw
 from typing import Literal
 
 normalBasePath = "./image/1_normal/mob"
-circularBasePath = "./image/5_normal_circular/mob"
+circularBasePath = "./image/5_normal-circular/mob"
 
 superOutlineColor = "#23CF84"
 uniqueOutlineColor = "#454545"
