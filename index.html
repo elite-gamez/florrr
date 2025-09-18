@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>florr.io</title>
+<meta name="application-name" content="florr.io">
+<meta name="description" content="Battle enemies and seek the rarest petals to add to your collection">
+<meta name="msapplication-TileColor" content="#181818">
+<meta name="theme-color" content="#181818">
+<script>var baseHref = "//static.florr.io/d39e649c4c180b7c92d88c14804f710cd38d6762/";</script>
+<script>var versionHash = "d39e649c4c180b7c92d88c14804f710cd38d6762";</script>
+<style>
+body {
+	background-color: #181818;
+}
+</style>
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="user-scalable=no, width=device-width, height=device-height, initial-scale=1, maximum-scale=1.0, minimum-scale=1, shrink-to-fit=no, viewport-fit=cover">
+<link rel="manifest" href="manifest.json">
+<style>
+	
+:root {
+    --sat: env(safe-area-inset-top);
+    --sar: env(safe-area-inset-right);
+    --sab: env(safe-area-inset-bottom);
+    --sal: env(safe-area-inset-left);
+}
+
+html, body, #canvas {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+body {
+	position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+a, a:visited {
+	color: #3333FF;
+	text-decoration: none
+}
+
+a:hover {
+	color: #6666FF;
+}
+
+#status-container {
+	color: #FFFFFF;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 48pt;
+	font-family: sans-serif;
+	font-weight: bold;
+	cursor: default;
+	text-align: center;
+}
+
+#status-container small {
+	font-size: 50%;
+}
+
+#canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	width: 100dvw;
+	height: 100dvh;
+	cursor: default;
+}
+
+#canvas[data-fake-landscape="true"], #textInputContainer[data-fake-landscape="true"] {
+	width: 100vh;
+	height: 100vw;
+	width: 100dvh;
+	height: 100dvw;
+	transform: translate(100vw, 0px) rotate(90deg);
+	transform: translate(100dvw, 0px) rotate(90deg);
+	transform-origin: left top;
+}
+
+#canvasOverlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+#textInputContainer {
+	position: fixed;
+	pointer-events: none;
+}
+
+@font-face {
+    font-family: 'Game';
+	font-style: normal;
+	font-weight: 700;
+    src: url('//static.florr.io/d39e649c4c180b7c92d88c14804f710cd38d6762/Ubuntu-B.ttf')  format('truetype');
+}
+
+.textInput {
+	background-color: transparent;
+	font-family: 'Game', 'Microsoft YaHei', sans-serif;
+	font-weight: 700;
+	padding: 0;
+	border: 0;
+	outline: none;
+	pointer-events: all;
+}
+
+</style>
+</head>
+<body>
+<script>
+window.aiptag = window.aiptag || {cmd: []};
+aiptag.cmd.player = aiptag.cmd.player || [];
+
+//CMP tool settings
+aiptag.cmp = {
+	show: true,
+	position: "centered",  //centered, bottom
+	button: false,
+	buttonText: "Privacy settings",
+	buttonPosition: "bottom-right" //bottom-left, bottom-right, top-left, top-right
+}
+
+aiptag.cmd.player.push(function() {
+	aiptag.adplayer = new aipPlayer({
+		AD_WIDTH: 960,
+		AD_HEIGHT: 540,
+		AD_DISPLAY: 'center', //default, fullscreen, center, fill
+		TRUSTED: true,
+		LOADING_TEXT: 'loading advertisement',
+		PREROLL_ELEM: function(){return document.getElementById('preroll')},
+		AIP_COMPLETE: function(state){
+			if(window.aip_complete) window.aip_complete();
+		},
+		AIP_REMOVE: function ()  {
+			if(window.aip_complete) window.aip_complete();
+		}
+	});
+});
+</script>
+<!-- <script async src="//api.adinplay.com/libs/aiptag/pub/DGD/florr.io/tag.min.js"></script> -->
+<div id="preroll"></div>
+
+<style>
+#xsolla-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+
+#xsolla-container[data-active="true"] {
+	display: flex;
+}
+
+#xsolla-container2 {
+	position: relative;
+	border-radius: 5px;
+	border: 10px solid rgba(0,0,0,0.2);
+	line-height: 0;
+}
+
+#xsolla-iframe {
+	border: none;
+	max-width: 100%;
+	max-height: 100%;
+	width: 740px;
+	height: 760px;
+}
+
+#xsolla-close {
+	cursor: pointer;
+	--btn-color: #BB5555;
+}
+
+#xsolla-close:hover {
+	--btn-color: #C16666;
+}
+
+#xsolla-close:active {
+	--btn-color: #A84C4C;
+}
+
+@media (max-width: 800px), (max-height: 820px) {
+	#xsolla-iframe, #xsolla-container2 {
+		border: none;
+		border-radius: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+</style>
+
+<div id="xsolla-container">
+	<div id="xsolla-container2">
+		<div style="z-index:-1; position:absolute; width:100%; height:100%; display: flex; justify-content: center; align-items: center; background-color: rgba(0,0,0,0.2);">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+				<circle cx="50" cy="50" r="30" stroke="rgba(0,0,0,0.3)" stroke-width="10" fill="none"></circle>
+				<circle cx="50" cy="50" r="30" stroke="#fff" stroke-width="8" stroke-linecap="round" fill="none">
+					<animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;180 50 50;720 50 50" keyTimes="0;0.5;1"></animateTransform>
+					<animate attributeName="stroke-dasharray" repeatCount="indefinite" dur="1s" values="18.84955592153876 169.64600329384882;94.2477796076938 94.24777960769377;18.84955592153876 169.64600329384882" keyTimes="0;0.5;1"></animate>
+				</circle>
+			</svg>
+		</div>
+		<div id="xsolla-close" style="width:40px;height:40px;position:absolute;right:10px;top:10px;border:none;">
+			<svg viewBox="-35 -35 70 70">
+				<rect x="-30" y="-30" width="60" height="60" rx="6" ry="6" style="fill: var(--btn-color);" stroke="#974545" stroke-width="6" stroke-linejoin="round"/>
+				<path fill="none" stroke="#ccc" d="M-15-15L15 15M15-15L-15 15" stroke-linecap="round" stroke-width="9"/>
+			</svg>
+		</div>
+	</div>
+</div>
+<div id="status-container">
+	<span id="loading">Loading...</span>
+	<span id="unsupported" style="display: none;">
+		Your browser isn't supported<br />
+		<small>
+			try <a href="//chrome.google.com">Google Chrome</a> or <a href="https://www.mozilla.org/en-US/firefox/">Firefox</a><br />
+		</small>
+	</span>
+	<span id="errorDialog" style="display: none;">
+		Error<br />
+		<small>
+			Uninstall any scripts you may have,<br />as they might be interfering with the game<br />
+		</small>
+	</span>
+</div>
+
+<canvas id="canvas" width="800" height="800" style="display: none;" oncontextmenu="return false;"></canvas>
+
+<div style="font-family:'Game'; display:none;">&nbsp;&#33457;</div>
+<div id="textInputContainer"></div>
+
+<script>
+	
+window["cp6"] = window["cp6"] || {};
+window["Module"] = window["Module"] || {};
+Module.canvas = document.getElementById("canvas");
+
+function isBrowserSupported(){
+	var canvas = document.createElement("canvas");
+	if(!canvas || !canvas.getContext) return false;
+	
+	//var gl = canvas.getContext("webgl2") || canvas.getContext("experimental-webgl2");
+	//if(!gl) return false;
+	
+	//if(!window["URL"] || !URL.createObjectURL) return false;
+	
+	return true;
+}
+
+(function(window, document){
+	if(!isBrowserSupported()){
+		document.getElementById("loading").style.display = "none";
+		document.getElementById("unsupported").style.display = "block";
+		document.getElementById("errorDialog").style.display = "none";
+		return;
+	}
+	
+	
+	// Remove "cp6_web_hash" from url, used during updates to skip cache
+	var url = new URL(window.location);
+	var versionOverride = url.searchParams.get("cp6_web_hash");
+	if(versionOverride){
+		var bases = document.getElementsByTagName("base");
+		if(bases.length > 0){
+			bases[0].href = bases[0].href.replace(versionHash, versionOverride);
+		}
+		
+		baseHref = baseHref.replace(versionHash, versionOverride);
+		versionHash = versionOverride;
+		
+		url.searchParams.delete("cp6_web_hash");
+		window.history.replaceState({}, document.title, url);
+		window["cp6"]["versionOverride"] = versionOverride;
+	}
+	
+	document.getElementById("canvas").style.display = "block";
+	
+	var gameScript = document.createElement('script');
+	gameScript.async = true;
+	gameScript.type = 'text/javascript';
+	// Loading errors can happen shortly after an update if the file isn't quite ready at static storage when servers are up
+	// Better to just try again instead of hanging. It's still really bad and shouldn't happen though.
+	gameScript.onerror = function(){ setTimeout(function(){ window.location.reload(true); }, 500); };
+	gameScript.onload = function(){};
+	gameScript.src = baseHref + "client.js";
+	var node = document.getElementsByTagName('script')[0];
+	node.parentNode.insertBefore(gameScript, node);
+})(window, document);
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"f4700e171cc74f4c87f55b36656e69c7","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
